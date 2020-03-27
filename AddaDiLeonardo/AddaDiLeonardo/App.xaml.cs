@@ -10,7 +10,7 @@ namespace AddaDiLeonardo
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new Views.Tappe.Tappa_01();
         }
 
         protected override void OnStart()
