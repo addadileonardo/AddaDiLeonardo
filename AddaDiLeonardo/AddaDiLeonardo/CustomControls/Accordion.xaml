@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AddaDiLeonardo.CustomControls.Accordion">
+  <ContentView.Content>
+        <StackLayout Orientation="Vertical" Margin="0,0,0,0">
+
+            <!--Header-->
+            <StackLayout Padding="20,20,20,20" BackgroundColor="{Binding Source={x:Reference _accordion}, Path=BGColor}" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <!--Title-->
+                <Label  x:Name="_title"
+                       HorizontalOptions="Start" VerticalOptions="Center" Margin="5,0,0,0"
+                       Text="{Binding Source={x:Reference _accordion}, Path=Title}"
+                       FontSize="20" TextColor="Black">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="RobotoCondensed-Bold" />
+                            <On Platform="Android" Value="RobotoCondensed-Bold.ttf#RobotoCondensed-Bold" />
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+                <!--Indicator-->
+                <ContentView  x:Name="_indicator"
+                             HorizontalOptions="EndAndExpand" VerticalOptions="Center" Margin="0,0,0,0"
+                             Content="{Binding Source={x:Reference _accordion}, Path=Indicator}">
+
+                </ContentView>
+
+                <!--TapHandler-->
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped"/>
+                </StackLayout.GestureRecognizers>
+
+            </StackLayout>
+
+            <!--Content-->
+
+            <StackLayout  Margin="0,-6,0,0" x:Name="_content" BackgroundColor="{Binding Source={x:Reference _accordion}, Path=BGColor}">
+                <ContentView    Content="{Binding Source={x:Reference _accordion}, Path=AccordionContent}">
+                </ContentView>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>
