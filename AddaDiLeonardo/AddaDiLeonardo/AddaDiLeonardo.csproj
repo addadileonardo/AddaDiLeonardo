@@ -21,6 +21,11 @@
     <None Remove="Images\Icons\close_4.png" />
     <None Remove="Images\Icons\close_5.png" />
     <None Remove="Images\Icons\Icon-Place_%403x.png" />
+    <None Remove="Images\Map\centraleW.png" />
+    <None Remove="Images\Map\MappaRaul.png" />
+    <None Remove="Images\Map\ponteW.png" />
+    <None Remove="Images\Map\santuarioW.png" />
+    <None Remove="Images\Map\traghettoW.png" />
     <None Remove="Images\Tappe\Tappa_03\Rocchetta_01.JPG" />
     <None Remove="Images\Tappe\Tappa_03\Rocchetta_02.jpeg" />
     <None Remove="Images\Tappe\Tappa_03\Rocchetta_03.jpeg" />
@@ -64,6 +69,11 @@
     <EmbeddedResource Include="Images\Home\ponte.png" />
     <EmbeddedResource Include="Images\Home\rocchetta.png" />
     <EmbeddedResource Include="Images\Home\traghetto.png" />
+    <EmbeddedResource Include="Images\Map\centraleW.png" />
+    <EmbeddedResource Include="Images\Map\MappaRaul.png" />
+    <EmbeddedResource Include="Images\Map\ponteW.png" />
+    <EmbeddedResource Include="Images\Map\santuarioW.png" />
+    <EmbeddedResource Include="Images\Map\traghettoW.png" />
     <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_01.jpg" />
     <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_02.jpg" />
     <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_03.jpg" />
