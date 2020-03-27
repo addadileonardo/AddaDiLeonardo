@@ -16,16 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Images\Home\" />
-    <Folder Include="Images\Icons\" />
-    <Folder Include="Images\Map\" />
-    <Folder Include="Database\" />
-    <Folder Include="Images\Tappe\Tappa_05\" />
-    <Folder Include="Images\Tappe\Tappa_04\" />
-    <Folder Include="Images\Tappe\Tappa_03\" />
-    <Folder Include="Images\Tappe\Tappa_02\" />
-    <Folder Include="Images\Tappe\Tappa_01\" />
-    <Folder Include="MarkupExtension\" />
-    <Folder Include="Views\Tappe\" />
+
+    <EmbeddedResource Update="CustomControls\Accordion.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+
   </ItemGroup>
 </Project>
