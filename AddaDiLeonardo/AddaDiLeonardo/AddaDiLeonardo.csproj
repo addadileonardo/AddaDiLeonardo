@@ -11,10 +11,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\Home\backgroundtesto.jpg" />
+    <None Remove="Images\Home\centrale.png" />
+    <None Remove="Images\Home\play.png" />
+    <None Remove="Images\Home\ponte.png" />
+    <None Remove="Images\Home\rocchetta.png" />
+    <None Remove="Images\Home\traghetto.png" />
     <None Remove="Images\Icons\arrow2.png" />
     <None Remove="Images\Icons\close_4.png" />
     <None Remove="Images\Icons\close_5.png" />
     <None Remove="Images\Icons\Icon-Place_%403x.png" />
+    <None Remove="Images\Map\centraleW.png" />
+    <None Remove="Images\Map\MappaRaul.png" />
+    <None Remove="Images\Map\ponteW.png" />
+    <None Remove="Images\Map\santuarioW.png" />
+    <None Remove="Images\Map\traghettoW.png" />
     <None Remove="Images\Tappe\Tappa_03\Rocchetta_01.JPG" />
     <None Remove="Images\Tappe\Tappa_03\Rocchetta_02.jpeg" />
     <None Remove="Images\Tappe\Tappa_03\Rocchetta_03.jpeg" />
@@ -52,6 +63,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Images\Home\backgroundtesto.jpg" />
+    <EmbeddedResource Include="Images\Home\centrale.png" />
+    <EmbeddedResource Include="Images\Home\play.png" />
+    <EmbeddedResource Include="Images\Home\ponte.png" />
+    <EmbeddedResource Include="Images\Home\rocchetta.png" />
+    <EmbeddedResource Include="Images\Home\traghetto.png" />
+    <EmbeddedResource Include="Images\Map\centraleW.png" />
+    <EmbeddedResource Include="Images\Map\MappaRaul.png" />
+    <EmbeddedResource Include="Images\Map\ponteW.png" />
+    <EmbeddedResource Include="Images\Map\santuarioW.png" />
+    <EmbeddedResource Include="Images\Map\traghettoW.png" />
     <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_01.jpg" />
     <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_02.jpg" />
     <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_03.jpg" />
@@ -107,6 +129,10 @@
     </EmbeddedResource>
 
     <EmbeddedResource Update="Views\HomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+
+    <EmbeddedResource Update="Views\Map.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
 
