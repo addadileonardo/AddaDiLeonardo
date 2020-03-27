@@ -11,6 +11,91 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\Icons\arrow2.png" />
+    <None Remove="Images\Icons\close_4.png" />
+    <None Remove="Images\Icons\close_5.png" />
+    <None Remove="Images\Icons\Icon-Place_%403x.png" />
+    <None Remove="Images\Tappe\Tappa_03\Rocchetta_01.JPG" />
+    <None Remove="Images\Tappe\Tappa_03\Rocchetta_02.jpeg" />
+    <None Remove="Images\Tappe\Tappa_03\Rocchetta_03.jpeg" />
+    <None Remove="Images\Tappe\Tappa_03\Rocchetta_04.jpeg" />
+    <None Remove="Images\Tappe\Tappa_03\Rocchetta_05.jpeg" />
+    <None Remove="Images\Tappe\Tappa_03\Rocchetta_06.JPG" />
+    <None Remove="Images\Tappe\Tappa_03\Rocchetta_07.jpg" />
+    <None Remove="Images\Tappe\Tappa_03\Rocchetta_08.jpg" />
+    <None Remove="Images\Tappe\Tappa_03\Rocchetta_09.jpg" />
+    <None Remove="Images\Tappe\Tappa_03\Rocchetta_11.jpg" />
+    <None Remove="Images\Tappe\Tappa_03\Rocchetta_12.jpg" />
+    <None Remove="Images\Tappe\Tappa_03\Rocchetta_13.jpg" />
+    <None Remove="Images\Tappe\Tappa_03\Rocchetta_14.jpg" />
+    <None Remove="Images\Tappe\Tappa_03\Rocchetta_15.jpg" />
+    <None Remove="Images\Tappe\Tappa_03\Rocchetta_16.jpg" />
+    <None Remove="Images\Tappe\Tappa_03\Rocchetta_17.jpg" />
+    <None Remove="Images\Tappe\Tappa_03\Rocchetta_18.jpg" />
+    <None Remove="Images\Tappe\Tappa_03\Rocchetta_19.jpg" />
+    <None Remove="Images\Tappe\Tappa_03\Rocchetta_20.jpg" />
+    <None Remove="Images\Tappe\Tappa_03\Rocchetta_21.jpg" />
+    <None Remove="Images\Tappe\Tappa_04\ponte_01.jpg" />
+    <None Remove="Images\Tappe\Tappa_04\ponte_02.jpg" />
+    <None Remove="Images\Tappe\Tappa_04\ponte_03.png" />
+    <None Remove="Images\Tappe\Tappa_04\ponte_04.jpg" />
+    <None Remove="Images\Tappe\Tappa_04\ponte_05.jpg" />
+    <None Remove="Images\Tappe\Tappa_05\centrali_01.jpg" />
+    <None Remove="Images\Tappe\Tappa_05\centrali_02.jpg" />
+    <None Remove="Images\Tappe\Tappa_05\centrali_03.jpg" />
+    <None Remove="Images\Tappe\Tappa_05\centrali_04.jpg" />
+    <None Remove="Images\Tappe\Tappa_05\centrali_05.jpg" />
+    <None Remove="Images\Tappe\Tappa_05\centrali_06.jpg" />
+    <None Remove="Images\Tappe\Tappa_05\centrali_07.jpg" />
+    <None Remove="Images\Tappe\Tappa_05\centrali_08.jpg" />
+    <None Remove="Images\Tappe\Tappa_05\centrali_09.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_01.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_02.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_03.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_04.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_05.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_06.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_07.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_08.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_09.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Icons\arrow2.png" />
+    <EmbeddedResource Include="Images\Icons\close_4.png" />
+    <EmbeddedResource Include="Images\Icons\close_5.png" />
+    <EmbeddedResource Include="Images\Icons\Icon-Place_@3x.png" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_01.JPG" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_02.jpeg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_03.jpeg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_04.jpeg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_05.jpeg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_06.JPG" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_07.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_08.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_09.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_11.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_12.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_13.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_14.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_15.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_16.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_17.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_18.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_19.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_20.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_21.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_04\ponte_01.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_04\ponte_02.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_04\ponte_03.png" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_04\ponte_04.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_04\ponte_05.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.5.0.495" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.1" />
   </ItemGroup>
