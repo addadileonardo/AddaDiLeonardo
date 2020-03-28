@@ -32,7 +32,7 @@
                     </OnPlatform>
                 </Label.FontFamily>
             </Label>
-            <local:Accordion x:Name="Accordion0" AccordionName="Accordion0" Title="" BGColor="#F6F6F6">
+            <local:Accordion x:Name="Accordion0" AccordionName="Accordion0" Title="Ciao" BGColor="#F6F6F6">
                 <local:Accordion.Indicator></local:Accordion.Indicator>
                 <local:Accordion.AccordionContent>
                     <StackLayout Orientation="Vertical" >
