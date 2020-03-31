@@ -10,6 +10,7 @@ namespace AddaDiLeonardo
         {
             InitializeComponent();
 
+            //MainPage = new Views.Tappe.Tappa_01();
             MainPage = new MainPage();
         }
 

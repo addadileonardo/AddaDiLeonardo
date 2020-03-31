@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibVLCSharp.Shared;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -16,6 +17,13 @@ namespace AddaDiLeonardo
         public MainPage()
         {
             InitializeComponent();
+            //https://drive.google.com/uc?export=download&id=1IZxR7_jlFOtGRcUMGMPl0D9MdM1d8LUN
+            Core.Initialize();
+            var _libVLC = new LibVLC();
+            var media = new Media(_libVLC, "https://drive.google.com/uc?export=download&id=1IZxR7_jlFOtGRcUMGMPl0D9MdM1d8LUN", FromType.FromLocation);
+            myvideo.MediaPlayer = new MediaPlayer(media);
+            myvideo.MediaPlayer.Fullscreen = true;
+            myvideo.MediaPlayer.Play();
         }
     }
 }

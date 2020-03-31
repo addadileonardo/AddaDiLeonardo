@@ -2,14 +2,54 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:local="clr-namespace:AddaDiLeonardo.CustomControls"
              mc:Ignorable="d"
              x:Class="AddaDiLeonardo.Views.Tappe.Tappa_01">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="lblTitolo" FontSize="28" TextColor="Black" Text="PROVA TITOLO">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="iOS" Value="RobotoCondensed-Bold" />
+                        <On Platform="Android" Value="RobotoCondensed-Bold.ttf#RobotoCondensed-Bold" />
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+            <Label x:Name="lblSottotitolo" FontSize="26" Margin="0,0,0,25" TextColor="Black" Text="PROVA SOTTOTITOLO">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="iOS" Value="RobotoCondensed-Light" />
+                        <On Platform="Android" Value="RobotoCondensed-Light.ttf#Font/RobotoCondensed-Light" />
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+            <Label x:Name="lblDescrizione" FontSize="Medium" LineHeight="1.10" Margin="0,0,0,25" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque, augue et tincidunt sodales, nisi ante cursus lacus, quis sodales dui sem at sem. Aliquam tempor consectetur arcu a tincidunt. Donec nec augue in erat facilisis imperdiet ac eu nibh. Donec metus lectus, facilisis sit amet dapibus quis, venenatis sit amet justo. Donec tellus lorem, fermentum quis elit sit amet, sagittis aliquet nisl. Integer eget consectetur neque. Phasellus feugiat, massa ut hendrerit suscipit, ipsum mi laoreet lorem, ac gravida sapien magna ac libero. Sed iaculis, ligula auctor efficitur posuere, orci arcu rutrum sem, quis egestas eros magna non elit. In ullamcorper tortor a lorem finibus, ac fermentum nibh blandit. Proin vitae condimentum dolor. Fusce blandit hendrerit dui vitae dignissim. Suspendisse orci arcu, accumsan at venenatis elementum, fermentum sit amet diam.">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="iOS" Value="Roboto-Light" />
+                        <On Platform="Android" Value="Roboto-Light.ttf#Roboto-Light" />
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+            <local:Accordion x:Name="Accordion0" AccordionName="Accordion0" Title="Ciao" BGColor="#F6F6F6">
+                <local:Accordion.Indicator></local:Accordion.Indicator>
+                <local:Accordion.AccordionContent>
+                    <StackLayout Orientation="Vertical" >
+                        <Image x:Name="imgSection1" Aspect="AspectFill"></Image>
+                        <StackLayout Margin="10,0,10,10" x:Name="stackContenuto_0" >
+                            <Label x:Name="lblciao" FontSize="Medium" LineHeight="1.10" Margin="0,0,0,25" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque, augue et tincidunt sodales, nisi ante cursus lacus, quis sodales dui sem at sem. Aliquam tempor consectetur arcu a tincidunt. Donec nec augue in erat facilisis imperdiet ac eu nibh. Donec metus lectus, facilisis sit amet dapibus quis, venenatis sit amet justo. Donec tellus lorem, fermentum quis elit sit amet, sagittis aliquet nisl. Integer eget consectetur neque. Phasellus feugiat, massa ut hendrerit suscipit, ipsum mi laoreet lorem, ac gravida sapien magna ac libero. Sed iaculis, ligula auctor efficitur posuere, orci arcu rutrum sem, quis egestas eros magna non elit. In ullamcorper tortor a lorem finibus, ac fermentum nibh blandit. Proin vitae condimentum dolor. Fusce blandit hendrerit dui vitae dignissim. Suspendisse orci arcu, accumsan at venenatis elementum, fermentum sit amet diam.">
+                                <Label.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String">
+                                        <On Platform="iOS" Value="Roboto-Light" />
+                                        <On Platform="Android" Value="Roboto-Light.ttf#Roboto-Light" />
+                                    </OnPlatform>
+                                </Label.FontFamily>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </local:Accordion.AccordionContent>
+            </local:Accordion>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
