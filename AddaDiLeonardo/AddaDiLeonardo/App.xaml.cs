@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AddaDiLeonardo.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using AddaDiLeonardo.Database;

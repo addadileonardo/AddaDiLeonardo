@@ -65,6 +65,8 @@
   <ItemGroup>
     <Compile Include="CustomLabelRender.cs" />
     <Compile Include="CustomLabelTitleRender.cs" />
+    <Compile Include="CustomLabel_IntroSubTitleRender.cs" />
+    <Compile Include="CustomLabel_IntroTitleRender.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Entitlements.plist" />

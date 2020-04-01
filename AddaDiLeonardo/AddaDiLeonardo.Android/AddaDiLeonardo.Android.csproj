@@ -69,6 +69,8 @@
   <ItemGroup>
     <Compile Include="CustomLabelRender.cs" />
     <Compile Include="CustomLabelTitleRender.cs" />
+    <Compile Include="CustomLabel_IntroSubTitleRender.cs" />
+    <Compile Include="CustomLabel_IntroTitleRender.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
