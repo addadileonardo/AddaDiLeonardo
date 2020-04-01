@@ -25,6 +25,7 @@ namespace AddaDiLeonardo.Views.Tappe
             accordions = new List<Accordion>() { Accordion_0 };
             foreach (Accordion accordion in accordions)
                 accordion.AccordionOpened += accordionEvent;
+            #region introduction
 
             close.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.close_5.png");
             ImgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_03.Rocchetta_01.JPG");
@@ -33,10 +34,12 @@ namespace AddaDiLeonardo.Views.Tappe
             lblSubTitle.Text = tappa.Sottotitolo;
             lblDescription.Text = tappa.Descrizione;
 
+            #endregion
 
+            #region accordion
             Accordion_0.Title = sezioni[0].Titolo;
             stackContenuto_0.Children.Add(FormattaContenuto.Formatta(contenuti_0[0].Testo));
-            
+            #endregion
 
         }
 

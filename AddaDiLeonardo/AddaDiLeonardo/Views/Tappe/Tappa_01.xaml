@@ -14,6 +14,8 @@
             
             <ScrollView x:Name="Scroll" Grid.Row="0">
                 <StackLayout Spacing="0">
+
+                    <!--#region INTRODUCTION-->
                     <ImageButton x:Name="ImgTappa" Aspect="AspectFill" Clicked="ImgTappa_Clicked"></ImageButton>
 
                     <StackLayout BackgroundColor="White">
@@ -35,9 +37,11 @@
                             <local:CustomLabel x:Name="lblDescription"></local:CustomLabel>
                         </StackLayout>
                     </StackLayout>
-                
+                    <!--#endregion-->
 
-                <local:Accordion x:Name="Accordion_0" AccordionName="Accordion_0" BGColor="#F6F6F6">
+
+                    <!--#region ACCORDION-->
+                    <local:Accordion x:Name="Accordion_0" AccordionName="Accordion_0" BGColor="#F6F6F6">
                     <local:Accordion.AccordionContent>
                             <StackLayout Orientation="Vertical" >
                                 <StackLayout Margin="10,0,10,10" x:Name="stackContenuto_0" >
@@ -46,7 +50,8 @@
                         </StackLayout>
                     </local:Accordion.AccordionContent>
                 </local:Accordion>
-
+                    <!--#endregion-->
+               
                 </StackLayout>
             </ScrollView>
             

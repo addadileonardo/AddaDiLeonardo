@@ -9,7 +9,7 @@ namespace AddaDiLeonardo.CustomControls
     {
         public CustomLabelTitle()
         {
-            FontFamily = Device.RuntimePlatform == Device.iOS ? "Roboto-Regular" : Device.RuntimePlatform == Device.Android ? "Roboto-Regular.ttf#Roboto" : "Assets/Roboto-Regular.ttf#Roboto";
+            FontFamily = Device.RuntimePlatform == Device.iOS ? "Roboto-Medium" : Device.RuntimePlatform == Device.Android ? "Roboto-Medium.ttf#Roboto" : "Assets/Roboto-Medium.ttf#Roboto";
             FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label));
             LineHeight = 1.10;
             FontAttributes = FontAttributes.Bold;
