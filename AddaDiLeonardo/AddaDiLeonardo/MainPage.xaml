@@ -8,7 +8,7 @@
              x:Class="AddaDiLeonardo.MainPage">
 
     <StackLayout>
-        <shared:MediaPlayerElement x:Name="myvideo" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></shared:MediaPlayerElement>
+        <Button Text="video" Clicked="Button_Clicked"></Button>
     </StackLayout>
 
 </ContentPage>
