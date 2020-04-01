@@ -20,7 +20,7 @@ namespace AddaDiLeonardo
         }
 
         private static Database.Database database;
-        public static Database.Database Databasea
+        public static Database.Database Database
         {
             get
             {

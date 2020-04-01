@@ -24,5 +24,10 @@ namespace AddaDiLeonardo
         {
             await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1-ybKXJo6ZUxK-OAVCftXiX0gq7IOpbQB"));
         }
+
+        private async void Button_Clicked_1(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Views.Tappe.Tappa_01());
+        }
     }
 }
