@@ -6,10 +6,31 @@
              mc:Ignorable="d"
              x:Class="AddaDiLeonardo.Views.HomePage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid BackgroundColor="Black">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <ScrollView Grid.Row="0">
+
+                    <!--QUA CI VA IL CODICE DELLA HOMEPAGE-->
+
+            </ScrollView>
+            <StackLayout Grid.Row="0" HorizontalOptions="End" VerticalOptions="Start" WidthRequest="70">
+
+                <Button Text="Click me" Clicked="btnOpen_Clicked" HorizontalOptions="End" x:Name="btnOpen" BackgroundColor="Transparent" TextColor="White"></Button>
+
+                <StackLayout x:Name="LanguageStack" HorizontalOptions="End">
+                    <Button x:Name="btnIT" Clicked="btnIT_Clicked" Text="IT" HorizontalOptions="End" BackgroundColor="Transparent" TextColor="White" ></Button>
+                    <Button x:Name="btnENG" Clicked="btnENG_Clicked" Text="ENG"  HorizontalOptions="End" BackgroundColor="Transparent" TextColor="White"></Button>
+                    <Button x:Name="btnFR" Clicked="btnFR_Clicked" Text="FR"  HorizontalOptions="End" BackgroundColor="Transparent" TextColor="White"></Button>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
+
+<!--La pagina contiene una grid con una sola row definition. al suo interno dichiari una scrollview che fa parte della riga 0
+    e poi uno stack layout che fa parte sempre della riga, in questo modo si sovrappongono ma uno scorre.
+    Ovviamente quello che sta sopra non deve essere grande tutta la pagina sennò quello sotto non è accessibile.-->
+
+<!--Ho dichiarato 4 bottoni: uno che si occupa dell'apertuta e chiusura dello stack di selezione, e tre per la selezione della lingua -->
