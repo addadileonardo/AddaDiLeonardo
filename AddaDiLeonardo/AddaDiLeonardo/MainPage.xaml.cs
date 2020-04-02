@@ -1,4 +1,5 @@
-﻿using LibVLCSharp.Shared;
+﻿using AddaDiLeonardo.Views;
+using LibVLCSharp.Shared;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,13 +18,41 @@ namespace AddaDiLeonardo
         public MainPage()
         {
             InitializeComponent();
-            //https://drive.google.com/uc?export=download&id=1IZxR7_jlFOtGRcUMGMPl0D9MdM1d8LUN
-            Core.Initialize();
-            var _libVLC = new LibVLC();
-            var media = new Media(_libVLC, "https://drive.google.com/uc?export=download&id=1IZxR7_jlFOtGRcUMGMPl0D9MdM1d8LUN", FromType.FromLocation);
-            myvideo.MediaPlayer = new MediaPlayer(media);
-            myvideo.MediaPlayer.Fullscreen = true;
-            myvideo.MediaPlayer.Play();
+        }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1-ybKXJo6ZUxK-OAVCftXiX0gq7IOpbQB"));
+        }
+
+        private async void Button_Clicked_1(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Views.Tappe.Tappa_01());
+        }
+
+        private async void Button_Clicked_2(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Views.Tappe.Tappa_04());
+        }
+
+        private async void Button_Clicked_3(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Views.Tappe.Tappa_03());
+        }
+
+        private async void Button_Clicked_4(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Views.Tappe.Tappa_02());
+        }
+
+        private async void Button_Clicked_5(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Views.Tappe.Tappa_05());
+        }
+
+        private async void Button_Clicked_6(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Views.HomePage());
         }
     }
 }

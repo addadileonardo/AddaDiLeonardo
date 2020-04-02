@@ -69,6 +69,8 @@
   <ItemGroup>
     <Compile Include="CustomLabelRender.cs" />
     <Compile Include="CustomLabelTitleRender.cs" />
+    <Compile Include="CustomLabel_IntroSubTitleRender.cs" />
+    <Compile Include="CustomLabel_IntroTitleRender.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -92,6 +94,15 @@
     <AndroidAsset Include="Assets\FontAwesome5Regular.otf" />
     <AndroidAsset Include="Assets\FontAwesome5Solid.otf" />
     <AndroidAsset Include="Assets\FontAwesome5Brands.otf" />
+    <AndroidAsset Include="Assets\Francese.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Inglese.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Italiano.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />

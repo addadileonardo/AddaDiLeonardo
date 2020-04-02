@@ -65,6 +65,8 @@
   <ItemGroup>
     <Compile Include="CustomLabelRender.cs" />
     <Compile Include="CustomLabelTitleRender.cs" />
+    <Compile Include="CustomLabel_IntroSubTitleRender.cs" />
+    <Compile Include="CustomLabel_IntroTitleRender.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Entitlements.plist" />
@@ -88,6 +90,15 @@
     <BundleResource Include="Resources\FontAwesome5Solid.otf" />
     <BundleResource Include="Resources\FontAwesome5Brands.otf" />
     <BundleResource Include="Resources\FontAwesome5Regular.otf" />
+    <BundleResource Include="Resources\Francese.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Inglese.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Italiano.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
