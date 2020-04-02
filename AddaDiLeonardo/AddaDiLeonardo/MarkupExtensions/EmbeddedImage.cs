@@ -6,8 +6,7 @@ using Xamarin.Forms.Xaml;
 
 namespace AddaDiLeonardo.MarkupExtensions
 {
-    [ContentProperty("ResourceId")]
-    class EmbeddedImage : IMarkupExtension
+    class EmbeddedImage: IMarkupExtension
     {
         public string ResourceId { get; set; }
 
@@ -18,6 +17,5 @@ namespace AddaDiLeonardo.MarkupExtensions
 
             return ImageSource.FromResource(ResourceId);
         }
-
     }
 }
