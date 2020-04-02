@@ -2,14 +2,96 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:AddaDiLeonardo.CustomControls"
              mc:Ignorable="d"
              x:Class="AddaDiLeonardo.Views.Tappe.Tappa_05">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <ScrollView x:Name="Scroll" Grid.Row="0">
+                <StackLayout Spacing="0">
+
+                    <!--#region INTRODUCTION-->
+                    <ImageButton x:Name="ImgTappa" Aspect="AspectFill" Clicked="ImgTappa_Clicked"></ImageButton>
+
+                    <StackLayout BackgroundColor="White">
+
+                        <StackLayout Margin="20,25,20,20">
+                            <local:CustomLabel_IntroTitle x:Name="lblTitle"></local:CustomLabel_IntroTitle>
+                            <local:CustomLabel_IntroSubTitle x:Name="lblSubTitle" Margin="0,0,0,25"></local:CustomLabel_IntroSubTitle>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Margin="0,0,0,25">
+                                <Image x:Name="iconMarker" Aspect="AspectFit"></Image>
+                                <Label  Text="Cornate d'Adda">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="iOS" Value="Roboto-Light" />
+                                            <On Platform="Android" Value="Roboto-Light.ttf#Roboto" />
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                            </StackLayout>
+                            <local:CustomLabel x:Name="lblDescription"></local:CustomLabel>
+                        </StackLayout>
+                    </StackLayout>
+                    <!--#endregion-->
+
+                    <!--#region ACCORDION-->
+                    <local:Accordion x:Name="Accordion_0" AccordionName="Accordion_0" BGColor="#F6F6F6">
+                        <local:Accordion.AccordionContent>
+                            <StackLayout Orientation="Vertical" >
+                                <Image x:Name="imgSection_0" Aspect="AspectFill"></Image>
+                                <StackLayout Margin="10,0,10,10" x:Name="stackContenuto_0" >
+
+                                </StackLayout>
+                            </StackLayout>
+                        </local:Accordion.AccordionContent>
+                    </local:Accordion>
+
+                    <local:Accordion x:Name="Accordion_1" AccordionName="Accordion_1">
+                        <local:Accordion.AccordionContent>
+                            <StackLayout Orientation="Vertical" >
+                                <Image x:Name="imgSection_1" Aspect="AspectFill"></Image>
+                                <StackLayout Margin="10,0,10,10" x:Name="stackContenuto_1" >
+
+                                </StackLayout>
+                            </StackLayout>
+                        </local:Accordion.AccordionContent>
+                    </local:Accordion>
+
+                    <local:Accordion x:Name="Accordion_2" AccordionName="Accordion_2" BGColor="#F6F6F6">
+                        <local:Accordion.AccordionContent>
+                            <StackLayout Orientation="Vertical" >
+                                <Image x:Name="imgSection_2" Aspect="AspectFill"></Image>
+                                <StackLayout Margin="10,0,10,10" x:Name="stackContenuto_2" >
+
+                                </StackLayout>
+                            </StackLayout>
+                        </local:Accordion.AccordionContent>
+                    </local:Accordion>
+
+                    <local:Accordion x:Name="Accordion_3" AccordionName="Accordion_3">
+                        <local:Accordion.AccordionContent>
+                            <StackLayout Orientation="Vertical" >
+                                <Image x:Name="imgSection_3" Aspect="AspectFill"></Image>
+                                <StackLayout Margin="10,0,10,10" x:Name="stackContenuto_3" >
+
+                                </StackLayout>
+                            </StackLayout>
+                        </local:Accordion.AccordionContent>
+                    </local:Accordion>
+
+                    <!--#endregion-->
+
+                </StackLayout>
+            </ScrollView>
+
+            <ImageButton Clicked="close_Clicked" BackgroundColor="Transparent" Margin="0,10,10,0" HeightRequest="40" x:Name="close" Grid.Row="0" VerticalOptions="Start" HorizontalOptions="End"></ImageButton>
+
+        </Grid>
+
     </ContentPage.Content>
 </ContentPage>

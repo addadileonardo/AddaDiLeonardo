@@ -32,7 +32,7 @@ namespace AddaDiLeonardo
 
         private async void Button_Clicked_2(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new Views.Tappe.Tappa_02());
+            await Navigation.PushModalAsync(new Views.Tappe.Tappa_04());
         }
 
         private async void Button_Clicked_3(object sender, EventArgs e)
@@ -42,7 +42,7 @@ namespace AddaDiLeonardo
 
         private async void Button_Clicked_4(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new Views.Tappe.Tappa_04());
+            await Navigation.PushModalAsync(new Views.Tappe.Tappa_02());
         }
 
         private async void Button_Clicked_5(object sender, EventArgs e)
