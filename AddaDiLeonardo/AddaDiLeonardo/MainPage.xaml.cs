@@ -49,5 +49,10 @@ namespace AddaDiLeonardo
         {
             await Navigation.PushModalAsync(new Views.Tappe.Tappa_05());
         }
+
+        private async void Button_Clicked_6(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Views.HomePage());
+        }
     }
 }
