@@ -25,6 +25,36 @@ namespace AddaDiLeonardo.Views
             LanguageStack.TranslateTo(0, -200, 00); //traslo lo stack di selezione di -200 sull'asse y-> in realtà purtroppo non escono fuori dallo schermo ma si sovrappongono nell'angolino a destra. quindi se lo sfono non è trasparente si vedono..
         }
 
+        private object syncLockPlayer = new object();
+        bool isInCallPlayer = false;
+
+        private async void btnRiproduci_Clicked(object sender, EventArgs e)
+        {
+            lock (syncLockPlayer)
+            {
+                if (isInCallPlayer)
+                    return;
+                isInCallPlayer = true;
+            }
+
+            try
+            {
+                //await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1-ybKXJo6ZUxK-OAVCftXiX0gq7IOpbQB"));
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                lock (syncLockPlayer)
+                {
+                    isInCallPlayer = false;
+                }
+            }
+
+        }
+
         /// <summary>
         /// Apre o chiude lo stack di selezione
         /// </summary>
