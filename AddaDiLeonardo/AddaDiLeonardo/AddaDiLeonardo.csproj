@@ -46,11 +46,13 @@
     <None Remove="Images\Tappe\Tappa_03\Rocchetta_19.jpg" />
     <None Remove="Images\Tappe\Tappa_03\Rocchetta_20.jpg" />
     <None Remove="Images\Tappe\Tappa_03\Rocchetta_21.jpg" />
+    <None Remove="Images\Tappe\Tappa_03\Rocchetta_22.jpg" />
     <None Remove="Images\Tappe\Tappa_04\ponte_01.jpg" />
     <None Remove="Images\Tappe\Tappa_04\ponte_02.jpg" />
     <None Remove="Images\Tappe\Tappa_04\ponte_03.jpg" />
     <None Remove="Images\Tappe\Tappa_04\ponte_04.jpg" />
     <None Remove="Images\Tappe\Tappa_04\ponte_05.jpg" />
+    <None Remove="Images\Tappe\Tappa_04\ponte_06.PNG" />
     <None Remove="Images\Tappe\Tappa_05\centrali_01.jpg" />
     <None Remove="Images\Tappe\Tappa_05\centrali_02.jpg" />
     <None Remove="Images\Tappe\Tappa_05\centrali_03.jpg" />
@@ -60,6 +62,7 @@
     <None Remove="Images\Tappe\Tappa_05\centrali_07.jpg" />
     <None Remove="Images\Tappe\Tappa_05\centrali_08.jpg" />
     <None Remove="Images\Tappe\Tappa_05\centrali_09.jpg" />
+    <None Remove="Images\Tappe\Tappa_05\centrali_10.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -74,7 +77,9 @@
     <EmbeddedResource Include="Images\Map\ponteW.png" />
     <EmbeddedResource Include="Images\Map\santuarioW.png" />
     <EmbeddedResource Include="Images\Map\traghettoW.png" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_22.jpg" />
     <EmbeddedResource Include="Images\Tappe\Tappa_04\ponte_03.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_04\ponte_06.PNG" />
     <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_01.jpg" />
     <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_02.jpg" />
     <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_03.jpg" />
@@ -115,6 +120,7 @@
     <EmbeddedResource Include="Images\Tappe\Tappa_04\ponte_02.jpg" />
     <EmbeddedResource Include="Images\Tappe\Tappa_04\ponte_04.jpg" />
     <EmbeddedResource Include="Images\Tappe\Tappa_04\ponte_05.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_10.jpg" />
   </ItemGroup>
 
   <ItemGroup>
