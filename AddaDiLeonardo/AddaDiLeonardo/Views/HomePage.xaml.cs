@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AddaDiLeonardo.Views.Tappe;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,131 @@ namespace AddaDiLeonardo.Views
             btnOpen.Text = ActiveLanguage; //imposto la lingua attiva
             LanguageStack.TranslateTo(0, -200, 00); //traslo lo stack di selezione di -200 sull'asse y-> in realtà purtroppo non escono fuori dallo schermo ma si sovrappongono nell'angolino a destra. quindi se lo sfono non è trasparente si vedono..
         }
+
+        #region "STEP"
+        private object syncLockTappa = new object();
+        bool isInCallTappa = false;
+
+        private async void OnImageNameTapped(object sender, EventArgs args)
+        {
+
+            lock (syncLockTappa)
+            {
+                if (isInCallTappa)
+                    return;
+                isInCallTappa = true;
+            }
+
+            try
+            {
+
+                switch (((Image)sender).ClassId)
+                {
+
+                    case "step1":
+                        var TappaFiume = new Tappa_01();
+                        await Navigation.PushModalAsync(TappaFiume);
+                        break;
+
+                    case "step2":
+                        var TappaPonte = new Tappa_04();
+                        await Navigation.PushModalAsync(TappaPonte);
+                        break;
+
+                    case "step3":
+                        var TappaRocchetta = new Tappa_03();
+                        await Navigation.PushModalAsync(TappaRocchetta);
+                        break;
+
+                    case "step4":
+                        var TappaTraghetto = new Tappa_02();
+                        await Navigation.PushModalAsync(TappaTraghetto);
+                        break;
+                    case "step5":
+                        var TappaCentrali = new Tappa_05();
+                        await Navigation.PushModalAsync(TappaCentrali);
+                        break;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                lock (syncLockTappa)
+                {
+                    isInCallTappa = false;
+                }
+            }
+
+        }
+        #endregion
+
+        #region "VIDEOPLAYER"
+        private object syncLockPlayer = new object();
+        bool isInCallPlayer = false;
+
+        private async void btnVideoPlayer_Clicked(object sender, EventArgs e)
+        {
+            lock (syncLockPlayer)
+            {
+                if (isInCallPlayer)
+                    return;
+                isInCallPlayer = true;
+            }
+
+            try
+            {
+                await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1-ybKXJo6ZUxK-OAVCftXiX0gq7IOpbQB"));
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                lock (syncLockPlayer)
+                {
+                    isInCallPlayer = false;
+                }
+            }
+
+        }
+        #endregion
+
+        #region "MAP"
+        private object syncLockMap = new object();
+        bool isInCallMap = false;
+
+        private async void btnMap_Clicked(object sender, EventArgs e)
+        {
+            lock (syncLockMap)
+            {
+                if (isInCallMap)
+                    return;
+                isInCallPlayer = true;
+            }
+
+            try
+            {
+                await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1-ybKXJo6ZUxK-OAVCftXiX0gq7IOpbQB"));
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                lock (syncLockMap)
+                {
+                    isInCallMap = false;
+                }
+            }
+
+        }
+        #endregion
 
         /// <summary>
         /// Apre o chiude lo stack di selezione
