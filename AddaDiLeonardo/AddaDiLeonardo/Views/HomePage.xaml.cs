@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AddaDiLeonardo.Views.Tappe;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,65 @@ namespace AddaDiLeonardo.Views
             InitializeComponent();
             btnOpen.Text = ActiveLanguage; //imposto la lingua attiva
             LanguageStack.TranslateTo(0, -200, 00); //traslo lo stack di selezione di -200 sull'asse y-> in realtà purtroppo non escono fuori dallo schermo ma si sovrappongono nell'angolino a destra. quindi se lo sfono non è trasparente si vedono..
+        }
+
+        private object syncLockTappa = new object();
+        bool isInCallTappa = false;
+
+        private async void OnImageNameTapped(object sender, EventArgs args)
+        {
+
+            lock (syncLockTappa)
+            {
+                if (isInCallTappa)
+                    return;
+                isInCallTappa = true;
+            }
+
+            try
+            {
+
+                switch (((Image)sender).ClassId)
+                {
+
+                    case "step1":
+                        var TappaFiume = new Tappa_01();
+                        await Navigation.PushModalAsync(TappaFiume);
+                        break;
+
+                    case "step2":
+                        var TappaPonte = new Tappa_04();
+                        await Navigation.PushModalAsync(TappaPonte);
+                        break;
+
+                    case "step3":
+                        var TappaRocchetta = new Tappa_03();
+                        await Navigation.PushModalAsync(TappaRocchetta);
+                        break;
+
+                    case "step4":
+                        var TappaTraghetto = new Tappa_02();
+                        await Navigation.PushModalAsync(TappaTraghetto);
+                        break;
+                    case "step5":
+                        var TappaCentrali = new Tappa_05();
+                        await Navigation.PushModalAsync(TappaCentrali);
+                        break;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                lock (syncLockTappa)
+                {
+                    isInCallTappa = false;
+                }
+            }
+
         }
 
         private object syncLockPlayer = new object();

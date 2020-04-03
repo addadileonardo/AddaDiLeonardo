@@ -41,6 +41,28 @@
                         </Image.GestureRecognizers>
                     </Image>
 
+                    <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.ponte.png}" Aspect="AspectFill" HeightRequest="200" ClassId="step1" x:Name="step1"
+			        RelativeLayout.XConstraint="{ConstraintExpression
+				    Type=RelativeToParent,
+			        Property=X,
+				    Factor=1}"
+                    RelativeLayout.YConstraint="{ConstraintExpression
+                    Type=RelativeToView,
+                    ElementName=background,
+                    Property=Height, 
+                    Factor=1,
+                    Constant=5}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                    Type=RelativeToParent,
+                    Property=Width,
+                    Factor=1}">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                            Tapped="OnImageNameTapped"
+                            NumberOfTapsRequired="1" />
+                        </Image.GestureRecognizers>
+                    </Image>
+
                 </RelativeLayout>
 
             </ScrollView>
