@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:local="clr-namespace:AddaDiLeonardo.MarkupExtensions"
+             xmlns:local="clr-namespace:AddaDiLeonardo.MarkupExtensions" 
+             xmlns:Local="clr-namespace:AddaDiLeonardo.CustomControls"
              mc:Ignorable="d"
              x:Class="AddaDiLeonardo.Views.HomePage">
     <ContentPage.Content>
@@ -40,6 +41,23 @@
                             NumberOfTapsRequired="1" />
                         </Image.GestureRecognizers>
                     </Image>
+
+                    <Local:CustomLabel Text="Testo di prova testo di prova testo di prova" TextColor="White" WidthRequest="300"
+                    RelativeLayout.XConstraint="{ConstraintExpression
+				    Type=RelativeToView,
+                    ElementName=background,
+			        Property=Width,
+				    Factor=0.5,
+                    Constant=-150}"
+                    RelativeLayout.YConstraint="{ConstraintExpression
+                    Type=RelativeToView,
+                    ElementName=background,
+                    Property=Height, 
+                    Factor= 1,
+                    Constant=-265}">
+                                       
+                        
+                    </Local:CustomLabel>
 
                     <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.centrale.png}" Aspect="AspectFill" WidthRequest="170" HeightRequest="38" x:Name="map"
 			        RelativeLayout.XConstraint="{ConstraintExpression
