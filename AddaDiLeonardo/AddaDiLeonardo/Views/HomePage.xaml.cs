@@ -26,6 +26,7 @@ namespace AddaDiLeonardo.Views
             LanguageStack.TranslateTo(0, -200, 00); //traslo lo stack di selezione di -200 sull'asse y-> in realtà purtroppo non escono fuori dallo schermo ma si sovrappongono nell'angolino a destra. quindi se lo sfono non è trasparente si vedono..
         }
 
+        #region "TAPPE"
         private object syncLockTappa = new object();
         bool isInCallTappa = false;
 
@@ -84,7 +85,9 @@ namespace AddaDiLeonardo.Views
             }
 
         }
+        #endregion
 
+        #region "VIDEOPLAYER"
         private object syncLockPlayer = new object();
         bool isInCallPlayer = false;
 
@@ -114,6 +117,7 @@ namespace AddaDiLeonardo.Views
             }
 
         }
+        #endregion
 
         /// <summary>
         /// Apre o chiude lo stack di selezione
