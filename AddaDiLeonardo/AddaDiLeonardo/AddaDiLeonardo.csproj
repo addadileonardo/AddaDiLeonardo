@@ -11,12 +11,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\Home\background.png" />
     <None Remove="Images\Home\backgroundtesto.jpg" />
     <None Remove="Images\Home\centrale.png" />
-    <None Remove="Images\Home\play.png" />
     <None Remove="Images\Home\ponte.png" />
     <None Remove="Images\Home\rocchetta.png" />
     <None Remove="Images\Home\traghetto.png" />
+    <None Remove="Images\Home\videoplayer.png" />
     <None Remove="Images\Icons\arrow2.png" />
     <None Remove="Images\Icons\close_4.png" />
     <None Remove="Images\Icons\close_5.png" />
@@ -66,9 +67,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Images\Home\background.png" />
     <EmbeddedResource Include="Images\Home\backgroundtesto.jpg" />
     <EmbeddedResource Include="Images\Home\centrale.png" />
-    <EmbeddedResource Include="Images\Home\play.png" />
+    <EmbeddedResource Include="Images\Home\videoplayer.png" />
     <EmbeddedResource Include="Images\Home\ponte.png" />
     <EmbeddedResource Include="Images\Home\rocchetta.png" />
     <EmbeddedResource Include="Images\Home\traghetto.png" />

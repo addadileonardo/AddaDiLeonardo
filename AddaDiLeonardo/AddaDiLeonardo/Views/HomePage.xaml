@@ -15,13 +15,13 @@
 
                 <RelativeLayout Padding="0, 0, 0, 0">
 
-                    <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.backgroundtesto.jpg}" Aspect="AspectFill" x:Name="background"
+                    <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.background.png}" Aspect="AspectFill" x:Name="background"
 			        RelativeLayout.WidthConstraint="{ConstraintExpression
 				    Type=RelativeToParent,
 			        Property=Width,
 				    Factor=1}" />
 
-                    <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.play.png}" Aspect="AspectFit" WidthRequest="170" HeightRequest="38" x:Name="play"
+                    <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.videoplayer.png}" Aspect="AspectFit" WidthRequest="170" HeightRequest="38" x:Name="videoplayer"
 			        RelativeLayout.XConstraint="{ConstraintExpression
 				    Type=RelativeToView,
                     ElementName=background,
@@ -33,7 +33,7 @@
                     ElementName=background,
                     Property=Height, 
                     Factor= 1,
-                    Constant=-55}">
+                    Constant=-245}">
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer
                             Tapped="btnRiproduci_Clicked"
