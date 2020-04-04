@@ -16,7 +16,7 @@ namespace AddaDiLeonardo
             InitializeComponent();
 
             //MainPage = new Views.Tappe.Tappa_01();
-            MainPage = new MainPage();
+            MainPage = new HomePage();
         }
 
         private static Database.Database database;
