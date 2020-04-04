@@ -12,6 +12,11 @@
 
   <ItemGroup>
     <None Remove="Images\Home\background.png" />
+    <None Remove="Images\Home\centrale.jpg" />
+    <None Remove="Images\Home\fiume.jpg" />
+    <None Remove="Images\Home\ponte.jpg" />
+    <None Remove="Images\Home\rocchetta.jpg" />
+    <None Remove="Images\Home\traghetto.jpg" />
     <None Remove="Images\Home\videoplayer.png" />
     <None Remove="Images\Icons\arrow2.png" />
     <None Remove="Images\Icons\close_4.png" />
@@ -63,6 +68,11 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Images\Home\background.png" />
+    <EmbeddedResource Include="Images\Home\centrale.jpg" />
+    <EmbeddedResource Include="Images\Home\fiume.jpg" />
+    <EmbeddedResource Include="Images\Home\ponte.jpg" />
+    <EmbeddedResource Include="Images\Home\rocchetta.jpg" />
+    <EmbeddedResource Include="Images\Home\traghetto.jpg" />
     <EmbeddedResource Include="Images\Home\videoplayer.png" />
     <EmbeddedResource Include="Images\Map\centraleW.png" />
     <EmbeddedResource Include="Images\Map\MappaRaul.png" />
