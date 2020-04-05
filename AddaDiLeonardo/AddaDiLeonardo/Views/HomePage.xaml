@@ -39,35 +39,65 @@
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="200"></RowDefinition>
                                 </Grid.RowDefinitions>
-                                <Image Grid.Row="0" Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.fiume.jpg}" Aspect="AspectFill" ClassId="step1" x:Name="step1"></Image>
+                                <Image Grid.Row="0" Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.fiume.jpg}" Aspect="AspectFill" ClassId="step1" x:Name="step1">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                        Tapped="OnImageNameTapped"
+                                        NumberOfTapsRequired="1" />
+                                    </Image.GestureRecognizers>
+                                </Image>
                                 <Local:CustomLabel Grid.Row="0" HorizontalOptions="End" VerticalOptions="End" Padding="5, 0, 5, 0" BackgroundColor="Black" TextColor="White" x:Name="fiumeText" Text="IL FIUME"></Local:CustomLabel>
                             </Grid>
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="200"></RowDefinition>
                                 </Grid.RowDefinitions>
-                                <Image Grid.Row="0" Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.ponte.jpg}" Aspect="AspectFill" ClassId="step2" x:Name="step2"></Image>
+                                <Image Grid.Row="0" Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.ponte.jpg}" Aspect="AspectFill" ClassId="step2" x:Name="step2">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                        Tapped="OnImageNameTapped"
+                                        NumberOfTapsRequired="1" />
+                                    </Image.GestureRecognizers>
+                                </Image>
                                 <Local:CustomLabel Grid.Row="0" HorizontalOptions="End" VerticalOptions="End" Padding="5, 0, 5, 0" BackgroundColor="Black" TextColor="White" x:Name="ponteText" Text="IL PONTE"></Local:CustomLabel>
                             </Grid>
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="200"></RowDefinition>
                                 </Grid.RowDefinitions>
-                                <Image Grid.Row="0" Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.rocchetta.jpg}" Aspect="AspectFill" ClassId="step3" x:Name="step3"></Image>
+                                <Image Grid.Row="0" Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.rocchetta.jpg}" Aspect="AspectFill" ClassId="step3" x:Name="step3">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                        Tapped="OnImageNameTapped"
+                                        NumberOfTapsRequired="1" />
+                                    </Image.GestureRecognizers>
+                                </Image>
                                 <Local:CustomLabel Grid.Row="0" HorizontalOptions="End" VerticalOptions="End" Padding="5, 0, 5, 0" BackgroundColor="Black" TextColor="White" x:Name="rocchettaText" Text="LA ROCCHETTA"></Local:CustomLabel>
                             </Grid>
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="200"></RowDefinition>
                                 </Grid.RowDefinitions>
-                                <Image Grid.Row="0" Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.traghetto.jpg}" Aspect="AspectFill" ClassId="step4" x:Name="step4"></Image>
+                                <Image Grid.Row="0" Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.traghetto.jpg}" Aspect="AspectFill" ClassId="step4" x:Name="step4">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                        Tapped="OnImageNameTapped"
+                                        NumberOfTapsRequired="1" />
+                                    </Image.GestureRecognizers>
+                                </Image>
                                 <Local:CustomLabel Grid.Row="0" HorizontalOptions="End" VerticalOptions="End" Padding="5, 0, 5, 0" BackgroundColor="Black" TextColor="White" x:Name="traghettoText" Text="IL TRAGHETTO"></Local:CustomLabel>
                             </Grid>
-                            <Grid>
+                            <Grid RowSpacing="0">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="200"></RowDefinition>
                                 </Grid.RowDefinitions>
-                                <Image Grid.Row="0" Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.centrale.jpg}" Aspect="AspectFill" ClassId="step5" x:Name="step5"></Image>
+                                <Image Grid.Row="0" Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.centrale.jpg}" Aspect="AspectFill" ClassId="step5" x:Name="step5">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                        Tapped="OnImageNameTapped"
+                                        NumberOfTapsRequired="1" />
+                                    </Image.GestureRecognizers>
+                                </Image>
                                 <Local:CustomLabel Grid.Row="0" HorizontalOptions="End" VerticalOptions="End" Padding="5, 0, 5, 0" BackgroundColor="Black" TextColor="White" x:Name="centraleText" Text="LA CENTRALE"></Local:CustomLabel>
                             </Grid>
 
