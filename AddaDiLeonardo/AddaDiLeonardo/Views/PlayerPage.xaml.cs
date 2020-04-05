@@ -17,6 +17,7 @@ namespace AddaDiLeonardo.Views
         public PlayerPage(string link)
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
             Core.Initialize();
             _link = link;
             close.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.close_5.png");
