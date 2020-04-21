@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace AddaDiLeonardo.Database
 {
+    //Metodo di estensione per eseguire in modo asincrono in contesti dove non è possibile
     public static class AsyncTaskExtensions
     {
         public static async void SafeFireAndForget(this Task task,

@@ -30,6 +30,9 @@ namespace AddaDiLeonardo.Database
                     !DatabaseConnection.TableMappings.Any(m => m.MappedType.Name == typeof(Sezioni).Name) ||
                     !DatabaseConnection.TableMappings.Any(m => m.MappedType.Name == typeof(Contenuti).Name))
                 {
+
+                    //Originariamente creava le tabelle se non erano presenti
+
                     //await Database.CreateTablesAsync(CreateFlags.None, typeof(TodoItem)).ConfigureAwait(false);
                     //initialized = true;
                     //throw new Exception("Non tutte le tabelle sono implementate correttamente");
@@ -41,52 +44,69 @@ namespace AddaDiLeonardo.Database
 
         public Database()
         {
-            Initialize().SafeFireAndForget(false);
+            Initialize().SafeFireAndForget(false);//Metodo di estensione per eseguire funzioni asincrone all'interno dei costruttori di classe
         }
 
         //===== Metodi =====
 
-        //Tappe
+        #region Tappe
+
+        //Metodo che ritorna la lista completa delle tappe
         public Task<List<Tappe>> GetTappeAsync()
         {
             return DatabaseConnection.Table<Tappe>().ToListAsync();
         }
 
+        //Metodo che ritorna la tappa in base all'id
         public Task<Tappe> GetTappeSingleAsync(int idTappa)
         {
             return DatabaseConnection.FindWithQueryAsync<Tappe>("SELECT [Id], [Titolo], [Sottotitolo], [Descrizione] FROM [Tappe] WHERE [Id] = ?", idTappa);
         }
 
-        //sezioni
+        #endregion
+
+        #region Sezioni
+
+        //Metodo che ritorna la lista completa delle sezioni
         public Task<List<Sezioni>> GetSezioniAsync()
         {
             return DatabaseConnection.Table<Sezioni>().ToListAsync();
         }
 
+        //Metodo che ritorna la lista di sezioni appartenenti alla tappa con id uguale a idTappa
         public Task<List<Sezioni>> GetSezioniAsync(int idTappa)
         {
             return DatabaseConnection.QueryAsync<Sezioni>("SELECT [Id], [Titolo], [Tappa] FROM [Sezioni] WHERE [Tappa] = ?", idTappa);
         }
 
+        //Metodo che ritorna la sezione in base al suo id
         public Task<Sezioni> GetSezioniSingleAsync(int idSezioni)
         {
             return DatabaseConnection.FindWithQueryAsync<Sezioni>("SELECT [Id], [Titolo], [Tappa] FROM [Sezioni] WHERE [Id] = ?", idSezioni);
         }
 
-        //contenuti
+        #endregion
+
+        #region Contenuti
+
+        //Metodo che ritorna la lista completa di contenuti
         public Task<List<Contenuti>> GetContenutiAsync()
         {
             return DatabaseConnection.Table<Contenuti>().ToListAsync();
         }
 
+        //Metodo che ritorna la lista di contenuti appartenenti alla sezione con id uguale a idSezione
         public Task<List<Contenuti>> GetContenutiAsync(int idSezione)
         {
             return DatabaseConnection.QueryAsync<Contenuti>("SELECT [Sezione], [Indice], [Testo] FROM [Contenuti] WHERE [Sezione] = ?", idSezione);
         }
 
+        //Metodo che ritorna il contenuto inbase alla sezione e l'indice forniti
         public Task<Contenuti> GetContenutiSingleAsync(int idSezione, int idIndice)
         {
             return DatabaseConnection.FindWithQueryAsync<Contenuti>("SELECT [Sezione], [Indice], [Testo] FROM [Contenuti] WHERE [Sezione] = ? AND [Indice] = ?", idSezione, idIndice);
         }
+
+        #endregion
     }
 }
