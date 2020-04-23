@@ -43,7 +43,8 @@ namespace AddaDiLeonardo.iOS
 
             if (!File.Exists(filename))
             {
-                System.IO.File.Copy("Database/"+dbname, filename);
+                //System.IO.File.Copy("Database/"+dbname, filename);
+                System.IO.File.Copy(NSBundle.MainBundle.PathForResource(dbname, type), filename);
             }
         }
     }
