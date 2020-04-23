@@ -10,14 +10,15 @@ namespace AddaDiLeonardo.Database
 {
     public class Database
     {
-        //Inizializzazione ritardata
-        static readonly Lazy<SQLiteAsyncConnection> lazyInitializer = new Lazy<SQLiteAsyncConnection>(() =>
+        //Inizializzazione ritardata 
+        //Viene richiamato quando l'istanza viene inizializzata e assegna il valore a DatabaseConnection
+        private readonly Lazy<SQLiteAsyncConnection> lazyInitializer = new Lazy<SQLiteAsyncConnection>(() =>
         {
             return new SQLiteAsyncConnection(Constants.DatabasePath, Constants.Flags);
         });
 
         //Connessione
-        static SQLiteAsyncConnection DatabaseConnection => lazyInitializer.Value;
+        public SQLiteAsyncConnection DatabaseConnection => lazyInitializer.Value;
         static bool initialized = false;
 
         async Task Initialize()
@@ -45,6 +46,7 @@ namespace AddaDiLeonardo.Database
         public Database()
         {
             Initialize().SafeFireAndForget(false);//Metodo di estensione per eseguire funzioni asincrone all'interno dei costruttori di classe
+            //DatabaseConnection = lazyInitializer.Value;
         }
 
         //===== Metodi =====
