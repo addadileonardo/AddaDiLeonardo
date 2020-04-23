@@ -28,7 +28,7 @@ namespace AddaDiLeonardo.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
 
-            //Database
+            //Caricamento dei database
             ExtractDBFromAssets(dbname: "Italiano.db");
             ExtractDBFromAssets(dbname: "Inglese.db");
             ExtractDBFromAssets(dbname: "Francese.db");
@@ -41,16 +41,18 @@ namespace AddaDiLeonardo.Droid
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
 
+        
+        //funzione per copiare i file dalla cartella Assets del progetto ad una altra con i privilegi di lettura/scrittura
         public void ExtractDBFromAssets(string dbname)
         {
-            string destination = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-            string filename = System.IO.Path.Combine(destination, dbname);
+            string destination = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal); //cartella di sistema con i permessi
+            string filename = System.IO.Path.Combine(destination, dbname); //nuovo path+filename composto dalla cartella e il nome del file passato come argomento
 
-            if (!System.IO.File.Exists(filename))
+            if (!System.IO.File.Exists(filename)) //controlla se il file esiste già
             {
                 using (FileStream writeStream = new FileStream(filename, FileMode.OpenOrCreate, FileAccess.Write))
                 {
-                    Assets.Open(dbname).CopyTo(writeStream);
+                    Assets.Open(dbname).CopyTo(writeStream); //Metodi concatenati per aprire e copiare i file con AssetsManager di Android
                 }
             }
         }

@@ -19,6 +19,7 @@ namespace AddaDiLeonardo
             MainPage = new MainPage();
         }
 
+        //Singleton pattern per la gestione del db
         private static Database.Database database;
         public static Database.Database Database
         {
