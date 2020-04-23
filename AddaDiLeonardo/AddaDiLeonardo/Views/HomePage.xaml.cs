@@ -16,12 +16,14 @@ namespace AddaDiLeonardo.Views
         //proprietà booleana per verificare se lo stack di selezione è aperto o chiuso
         public static bool isOpen = false;
 
-        //proprietà per tener traccia della lingua attiva -> da sostituire con quella già implementata in app per poi conservare l'impostazione alla chiusura
+        //proprietà per tener traccia della lingua attiva
         public static string ActiveLanguage = "IT";
 
         public HomePage()
         {
             InitializeComponent();
+            if(Application.Current.Properties.ContainsKey("lang"))
+                ActiveLanguage = Application.Current.Properties["lang"].ToString(); //viene impostata la lingua memorizzata se presente, altrimenti ita di default.
             btnOpen.Text = ActiveLanguage; //imposto la lingua attiva
             LanguageStack.TranslateTo(0, -200, 00); //traslo lo stack di selezione di -200 sull'asse y-> in realtà purtroppo non escono fuori dallo schermo ma si sovrappongono nell'angolino a destra. quindi se lo sfono non è trasparente si vedono..
         }
@@ -169,18 +171,21 @@ namespace AddaDiLeonardo.Views
         private void btnIT_Clicked(object sender, EventArgs e)
         {
             ActiveLanguage = "IT";
+            Application.Current.Properties["lang"] = "IT";
             Close();
         }
 
         private void btnENG_Clicked(object sender, EventArgs e)
         {
             ActiveLanguage = "ENG";
+            Application.Current.Properties["lang"] = "ENG";
             Close();
         }
 
         private void btnFR_Clicked(object sender, EventArgs e)
         {
             ActiveLanguage = "FR";
+            Application.Current.Properties["lang"] = "FR";
             Close();
         }
 
