@@ -28,7 +28,7 @@ namespace AddaDiLeonardo.Views.Tappe
 
             #region introduction
             close.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.close_5.png");
-            ImgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_05.centrali_10.jpg");
+            ImgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_05.centrali_05.jpg");
             iconMarker.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.Icon-Place_@3x.png");
             lblTitle.Text = tappa.Titolo;
             lblSubTitle.Text = tappa.Sottotitolo;
