@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 using Foundation;
@@ -27,7 +28,23 @@ namespace AddaDiLeonardo.iOS
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
+            //Database
+            ExtractBDFromResources("Italiano.db");
+            ExtractBDFromResources("Inglese.db");
+            ExtractBDFromResources("Francese.db");
+
             return base.FinishedLaunching(app, options);
+        }
+
+        public static void ExtractBDFromResources(string dbname)
+        {
+            string destination = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            string filename = System.IO.Path.Combine(destination, dbname);
+
+            if (!File.Exists(filename))
+            {
+                System.IO.File.Copy("Database/"+dbname, filename);
+            }
         }
     }
 }
