@@ -17,7 +17,6 @@ namespace AddaDiLeonardo.Views.Tappe
         public Tappa_03()
         {
             InitializeComponent();
-            var path = Database.Constants.DatabasePath;
             var tappa = App.Database.GetTappeSingleAsync(idTappa: 2).Result;
             var sezioni = App.Database.GetSezioniAsync(idTappa: tappa.Id).Result;
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AddaDiLeonardo.Views;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -19,13 +20,37 @@ namespace AddaDiLeonardo.Database
         // accesso multi-thread al database (non servirebbe perchè usa singleton)
         SQLite.SQLiteOpenFlags.SharedCache;
 
+        private static string choosenLanguage
+        {
+            get
+            {
+                string dbname;
+                switch (HomePage.ActiveLanguage)
+                {
+                    case "IT":
+                        dbname = DatabaseNames[0];
+                        break;
+                    case "ENG":
+                        dbname = DatabaseNames[1];
+                        break;
+                    case "FR":
+                        dbname = DatabaseNames[2];
+                        break;
+                    default:
+                        dbname = DatabaseNames[0];
+                        break;
+                }
+                return dbname;
+            }
+        }
+
         //Percorso completo del file database
         public static string DatabasePath
         {
             get
             {
                 var basePath = Environment.GetFolderPath(Environment.SpecialFolder.Personal); //cartella di sistema con permessi (vedi MainActivity.cs)
-                return Path.Combine(basePath, DatabaseNames[0]); //combina il percorso della cartella con il database selezionato //DA SISTEMARE !!! -> cambio lingua
+                return Path.Combine(basePath, choosenLanguage); //combina il percorso della cartella con il database selezionato
             }
         }
     }
