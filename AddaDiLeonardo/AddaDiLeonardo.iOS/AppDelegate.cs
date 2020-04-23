@@ -29,9 +29,9 @@ namespace AddaDiLeonardo.iOS
             LoadApplication(new App());
 
             //Database
-            ExtractBDFromResources("Italiano.db");
-            ExtractBDFromResources("Inglese.db");
-            ExtractBDFromResources("Francese.db");
+            ExtractBDFromResources("Italiano");
+            ExtractBDFromResources("Inglese");
+            ExtractBDFromResources("Francese");
 
             return base.FinishedLaunching(app, options);
         }
@@ -44,7 +44,7 @@ namespace AddaDiLeonardo.iOS
             if (!File.Exists(filename))
             {
                 //System.IO.File.Copy("Database/"+dbname, filename);
-                System.IO.File.Copy(NSBundle.MainBundle.PathForResource(dbname, type), filename);
+                System.IO.File.Copy(NSBundle.MainBundle.PathForResource(dbname, ".db"), filename);
             }
         }
     }
