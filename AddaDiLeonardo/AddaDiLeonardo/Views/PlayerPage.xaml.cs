@@ -32,11 +32,13 @@ namespace AddaDiLeonardo.Views
             }
             else
             {
+                
                 using (var _libVLC = new LibVLC())
                 {
                     var media = new Media(_libVLC, _link, FromType.FromLocation);
                     myvideo.MediaPlayer = new MediaPlayer(media)
                     {
+                        EnableHardwareDecoding = true,
                         Fullscreen = true
                     };
                     myvideo.MediaPlayer.Play();

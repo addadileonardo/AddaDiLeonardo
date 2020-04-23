@@ -47,7 +47,7 @@ namespace AddaDiLeonardo.Views.Tappe
             stackContenuto_1.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_04.ponte_01.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 5, 0, 5) });
             stackContenuto_1.Children.Add(FormattaContenuto.Formatta(contenuti_1[2].Testo));
             stackContenuto_1.Children.Add(FormattaContenuto.Formatta(contenuti_1[3].Testo));
-            stackContenuto_1.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_04.ponte_02.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 5, 0, 5) });
+            stackContenuto_1.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_04.ponte_02.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 5, 0, 5) });
             stackContenuto_1.Children.Add(FormattaContenuto.Formatta(contenuti_1[5].Testo));
             #endregion
 
