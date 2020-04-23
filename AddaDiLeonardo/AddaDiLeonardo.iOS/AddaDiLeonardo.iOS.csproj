@@ -69,9 +69,6 @@
     <Compile Include="CustomLabel_IntroTitleRender.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <None Include="Database\Francese.db" />
-    <None Include="Database\Inglese.db" />
-    <None Include="Database\Italiano.db" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
