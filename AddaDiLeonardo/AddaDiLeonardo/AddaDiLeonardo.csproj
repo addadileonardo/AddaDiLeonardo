@@ -18,6 +18,7 @@
     <None Remove="Images\Home\rocchetta.jpg" />
     <None Remove="Images\Home\traghetto.jpg" />
     <None Remove="Images\Home\videoplayer.png" />
+    <None Remove="Images\Icons\arrow-white.png" />
     <None Remove="Images\Icons\arrow2.png" />
     <None Remove="Images\Icons\close_4.png" />
     <None Remove="Images\Icons\close_5.png" />
@@ -73,6 +74,8 @@
     <EmbeddedResource Include="Images\Home\ponte.jpg" />
     <EmbeddedResource Include="Images\Home\rocchetta.jpg" />
     <EmbeddedResource Include="Images\Home\traghetto.jpg" />
+    <EmbeddedResource Include="Images\Home\videoplayer.png" />
+    <EmbeddedResource Include="Images\Icons\arrow-white.png" />
     <EmbeddedResource Include="Images\Map\centraleW.png" />
     <EmbeddedResource Include="Images\Map\MappaRaul.png" />
     <EmbeddedResource Include="Images\Map\ponteW.png" />

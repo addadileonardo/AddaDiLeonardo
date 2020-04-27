@@ -31,6 +31,8 @@ namespace AddaDiLeonardo.Views
             accordions = new List<Accordion>() { Accordion_0 };
             foreach (Accordion accordion in accordions)
                 accordion.AccordionOpened += accordionEvent;
+
+            Accordion_0.Indicator = new Image() { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.arrow-white.png"), WidthRequest = 20 };
         }
 
         static List<Accordion> accordions;

@@ -42,6 +42,8 @@ namespace AddaDiLeonardo.CustomControls
             set => SetValue(IndicatorProperty, value);
         }
 
+        Image Img = new Image() { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.arrow2.png"), WidthRequest = 20 };
+
         public static readonly BindableProperty BGColorProperty = BindableProperty.Create(nameof(BGColor), typeof(Color), typeof(Accordion), default(Color));
         public Color BGColor
         {
@@ -49,7 +51,12 @@ namespace AddaDiLeonardo.CustomControls
             set => SetValue(BGColorProperty, value);
         }
 
-        Image Img = new Image() { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.arrow2.png"), WidthRequest = 20 };
+        public static readonly BindableProperty TxtColorProperty = BindableProperty.Create(nameof(TxtColor), typeof(Color), typeof(Accordion), default(Color));
+        public Color TxtColor
+        {
+            get => (Color)GetValue(TxtColorProperty);
+            set => SetValue(TxtColorProperty, value);
+        }
 
         public static readonly BindableProperty IsOpenProperty = BindableProperty.Create(nameof(IsOpen), typeof(bool), typeof(Accordion), false, propertyChanged: IsOpenChanged);
         public bool IsOpen
