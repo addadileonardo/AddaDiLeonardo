@@ -32,10 +32,15 @@
 
                         <StackLayout Spacing="0" Grid.Row="1">
 
-                            <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.videoplayer.png}" Margin="0, 10, 0, 10" Aspect="AspectFit" WidthRequest="170" HeightRequest="38" x:Name="videoplayer"></Image>
+                            <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.videoplayer.png}" Margin="0, 10, 0, 10" Aspect="AspectFit" WidthRequest="110" HeightRequest="50" x:Name="videoplayer">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Tapped="btnVideoPlayer_Clicked"
+                                        NumberOfTapsRequired="1" />
+                                </Image.GestureRecognizers>
+                            </Image>
                             <Local:CustomLabel Margin="10, 0, 10, 0" TextColor="White" x:Name="descrizione" Text="La mia anima è pervasa da una mirabile serenità, simile a queste belle mattinate di maggio che io godo con tutto il cuore. Sono solo e mi rallegro di vivere in questo luogo che sembra esser creato per anime simili alla mia. Sono così felice, mio caro, così immerso nel sentimento della mia tranquilla esistenza che la mia arte ne soffre. Non potrei disegnare nulla ora, neppure un segno potrei" ></Local:CustomLabel>
-                            <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.videoplayer.png}" Margin="0, 10, 0, 10" Aspect="AspectFit" WidthRequest="170" HeightRequest="38" x:Name="map"></Image>
-                            <Grid>
+                            <Grid Margin="0, 20, 0, 0">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="200"></RowDefinition>
                                 </Grid.RowDefinitions>
