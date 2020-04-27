@@ -100,7 +100,7 @@
                                 </Image>
                                 <Local:CustomLabel Grid.Row="0" HorizontalOptions="End" VerticalOptions="End" Padding="5, 0, 5, 0" BackgroundColor="Black" TextColor="White" x:Name="centraleText" Text="LA CENTRALE"></Local:CustomLabel>
                             </Grid>
-                            <Local:Accordion x:Name="Accordion_0" AccordionName="Accordion_0" BGColor="White" Title="CREDITS"> <!--DA CAMBIARE IN NERO-->
+                            <Local:Accordion x:Name="Accordion_0" AccordionName="Accordion_0" BGColor="Black" TxtColor="White" Title="CREDITS">
                                 <Local:Accordion.AccordionContent>
                                     <StackLayout Orientation="Vertical" BackgroundColor="Black"> 
                                         <StackLayout Margin="10,0,10,10" x:Name="stackContenuto_0" >
