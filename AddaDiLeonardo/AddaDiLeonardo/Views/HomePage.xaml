@@ -14,7 +14,7 @@
             </Grid.RowDefinitions>
 
 
-            <ScrollView Grid.Row="0">
+            <ScrollView x:Name="Scroll" Grid.Row="0">
 
                 <Grid>
                     <Grid.RowDefinitions>
@@ -100,7 +100,66 @@
                                 </Image>
                                 <Local:CustomLabel Grid.Row="0" HorizontalOptions="End" VerticalOptions="End" Padding="5, 0, 5, 0" BackgroundColor="Black" TextColor="White" x:Name="centraleText" Text="LA CENTRALE"></Local:CustomLabel>
                             </Grid>
+                            <Local:Accordion x:Name="Accordion_0" AccordionName="Accordion_0" BGColor="White" Title="CREDITS"> <!--DA CAMBIARE IN NERO-->
+                                <Local:Accordion.AccordionContent>
+                                    <StackLayout Orientation="Vertical" BackgroundColor="Black"> 
+                                        <StackLayout Margin="10,0,10,10" x:Name="stackContenuto_0" >
+                                            <StackLayout Margin="20,0,20,0">
+                                                <StackLayout Margin="20,0,20,0">
 
+                                                    <Local:CustomLabelTitle Text="LEAD FULL STACK DEVELOPER" TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
+                                                    <Local:CustomLabel Text="Riccardo Raffini, Raul Sorrentino, Andrea Troccolo" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
+
+                                                    <Local:CustomLabelTitle Text="LEAD DEVELOPER" TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
+                                                    <Local:CustomLabel Text="Andrea Albani, Manuel Bortolotti, Simone Previtali" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
+
+                                                    <Local:CustomLabelTitle Text="VIDEO EDITING" TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
+                                                    <Local:CustomLabel Margin="0,10,0,0" Text="Simone Beretta, Andrea Bettinelli, Luis Blasco, Davide Bottini, Emanuele Comberiati, Dimitri Daneluzzi, Stefano Domenghini, Paolo Esposito, Omar Locatelli, Mattia Teli" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
+
+                                                    <Local:CustomLabelTitle Text="COPY AND CONTENT" TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
+                                                    <Local:CustomLabelTitle  Text='Team "Traghetto e Naviglio di Paderno"' TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
+                                                    <Local:CustomLabel Text="Lorenzo Pulcini, Simone Beretta, Elena Bassoli, Luis Blasco, Francesca Curcio, Paolo Esposito, Omar Locatelli, Veronica Cecchini Manara, Mattia Teli" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
+
+                                                    <Local:CustomLabelTitle  Text='Team "Ponte di San Michele"' TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
+                                                    <Local:CustomLabel Text="Agata Gagliano, Andrea Albani, Diego Appiani, Lorenzo Belotti, Andrea Bettinelli, Giobattista Leonardo Dominoni, Marta Rubini, Laura Valota" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
+
+                                                    <Local:CustomLabelTitle   Text='Team "Vergine delle Rocce e Santuario della Rocchetta"' TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
+                                                    <Local:CustomLabel Text="Gaia Morgana Gualandris, Dimitri Daneluzzi, Manuel Bortolotti, Sofia Montanari, Laura Palmieri, Benedetta Sarrocco, Raul Sorrentino, Andrea Troccolo, Giampietro Valentina, Cristina Zambelli" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
+
+                                                    <Local:CustomLabelTitle   Text='Team "Fiume Adda"' TextColor="White" HorizontalTextAlignment="Center" Margin="0,10,0,0"></Local:CustomLabelTitle>
+                                                    <Local:CustomLabel Text="Rachele Belli, Riccardo Raffini, Rachele Agliardi, Giulia Cioti, Stefano Domenghini, Lucrezia Finelli, Chiara Passera, Chiara Peri, Valerio Presciani, Simone Previtali" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
+
+                                                    <Local:CustomLabelTitle Text='Team "Centrali Idroelettriche Bertini ed Esterle"' TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
+                                                    <Local:CustomLabel Text="Chiara Alimonti, Luca Ferrari, Francesca Bonacina, Davide Bottini, Emanuele Comberiati, Andrea Ferioli, Lorenzo Foiadelli, Anita Gelfi, Federica Salerno, Michael Solivani, Maurizio Zambelli" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
+
+                                                    <Local:CustomLabelTitle Text='TECHNICAL AND SCIENTIFIC COMMITTEE' TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
+                                                    <Local:CustomLabelTitle Text='Micron' TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
+                                                    <Local:CustomLabel Text="Manuela Seminara, Barbara Carcano" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
+                                                    <Local:CustomLabel Text="" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
+
+                                                    <Local:CustomLabelTitle Text='Ecomuseo "Adda di Leonardo"' TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
+                                                    <Local:CustomLabel Text="Cristian Bonomi" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
+
+                                                    <Local:CustomLabelTitle Text='Dipartimento di Design, Politecnico di Milano' TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
+                                                    <Local:CustomLabel Text="Ilaria Mariani, Nicola Brignoli, Marisa Galbiati" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
+
+                                                    <Local:CustomLabelTitle Text='Fondazione Politecnico' TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
+                                                    <Local:CustomLabel Text="Francesca Brambilla, Manuela Pizzagalli" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
+
+                                                    <Local:CustomLabelTitle Text='Tutor e referenti PCTO, Liceo Lussana ' TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
+                                                    <Local:CustomLabel Text="Prof.ssa Manuela Bandini, Prof.ssa Paola Torroni" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
+
+                                                    <Local:CustomLabelTitle Text='Tutor e referenti PCTO, IIS Guglielmo Marconi' TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
+                                                    <Local:CustomLabel Text="Prof. Maurizio Agazzi" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
+
+
+                                                </StackLayout>
+
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Local:Accordion.AccordionContent>
+                            </Local:Accordion>
                         </StackLayout>
 
                     </Grid>

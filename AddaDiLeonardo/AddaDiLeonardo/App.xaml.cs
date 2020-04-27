@@ -21,12 +21,14 @@ namespace AddaDiLeonardo
 
         //Singleton pattern per la gestione del db
         private static Database.Database database;
+        private static string currentlanguage = "IT";
         public static Database.Database Database
         {
             get
             {
-                if (database == null)
+                if (database == null || currentlanguage != HomePage.ActiveLanguage)
                 {
+                    currentlanguage = HomePage.ActiveLanguage;
                     database = new Database.Database();
                 }
                 return database;
@@ -53,5 +55,6 @@ namespace AddaDiLeonardo
         protected override void OnResume()
         {
         }
+        
     }
 }

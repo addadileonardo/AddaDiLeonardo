@@ -54,5 +54,6 @@ namespace AddaDiLeonardo
         {
             await Navigation.PushModalAsync(new Views.HomePage());
         }
+
     }
 }
