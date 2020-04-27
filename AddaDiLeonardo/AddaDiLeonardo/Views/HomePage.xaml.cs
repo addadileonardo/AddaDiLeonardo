@@ -1,8 +1,10 @@
-﻿using AddaDiLeonardo.Views.Tappe;
+﻿using AddaDiLeonardo.CustomControls;
+using AddaDiLeonardo.Views.Tappe;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
@@ -26,6 +28,26 @@ namespace AddaDiLeonardo.Views
                 ActiveLanguage = Application.Current.Properties["lang"].ToString(); //viene impostata la lingua memorizzata se presente, altrimenti ita di default.
             btnOpen.Text = ActiveLanguage; //imposto la lingua attiva
             LanguageStack.TranslateTo(0, -200, 00); //traslo lo stack di selezione di -200 sull'asse y-> in realtà purtroppo non escono fuori dallo schermo ma si sovrappongono nell'angolino a destra. quindi se lo sfono non è trasparente si vedono..
+            accordions = new List<Accordion>() { Accordion_0 };
+            foreach (Accordion accordion in accordions)
+                accordion.AccordionOpened += accordionEvent;
+        }
+
+        static List<Accordion> accordions;
+        private void accordionEvent(object sender, EventArgs e)
+        {
+            accordions.Remove((Accordion)sender);
+            foreach (Accordion accordion in accordions)
+                if (accordion.IsOpen)
+                    accordion.IsOpen = !accordion.IsOpen;
+            accordions.Add((Accordion)sender);
+            Thread.Sleep((int)Accordion.AnimationDuration);
+            ScrollTop(((Accordion)sender).AccordionName);
+        }
+
+        private void ScrollTop(string elementname)
+        {
+            this.Scroll.ScrollToAsync(this.FindByName<Element>(elementname), ScrollToPosition.Start, true);
         }
 
         #region "STEP"
