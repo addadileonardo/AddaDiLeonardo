@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -69,10 +69,10 @@
     <EmbeddedResource Include="Images\Home\background.png" />
     <EmbeddedResource Include="Images\Home\centrale.jpg" />
     <EmbeddedResource Include="Images\Home\fiume.jpg" />
+    <EmbeddedResource Include="Images\Home\videoplayer.png" />
     <EmbeddedResource Include="Images\Home\ponte.jpg" />
     <EmbeddedResource Include="Images\Home\rocchetta.jpg" />
     <EmbeddedResource Include="Images\Home\traghetto.jpg" />
-    <EmbeddedResource Include="Images\Home\videoplayer.png" />
     <EmbeddedResource Include="Images\Map\centraleW.png" />
     <EmbeddedResource Include="Images\Map\MappaRaul.png" />
     <EmbeddedResource Include="Images\Map\ponteW.png" />
