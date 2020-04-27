@@ -27,12 +27,12 @@
     <None Remove="Images\Map\ponteW.png" />
     <None Remove="Images\Map\santuarioW.png" />
     <None Remove="Images\Map\traghettoW.png" />
-    <None Remove="Images\Tappe\Tappa_03\Rocchetta_01.JPG" />
-    <None Remove="Images\Tappe\Tappa_03\Rocchetta_02.jpeg" />
-    <None Remove="Images\Tappe\Tappa_03\Rocchetta_03.jpeg" />
-    <None Remove="Images\Tappe\Tappa_03\Rocchetta_04.jpeg" />
-    <None Remove="Images\Tappe\Tappa_03\Rocchetta_05.jpeg" />
-    <None Remove="Images\Tappe\Tappa_03\Rocchetta_06.JPG" />
+    <None Remove="Images\Tappe\Tappa_03\Rocchetta_01.jpg" />
+    <None Remove="Images\Tappe\Tappa_03\Rocchetta_02.jpg" />
+    <None Remove="Images\Tappe\Tappa_03\Rocchetta_03.jpg" />
+    <None Remove="Images\Tappe\Tappa_03\Rocchetta_04.jpg" />
+    <None Remove="Images\Tappe\Tappa_03\Rocchetta_05.jpg" />
+    <None Remove="Images\Tappe\Tappa_03\Rocchetta_06.jpg" />
     <None Remove="Images\Tappe\Tappa_03\Rocchetta_07.jpg" />
     <None Remove="Images\Tappe\Tappa_03\Rocchetta_08.jpg" />
     <None Remove="Images\Tappe\Tappa_03\Rocchetta_09.jpg" />
@@ -47,13 +47,13 @@
     <None Remove="Images\Tappe\Tappa_03\Rocchetta_19.jpg" />
     <None Remove="Images\Tappe\Tappa_03\Rocchetta_20.jpg" />
     <None Remove="Images\Tappe\Tappa_03\Rocchetta_21.jpg" />
-    <None Remove="Images\Tappe\Tappa_03\Rocchetta_22.jpg" />
+    <None Remove="Images\Tappe\Tappa_03\Rocchetta_22.png" />
     <None Remove="Images\Tappe\Tappa_04\ponte_01.jpg" />
     <None Remove="Images\Tappe\Tappa_04\ponte_02.jpg" />
     <None Remove="Images\Tappe\Tappa_04\ponte_03.jpg" />
     <None Remove="Images\Tappe\Tappa_04\ponte_04.jpg" />
     <None Remove="Images\Tappe\Tappa_04\ponte_05.jpg" />
-    <None Remove="Images\Tappe\Tappa_04\ponte_06.PNG" />
+    <None Remove="Images\Tappe\Tappa_04\ponte_06.png" />
     <None Remove="Images\Tappe\Tappa_05\centrali_01.jpg" />
     <None Remove="Images\Tappe\Tappa_05\centrali_02.jpg" />
     <None Remove="Images\Tappe\Tappa_05\centrali_03.jpg" />
@@ -63,7 +63,6 @@
     <None Remove="Images\Tappe\Tappa_05\centrali_07.jpg" />
     <None Remove="Images\Tappe\Tappa_05\centrali_08.jpg" />
     <None Remove="Images\Tappe\Tappa_05\centrali_09.jpg" />
-    <None Remove="Images\Tappe\Tappa_05\centrali_10.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -79,31 +78,12 @@
     <EmbeddedResource Include="Images\Map\ponteW.png" />
     <EmbeddedResource Include="Images\Map\santuarioW.png" />
     <EmbeddedResource Include="Images\Map\traghettoW.png" />
-    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_22.jpg" />
-    <EmbeddedResource Include="Images\Tappe\Tappa_04\ponte_03.jpg" />
-    <EmbeddedResource Include="Images\Tappe\Tappa_04\ponte_06.PNG" />
-    <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_01.jpg" />
-    <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_02.jpg" />
-    <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_03.jpg" />
-    <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_04.jpg" />
-    <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_05.jpg" />
-    <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_06.jpg" />
-    <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_07.jpg" />
-    <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_08.jpg" />
-    <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_09.jpg" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="Images\Icons\arrow2.png" />
-    <EmbeddedResource Include="Images\Icons\close_4.png" />
-    <EmbeddedResource Include="Images\Icons\close_5.png" />
-    <EmbeddedResource Include="Images\Icons\Icon-Place_@3x.png" />
-    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_01.JPG" />
-    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_02.jpeg" />
-    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_03.jpeg" />
-    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_04.jpeg" />
-    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_05.jpeg" />
-    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_06.JPG" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_01.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_02.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_03.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_04.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_05.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_06.jpg" />
     <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_07.jpg" />
     <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_08.jpg" />
     <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_09.jpg" />
@@ -118,11 +98,29 @@
     <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_19.jpg" />
     <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_20.jpg" />
     <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_21.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_22.png" />
     <EmbeddedResource Include="Images\Tappe\Tappa_04\ponte_01.jpg" />
     <EmbeddedResource Include="Images\Tappe\Tappa_04\ponte_02.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_04\ponte_03.jpg" />
     <EmbeddedResource Include="Images\Tappe\Tappa_04\ponte_04.jpg" />
     <EmbeddedResource Include="Images\Tappe\Tappa_04\ponte_05.jpg" />
-    <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_10.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Icons\arrow2.png" />
+    <EmbeddedResource Include="Images\Icons\close_4.png" />
+    <EmbeddedResource Include="Images\Icons\close_5.png" />
+    <EmbeddedResource Include="Images\Icons\Icon-Place_@3x.png" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_04\ponte_06.png" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_01.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_02.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_03.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_04.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_05.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_06.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_07.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_08.jpg" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_05\centrali_09.jpg" />
   </ItemGroup>
 
   <ItemGroup>
