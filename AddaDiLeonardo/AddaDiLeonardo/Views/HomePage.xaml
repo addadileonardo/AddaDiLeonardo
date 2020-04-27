@@ -32,7 +32,7 @@
 
                         <StackLayout Spacing="0" Grid.Row="1">
 
-                            <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.videoplayer.png}" Margin="0, 10, 0, 10" Aspect="AspectFit" WidthRequest="110" HeightRequest="50" x:Name="videoplayer">
+                            <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.videoplayer_2.png}" Margin="0, 10, 0, 10" Aspect="AspectFit" WidthRequest="110" HeightRequest="50" x:Name="videoplayer">
                                 <Image.GestureRecognizers>
                                     <TapGestureRecognizer
                                         Tapped="btnVideoPlayer_Clicked"
