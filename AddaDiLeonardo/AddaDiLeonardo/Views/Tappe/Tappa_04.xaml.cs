@@ -75,7 +75,7 @@ namespace AddaDiLeonardo.Views.Tappe
 
             #region accordion_4
             Accordion_4.Title = sezioni[4].Titolo;
-            stackContenuto_4.Children.Add(new Label { Text = "video" });
+            imgVideo3.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_04.ponte3_cover.png");
             #endregion
 
         }
@@ -110,6 +110,11 @@ namespace AddaDiLeonardo.Views.Tappe
         private async void imgVideo2_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1gtdOvg4SXK-4Xtd0CLv7JQWDXLLrXL0p"));
+        }
+
+        private async void imgVideo3_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1CKaLQyFhWr5ABpk0MkpezqDyCA-mdkFA"));
         }
     }
 }

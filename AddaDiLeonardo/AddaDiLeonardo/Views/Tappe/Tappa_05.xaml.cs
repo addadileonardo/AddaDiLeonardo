@@ -56,8 +56,6 @@ namespace AddaDiLeonardo.Views.Tappe
             Accordion_1.Title = sezioni[1].Titolo;
             stackContenuto_1.Children.Add(FormattaContenuto.Formatta(contenuti_1[0].Testo));
             stackContenuto_1.Children.Add(FormattaContenuto.Formatta(contenuti_1[1].Testo));
-            stackContenuto_1.Children.Add(new Label { Text = "video centrali_10" });
-            stackContenuto_1.Children.Add(new Label { Text = "video centrali_11" });
             stackContenuto_1.Children.Add(FormattaContenuto.Formatta(contenuti_1[4].Testo));
             stackContenuto_1.Children.Add(FormattaContenuto.Formatta(contenuti_1[5].Testo));
             #endregion
