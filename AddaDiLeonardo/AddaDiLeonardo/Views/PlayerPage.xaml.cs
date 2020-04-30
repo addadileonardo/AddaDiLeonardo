@@ -16,6 +16,7 @@ namespace AddaDiLeonardo.Views
         private string _link = default;
         public PlayerPage(string link)
         {
+            
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
             Core.Initialize();
@@ -41,10 +42,18 @@ namespace AddaDiLeonardo.Views
                         EnableHardwareDecoding = true,
                         Fullscreen = true
                     };
+                    myvideo.MediaPlayer.Playing += MediaPlayer_Playing;
                     myvideo.MediaPlayer.Play();
                 };
             }
         }
+
+        private void MediaPlayer_Playing(object sender, EventArgs e)
+        {
+            spinner.IsRunning = false;
+        }
+
+
 
         protected override void OnDisappearing()
         {

@@ -39,18 +39,18 @@
                     <!--#endregion-->
 
                     <!--#region ACCORDION-->
-                    <local:Accordion x:Name="Accordion_0" AccordionName="Accordion_0" BGColor="#F6F6F6">
+                    <local:Accordion TxtColor="Black" x:Name="Accordion_0" AccordionName="Accordion_0" BGColor="#F6F6F6">
                         <local:Accordion.AccordionContent>
                             <StackLayout Orientation="Vertical" >
                                 <Image x:Name="imgSection_0" Aspect="AspectFill"></Image>
                                 <StackLayout Margin="10,0,10,10" x:Name="stackContenuto_0" >
-
+                                    <ImageButton x:Name="imgVideo2" Aspect="AspectFill" Clicked="imgVideo2_Clicked"></ImageButton>
                                 </StackLayout>
                             </StackLayout>
                         </local:Accordion.AccordionContent>
                     </local:Accordion>
 
-                    <local:Accordion x:Name="Accordion_1" AccordionName="Accordion_1">
+                    <local:Accordion TxtColor="Black" x:Name="Accordion_1" AccordionName="Accordion_1">
                         <local:Accordion.AccordionContent>
                             <StackLayout Orientation="Vertical" >
                                 <Image x:Name="imgSection_1" Aspect="AspectFill"></Image>
@@ -61,7 +61,7 @@
                         </local:Accordion.AccordionContent>
                     </local:Accordion>
 
-                    <local:Accordion x:Name="Accordion_2" AccordionName="Accordion_2" BGColor="#F6F6F6">
+                    <local:Accordion TxtColor="Black" x:Name="Accordion_2" AccordionName="Accordion_2" BGColor="#F6F6F6">
                         <local:Accordion.AccordionContent>
                             <StackLayout Orientation="Vertical" >
                                 <Image x:Name="imgSection_2" Aspect="AspectFill"></Image>
@@ -72,7 +72,7 @@
                         </local:Accordion.AccordionContent>
                     </local:Accordion>
 
-                    <local:Accordion x:Name="Accordion_3" AccordionName="Accordion_3">
+                    <local:Accordion TxtColor="Black" x:Name="Accordion_3" AccordionName="Accordion_3">
                         <local:Accordion.AccordionContent>
                             <StackLayout Orientation="Vertical" >
                                 <Image x:Name="imgSection_3" Aspect="AspectFill"></Image>
@@ -83,7 +83,7 @@
                         </local:Accordion.AccordionContent>
                     </local:Accordion>
 
-                    <local:Accordion x:Name="Accordion_4" AccordionName="Accordion_4" BGColor="#F6F6F6">
+                    <local:Accordion TxtColor="Black" x:Name="Accordion_4" AccordionName="Accordion_4" BGColor="#F6F6F6">
                         <local:Accordion.AccordionContent>
                             <StackLayout Orientation="Vertical" >
                                 <Image x:Name="imgSection_4" Aspect="AspectFill"></Image>
