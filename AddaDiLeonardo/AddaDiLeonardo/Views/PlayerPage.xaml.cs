@@ -47,6 +47,8 @@ namespace AddaDiLeonardo.Views
                 };
             }
         }
+        
+        
 
         private void MediaPlayer_Playing(object sender, EventArgs e)
         {

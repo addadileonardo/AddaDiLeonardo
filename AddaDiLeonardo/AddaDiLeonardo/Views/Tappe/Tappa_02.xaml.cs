@@ -27,7 +27,7 @@ namespace AddaDiLeonardo.Views.Tappe
 
             #region introduction
             close.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.close_5.png");
-            ImgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_03.Rocchetta_01.JPG");
+            ImgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_02.traghetto_cover.png");
             iconMarker.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.Icon-Place_@3x.png");
             lblTitle.Text = tappa.Titolo;
             lblSubTitle.Text = tappa.Sottotitolo;
@@ -69,9 +69,9 @@ namespace AddaDiLeonardo.Views.Tappe
             #endregion
         }
 
-        private void ImgTappa_Clicked(object sender, EventArgs e)
+        private async void ImgTappa_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1erw66iglXnyz4jtZPI_cCbifx62N7J2T"));
         }
 
         private void close_Clicked(object sender, EventArgs e)
