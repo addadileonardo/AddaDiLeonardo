@@ -27,7 +27,7 @@ namespace AddaDiLeonardo.Views.Tappe
 
             #region introduction
             close.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.close_5.png");
-            ImgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_04.ponte_06.png");
+            ImgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_04.ponte_cover_v2.png");
             iconMarker.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.Icon-Place_@3x.png");
             lblTitle.Text = tappa.Titolo;
             lblSubTitle.Text = tappa.Sottotitolo;
@@ -37,7 +37,7 @@ namespace AddaDiLeonardo.Views.Tappe
             #region accordion_0
             var contenuti_0 = App.Database.GetContenutiAsync(idSezione: sezioni[0].Id).Result;
             Accordion_0.Title = sezioni[0].Titolo;
-            stackContenuto_0.Children.Add(new Label { Text = "video" });
+            imgVideo2.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_04.ponte2_cover.png");
             #endregion
 
             #region accordion_1
@@ -75,14 +75,14 @@ namespace AddaDiLeonardo.Views.Tappe
 
             #region accordion_4
             Accordion_4.Title = sezioni[4].Titolo;
-            stackContenuto_4.Children.Add(new Label { Text = "video" });
+            imgVideo3.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_04.ponte3_cover.png");
             #endregion
 
         }
 
-        private void ImgTappa_Clicked(object sender, EventArgs e)
+        private async void ImgTappa_Clicked(object sender, EventArgs e)
         {
-            
+            await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1CKaLQyFhWr5ABpk0MkpezqDyCA-mdkFA"));
         }
 
         private void close_Clicked(object sender, EventArgs e)
@@ -105,6 +105,16 @@ namespace AddaDiLeonardo.Views.Tappe
         private void ScrollTop(string elementname)
         {
             this.Scroll.ScrollToAsync(this.FindByName<Element>(elementname), ScrollToPosition.Start, true);
+        }
+
+        private async void imgVideo2_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1gtdOvg4SXK-4Xtd0CLv7JQWDXLLrXL0p"));
+        }
+
+        private async void imgVideo3_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1CKaLQyFhWr5ABpk0MkpezqDyCA-mdkFA"));
         }
     }
 }

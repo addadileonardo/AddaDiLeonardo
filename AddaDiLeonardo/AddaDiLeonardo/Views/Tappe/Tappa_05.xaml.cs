@@ -27,7 +27,7 @@ namespace AddaDiLeonardo.Views.Tappe
 
             #region introduction
             close.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.close_5.png");
-            ImgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_05.centrali_05.jpg");
+            ImgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_05.centrali_cover_v2.png");
             iconMarker.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.Icon-Place_@3x.png");
             lblTitle.Text = tappa.Titolo;
             lblSubTitle.Text = tappa.Sottotitolo;
@@ -56,8 +56,6 @@ namespace AddaDiLeonardo.Views.Tappe
             Accordion_1.Title = sezioni[1].Titolo;
             stackContenuto_1.Children.Add(FormattaContenuto.Formatta(contenuti_1[0].Testo));
             stackContenuto_1.Children.Add(FormattaContenuto.Formatta(contenuti_1[1].Testo));
-            stackContenuto_1.Children.Add(new Label { Text = "video centrali_10" });
-            stackContenuto_1.Children.Add(new Label { Text = "video centrali_11" });
             stackContenuto_1.Children.Add(FormattaContenuto.Formatta(contenuti_1[4].Testo));
             stackContenuto_1.Children.Add(FormattaContenuto.Formatta(contenuti_1[5].Testo));
             #endregion
@@ -99,9 +97,9 @@ namespace AddaDiLeonardo.Views.Tappe
             Navigation.PopModalAsync();
         }
 
-        private void ImgTappa_Clicked(object sender, EventArgs e)
+        private async void ImgTappa_Clicked(object sender, EventArgs e)
         {
-            
+            await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1gszAnkH7rgv7ihodJ-mvLmauAGjfIYjv"));
         }
 
         static List<Accordion> accordions;

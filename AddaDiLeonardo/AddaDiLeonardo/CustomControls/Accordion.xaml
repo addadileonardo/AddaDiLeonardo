@@ -15,7 +15,8 @@
                 <Label  x:Name="_title"
                        HorizontalOptions="Start" VerticalOptions="Center" Margin="5,0,0,0"
                        Text="{Binding Source={x:Reference _accordion}, Path=Title}"
-                       FontSize="20" TextColor="Black">
+                       FontSize="20" 
+                        TextColor="{Binding Source={x:Reference _accordion}, Path=TxtColor}">
                     <Label.FontFamily>
                         <OnPlatform x:TypeArguments="x:String">
                             <On Platform="iOS" Value="RobotoCondensed-Bold" />

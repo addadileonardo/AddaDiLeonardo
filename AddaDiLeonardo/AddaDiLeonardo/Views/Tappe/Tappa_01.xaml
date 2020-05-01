@@ -41,7 +41,7 @@
 
 
                     <!--#region ACCORDION-->
-                    <local:Accordion x:Name="Accordion_0" AccordionName="Accordion_0" BGColor="#F6F6F6">
+                    <local:Accordion x:Name="Accordion_0" AccordionName="Accordion_0" BGColor="#F6F6F6" TxtColor="Black">
                     <local:Accordion.AccordionContent>
                             <StackLayout Orientation="Vertical" >
                                 <StackLayout Margin="10,0,10,10" x:Name="stackContenuto_0" >
