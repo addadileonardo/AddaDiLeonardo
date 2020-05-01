@@ -94,6 +94,18 @@
                             </StackLayout>
                         </local:Accordion.AccordionContent>
                     </local:Accordion>
+
+                    <local:Accordion TxtColor="Black" x:Name="Accordion_5" AccordionName="Accordion_5" BGColor="#F6F6F6">
+                        <local:Accordion.AccordionContent>
+                            <StackLayout Orientation="Vertical" >
+                                <Image x:Name="imgSection_5" Aspect="AspectFill"></Image>
+                                <StackLayout Margin="10,0,10,10" x:Name="stackContenuto_5" >
+
+                                </StackLayout>
+                            </StackLayout>
+                        </local:Accordion.AccordionContent>
+                    </local:Accordion>
+
                     <!--#endregion-->
 
                 </StackLayout>
