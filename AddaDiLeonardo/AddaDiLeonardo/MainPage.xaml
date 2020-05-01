@@ -9,7 +9,7 @@
 
     <StackLayout>
         <Button Text="Homepage" Clicked="Button_Clicked_6"></Button>
-        <Button Text="video" Clicked="Button_Clicked"></Button>
+        <Button Text="video (link sbagliato per provare errore. video player funzionante in home tappe)" Clicked="Button_Clicked"></Button>
         <Button Text="fiume" Clicked="Button_Clicked_1"></Button>
         <Button Text="ponte" Clicked="Button_Clicked_2"></Button>
         <Button Text="rocchetta" Clicked="Button_Clicked_3"></Button>
