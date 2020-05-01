@@ -5,7 +5,6 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:shared="clr-namespace:LibVLCSharp.Forms.Shared;assembly=LibVLCSharp.Forms"
              mc:Ignorable="d"
              x:Class="AddaDiLeonardo.Views.PlayerPage"
-             Appearing="ContentPage_Appearing"
              >
     <ContentPage.Content>
         <Grid>
