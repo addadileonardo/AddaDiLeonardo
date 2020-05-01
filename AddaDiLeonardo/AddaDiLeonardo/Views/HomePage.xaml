@@ -171,45 +171,50 @@
                 </Grid>
 
             </ScrollView>
-            <StackLayout Grid.Row="0" HorizontalOptions="End" VerticalOptions="Start" WidthRequest="70">
+            <StackLayout Grid.Row="0" HorizontalOptions="End" VerticalOptions="Start" Orientation="Horizontal" Spacing="0">
+                <ImageButton x:Name="mappaIcon" Clicked="mappaIcon_Clicked" HeightRequest="40" VerticalOptions="Start" Margin="0,5,0,0" BackgroundColor="Transparent"></ImageButton>
+                <StackLayout  WidthRequest="70">
 
-                <Button Text="Click me" Clicked="btnOpen_Clicked" HorizontalOptions="End" x:Name="btnOpen" BackgroundColor="Transparent" TextColor="White" CharacterSpacing="2">
-                    <Button.FontFamily>
-                        <OnPlatform x:TypeArguments="x:String">
-                            <On Platform="iOS" Value="Roboto-Light" />
-                            <On Platform="Android" Value="Roboto-Light.ttf#Roboto" />
-                        </OnPlatform>
-                    </Button.FontFamily>
-                </Button>
+                    <Button Text="Click me" Clicked="btnOpen_Clicked" HorizontalOptions="End" x:Name="btnOpen" BackgroundColor="Transparent" TextColor="White" CharacterSpacing="2">
+                        <Button.FontFamily>
+                            <OnPlatform x:TypeArguments="x:String">
+                                <On Platform="iOS" Value="Roboto-Light" />
+                                <On Platform="Android" Value="Roboto-Light.ttf#Roboto" />
+                            </OnPlatform>
+                        </Button.FontFamily>
+                    </Button>
 
 
-                        <StackLayout x:Name="LanguageStack" HorizontalOptions="End">
-                            <Button x:Name="btnIT" CharacterSpacing="2" Clicked="btnIT_Clicked" Text="IT" HorizontalOptions="End" BackgroundColor="Transparent" TextColor="White" >
-                                <Button.FontFamily>
-                                    <OnPlatform x:TypeArguments="x:String">
-                                        <On Platform="iOS" Value="Roboto-Light" />
-                                        <On Platform="Android" Value="Roboto-Light.ttf#Roboto" />
-                                    </OnPlatform>
-                                </Button.FontFamily>
-                            </Button>
-                            <Button x:Name="btnENG" CharacterSpacing="2" Clicked="btnENG_Clicked" Text="ENG"  HorizontalOptions="End" BackgroundColor="Transparent" TextColor="White">
-                                <Button.FontFamily>
-                                    <OnPlatform x:TypeArguments="x:String">
-                                        <On Platform="iOS" Value="Roboto-Light" />
-                                        <On Platform="Android" Value="Roboto-Light.ttf#Roboto" />
-                                    </OnPlatform>
-                                </Button.FontFamily>
-                            </Button>
-                            <Button x:Name="btnFR" CharacterSpacing="2" Clicked="btnFR_Clicked" Text="FR"  HorizontalOptions="End" BackgroundColor="Transparent" TextColor="White">
-                                <Button.FontFamily>
-                                    <OnPlatform x:TypeArguments="x:String">
-                                        <On Platform="iOS" Value="Roboto-Light" />
-                                        <On Platform="Android" Value="Roboto-Light.ttf#Roboto" />
-                                    </OnPlatform>
-                                </Button.FontFamily>
-                            </Button>
-                        </StackLayout>
-                   
+                    <StackLayout x:Name="LanguageStack" HorizontalOptions="End">
+                        <Button x:Name="btnIT" CharacterSpacing="2" Clicked="btnIT_Clicked" Text="IT" HorizontalOptions="End" BackgroundColor="Transparent" TextColor="White" >
+                            <Button.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="iOS" Value="Roboto-Light" />
+                                    <On Platform="Android" Value="Roboto-Light.ttf#Roboto" />
+                                </OnPlatform>
+                            </Button.FontFamily>
+                        </Button>
+                        <Button x:Name="btnENG" CharacterSpacing="2" Clicked="btnENG_Clicked" Text="ENG"  HorizontalOptions="End" BackgroundColor="Transparent" TextColor="White">
+                            <Button.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="iOS" Value="Roboto-Light" />
+                                    <On Platform="Android" Value="Roboto-Light.ttf#Roboto" />
+                                </OnPlatform>
+                            </Button.FontFamily>
+                        </Button>
+                        <Button x:Name="btnFR" CharacterSpacing="2" Clicked="btnFR_Clicked" Text="FR"  HorizontalOptions="End" BackgroundColor="Transparent" TextColor="White">
+                            <Button.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="iOS" Value="Roboto-Light" />
+                                    <On Platform="Android" Value="Roboto-Light.ttf#Roboto" />
+                                </OnPlatform>
+                            </Button.FontFamily>
+                        </Button>
+                    </StackLayout>
+
+                </StackLayout>
+
+
             </StackLayout>
         </Grid>
     </ContentPage.Content>

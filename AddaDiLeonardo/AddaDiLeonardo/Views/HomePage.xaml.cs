@@ -24,6 +24,7 @@ namespace AddaDiLeonardo.Views
         public HomePage()
         {
             InitializeComponent();
+            mappaIcon.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.arrow-white.png");
             if(Application.Current.Properties.ContainsKey("lang"))
                 ActiveLanguage = Application.Current.Properties["lang"].ToString(); //viene impostata la lingua memorizzata se presente, altrimenti ita di default.
             btnOpen.Text = ActiveLanguage; //imposto la lingua attiva
@@ -50,6 +51,11 @@ namespace AddaDiLeonardo.Views
         private void ScrollTop(string elementname)
         {
             this.Scroll.ScrollToAsync(this.FindByName<Element>(elementname), ScrollToPosition.Start, true);
+        }
+
+        private void mappaIcon_Clicked(object sender, EventArgs e)
+        {
+            this.Scroll.ScrollToAsync(this.FindByName<Element>("Accordion_0"), ScrollToPosition.Start, true); //da modificare con mappa
         }
 
         #region "STEP"
@@ -259,6 +265,7 @@ namespace AddaDiLeonardo.Views
                 //funzione di riavvio app
             }
         }
+
 
     }
 }
