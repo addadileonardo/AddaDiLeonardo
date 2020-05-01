@@ -18,6 +18,7 @@ namespace AddaDiLeonardo
         public MainPage()
         {
             InitializeComponent();
+            
         }
 
         private async void Button_Clicked(object sender, EventArgs e)

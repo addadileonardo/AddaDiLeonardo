@@ -32,6 +32,7 @@
     <None Remove="Images\Tappe\Tappa_01\fiume_cover.png" />
     <None Remove="Images\Tappe\Tappa_02\traghetto2_cover.png" />
     <None Remove="Images\Tappe\Tappa_02\traghetto_cover.png" />
+    <None Remove="Images\Tappe\Tappa_03\rocchetta2_cover.png" />
     <None Remove="Images\Tappe\Tappa_03\Rocchetta_01.jpg" />
     <None Remove="Images\Tappe\Tappa_03\Rocchetta_02.jpg" />
     <None Remove="Images\Tappe\Tappa_03\Rocchetta_03.jpg" />
@@ -53,6 +54,7 @@
     <None Remove="Images\Tappe\Tappa_03\Rocchetta_20.jpg" />
     <None Remove="Images\Tappe\Tappa_03\Rocchetta_21.jpg" />
     <None Remove="Images\Tappe\Tappa_03\Rocchetta_22.png" />
+    <None Remove="Images\Tappe\Tappa_03\rocchetta_cover.png" />
     <None Remove="Images\Tappe\Tappa_04\ponte2_cover.png" />
     <None Remove="Images\Tappe\Tappa_04\ponte3_cover.png" />
     <None Remove="Images\Tappe\Tappa_04\ponte_01.jpg" />
@@ -92,6 +94,7 @@
     <EmbeddedResource Include="Images\Tappe\Tappa_01\fiume_cover.png" />
     <EmbeddedResource Include="Images\Tappe\Tappa_02\traghetto2_cover.png" />
     <EmbeddedResource Include="Images\Tappe\Tappa_02\traghetto_cover.png" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_03\rocchetta2_cover.png" />
     <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_01.jpg" />
     <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_02.jpg" />
     <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_03.jpg" />
@@ -113,6 +116,7 @@
     <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_20.jpg" />
     <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_21.jpg" />
     <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_22.png" />
+    <EmbeddedResource Include="Images\Tappe\Tappa_03\rocchetta_cover.png" />
     <EmbeddedResource Include="Images\Tappe\Tappa_04\ponte2_cover.png" />
     <EmbeddedResource Include="Images\Tappe\Tappa_04\ponte3_cover.png" />
     <EmbeddedResource Include="Images\Tappe\Tappa_04\ponte_01.jpg" />

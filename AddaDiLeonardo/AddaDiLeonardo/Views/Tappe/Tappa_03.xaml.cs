@@ -17,6 +17,9 @@ namespace AddaDiLeonardo.Views.Tappe
         public Tappa_03()
         {
             InitializeComponent();
+            close.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.close_5.png");
+            ImgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_03.rocchetta_cover.png");
+            iconMarker.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.Icon-Place_@3x.png");
             var tappa = App.Database.GetTappeSingleAsync(idTappa: 2).Result;
             var sezioni = App.Database.GetSezioniAsync(idTappa: tappa.Id).Result;
 
@@ -26,9 +29,6 @@ namespace AddaDiLeonardo.Views.Tappe
                 accordion.AccordionOpened += accordionEvent;
 
             #region introduction
-            close.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.close_5.png");
-            ImgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_03.Rocchetta_22.png");
-            iconMarker.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.Icon-Place_@3x.png");
             lblTitle.Text = tappa.Titolo;
             lblSubTitle.Text = tappa.Sottotitolo;
             lblDescription.Text = tappa.Descrizione;
@@ -111,13 +111,23 @@ namespace AddaDiLeonardo.Views.Tappe
             stackContenuto_4.Children.Add(FormattaContenuto.Formatta(contenuti_4[8].Testo));
             stackContenuto_4.Children.Add(FormattaContenuto.Formatta(contenuti_4[9].Testo));
             stackContenuto_4.Children.Add(FormattaContenuto.Formatta(contenuti_4[10].Testo));
-            //video intervista
+            ImageButton imgbtn = new ImageButton();
+            imgbtn.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_03.rocchetta2_cover.png");
+            imgbtn.Aspect = Aspect.AspectFill;
+            imgbtn.Margin = new Thickness(0, 5, 0, 5);
+            imgbtn.Clicked += Imgbtn_Clicked;
+            stackContenuto_4.Children.Add(imgbtn);
             #endregion
         }
 
-        private void ImgTappa_Clicked(object sender, EventArgs e)
+        private async void Imgbtn_Clicked(object sender, EventArgs e)
         {
+            await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1CKaLQyFhWr5ABpk0MkpezqDyCA-mdkFA"));
+        }
 
+        private async void ImgTappa_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1CKaLQyFhWr5ABpk0MkpezqDyCA-mdkFA"));
         }
 
         private void close_Clicked(object sender, EventArgs e)

@@ -24,16 +24,17 @@ namespace AddaDiLeonardo.Views
             close.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.close_5.png");
         }
 
-        private void ContentPage_Appearing(object sender, EventArgs e)
+        protected override async void OnAppearing()
         {
+            base.OnAppearing();
             if (Connectivity.NetworkAccess != NetworkAccess.Internet)
             {
-                DisplayAlert("ATTENZIONE!", "Accendi la connessione ad internet per vedere il video!", "OK");
-                Navigation.PopModalAsync();
+                await DisplayAlert("WARNING!", "Error message!", "OK");
+                await Navigation.PopModalAsync();
             }
             else
             {
-                
+
                 using (var _libVLC = new LibVLC())
                 {
                     var media = new Media(_libVLC, _link, FromType.FromLocation);
@@ -45,10 +46,10 @@ namespace AddaDiLeonardo.Views
                     myvideo.MediaPlayer.Playing += MediaPlayer_Playing;
                     myvideo.MediaPlayer.Play();
                 };
+
             }
         }
-        
-        
+
 
         private void MediaPlayer_Playing(object sender, EventArgs e)
         {

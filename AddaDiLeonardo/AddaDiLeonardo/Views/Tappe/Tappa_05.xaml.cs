@@ -17,6 +17,9 @@ namespace AddaDiLeonardo.Views.Tappe
         public Tappa_05()
         {
             InitializeComponent();
+            close.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.close_5.png");
+            ImgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_05.centrali_cover_v2.png");
+            iconMarker.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.Icon-Place_@3x.png");
             var tappa = App.Database.GetTappeSingleAsync(idTappa: 5).Result;
             var sezioni = App.Database.GetSezioniAsync(idTappa: tappa.Id).Result;
 
@@ -26,9 +29,7 @@ namespace AddaDiLeonardo.Views.Tappe
                 accordion.AccordionOpened += accordionEvent;
 
             #region introduction
-            close.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.close_5.png");
-            ImgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_05.centrali_cover_v2.png");
-            iconMarker.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.Icon-Place_@3x.png");
+            
             lblTitle.Text = tappa.Titolo;
             lblSubTitle.Text = tappa.Sottotitolo;
             lblDescription.Text = tappa.Descrizione;
