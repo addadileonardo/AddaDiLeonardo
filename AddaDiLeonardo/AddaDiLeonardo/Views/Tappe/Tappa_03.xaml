@@ -17,7 +17,6 @@
 
                     <!--#region INTRODUCTION-->
                     <ImageButton x:Name="ImgTappa" Aspect="AspectFill" Clicked="ImgTappa_Clicked"></ImageButton>
-
                     <StackLayout BackgroundColor="White">
 
                         <StackLayout Margin="20,25,20,20">

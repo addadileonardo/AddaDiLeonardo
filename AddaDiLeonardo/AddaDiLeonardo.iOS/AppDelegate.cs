@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-
 using Foundation;
 using LibVLCSharp.Forms.Shared;
 using UIKit;

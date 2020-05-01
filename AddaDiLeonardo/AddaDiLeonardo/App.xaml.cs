@@ -34,18 +34,8 @@ namespace AddaDiLeonardo
                 return database;
             }
         }
-
         protected override void OnStart()
         {
-            //TEST DB
-
-            //var path = AddaDiLeonardo.Database.Constants.DatabasePath;
-
-            //var tappa = App.Databasea.GetTappeSingleAsync(idTappa: 2).Result;
-            //var sezioni = App.Databasea.GetSezioniAsync(idTappa: tappa.Id).Result;
-            //var contenuti = App.Databasea.GetContenutiAsync(idSezione: sezioni[0].Id).Result;
-
-            //int totale = contenuti.Count;
         }
 
         protected override void OnSleep()
