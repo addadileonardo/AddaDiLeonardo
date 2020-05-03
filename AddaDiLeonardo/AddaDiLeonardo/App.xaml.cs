@@ -6,6 +6,7 @@ using AddaDiLeonardo.Database;
 using System.Reflection;
 using System.Linq;
 using System.IO;
+using AddaDiLeonardo.Images;
 
 namespace AddaDiLeonardo
 {
@@ -36,6 +37,7 @@ namespace AddaDiLeonardo
         }
         protected override void OnStart()
         {
+            
         }
 
         protected override void OnSleep()

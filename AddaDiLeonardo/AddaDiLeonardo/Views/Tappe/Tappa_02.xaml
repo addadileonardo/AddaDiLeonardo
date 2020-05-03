@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:AddaDiLeonardo.CustomControls"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              mc:Ignorable="d"
              x:Class="AddaDiLeonardo.Views.Tappe.Tappa_02">
     <ContentPage.Content>
@@ -16,7 +17,22 @@
                 <StackLayout Spacing="0">
 
                     <!--#region INTRODUCTION-->
-                    <ImageButton x:Name="ImgTappa" Aspect="AspectFill" Clicked="ImgTappa_Clicked"></ImageButton>
+                    <!--ImageButton x:Name="ImgTappa" Aspect="AspectFill" Clicked="ImgTappa_Clicked"></ImageButton-->
+                    <ffimageloading:CachedImage 
+                                LoadingPlaceholder= "LoaderImage"
+                                ErrorPlaceholder= "ErrorImage"
+                                CacheDuration= "50"
+                                RetryCount= "3"
+                                RetryDelay= "600"
+                                DownsampleToViewSize = "true"
+                                x:Name="ImgTappa" Aspect="AspectFill"
+                    >
+                        <ffimageloading:CachedImage.GestureRecognizers>
+                            <TapGestureRecognizer
+                                        Tapped="ImgTappa_Clicked"
+                                        NumberOfTapsRequired="1" />
+                        </ffimageloading:CachedImage.GestureRecognizers>
+                    </ffimageloading:CachedImage>
 
                     <StackLayout BackgroundColor="White">
 

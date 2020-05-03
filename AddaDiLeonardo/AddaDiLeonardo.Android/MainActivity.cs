@@ -26,6 +26,7 @@ namespace AddaDiLeonardo.Droid
             LibVLCSharpFormsRenderer.Init();
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init(true);//Cached images
             LoadApplication(new App());
 
             //Caricamento dei database

@@ -25,6 +25,7 @@ namespace AddaDiLeonardo.iOS
         {
             LibVLCSharpFormsRenderer.Init();
             global::Xamarin.Forms.Forms.Init();
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init();//Cached images
             LoadApplication(new App());
 
             //Database
