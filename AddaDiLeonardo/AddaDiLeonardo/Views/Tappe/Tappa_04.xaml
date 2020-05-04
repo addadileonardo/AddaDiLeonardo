@@ -14,8 +14,12 @@
 
             <ScrollView x:Name="Scroll" Grid.Row="0">
                 <StackLayout Spacing="0">
-
-                    <!--#region INTRODUCTION-->
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="220"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <!--#region INTRODUCTION-->
                     <!--ImageButton x:Name="ImgTappa" Aspect="AspectFill" Clicked="ImgTappa_Clicked"></ImageButton-->
                     <ffimageloading:CachedImage 
                                 LoadingPlaceholder= "LoaderImage"
@@ -24,7 +28,7 @@
                                 RetryCount= "3"
                                 RetryDelay= "600"
                                 DownsampleToViewSize = "true"
-                                x:Name="ImgTappa" Aspect="AspectFill"
+                                x:Name="ImgTappa" Aspect="AspectFill" Grid.Row="0"
                     >
                         <ffimageloading:CachedImage.GestureRecognizers>
                             <TapGestureRecognizer
@@ -32,8 +36,8 @@
                                         NumberOfTapsRequired="1" />
                         </ffimageloading:CachedImage.GestureRecognizers>
                     </ffimageloading:CachedImage>
-
-                    <StackLayout BackgroundColor="White">
+                        <StackLayout Grid.Row="1" Spacing="0">
+                            <StackLayout BackgroundColor="White">
 
                         <StackLayout Margin="20,25,20,20">
                             <local:CustomLabel_IntroTitle x:Name="lblTitle"></local:CustomLabel_IntroTitle>
@@ -110,7 +114,8 @@
                         </local:Accordion.AccordionContent>
                     </local:Accordion>
                     <!--#endregion-->
-
+                        </StackLayout>
+                    </Grid>
                 </StackLayout>
             </ScrollView>
 

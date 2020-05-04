@@ -18,7 +18,7 @@ namespace AddaDiLeonardo.Views.Tappe
         {
             InitializeComponent();
             close.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.close_5.png");
-            ImgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_02.traghetto_cover.png");
+            ImgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.cover.traghetto_cover.jpg");
             iconMarker.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.Icon-Place_@3x.png");
             var tappa = App.Database.GetTappeSingleAsync(idTappa: 3).Result;
             var sezioni = App.Database.GetSezioniAsync(idTappa: tappa.Id).Result;

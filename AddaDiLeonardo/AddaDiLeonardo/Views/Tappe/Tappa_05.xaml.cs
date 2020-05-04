@@ -18,7 +18,7 @@ namespace AddaDiLeonardo.Views.Tappe
         {
             InitializeComponent();
             close.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.close_5.png");
-            ImgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_05.centrali_cover_v2.png");
+            ImgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.cover.centrali_cover.jpg");
             iconMarker.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.Icon-Place_@3x.png");
             var tappa = App.Database.GetTappeSingleAsync(idTappa: 5).Result;
             var sezioni = App.Database.GetSezioniAsync(idTappa: tappa.Id).Result;
@@ -75,7 +75,6 @@ namespace AddaDiLeonardo.Views.Tappe
             stackContenuto_2.Children.Add(FormattaContenuto.Formatta(contenuti_2[8].Testo));
             stackContenuto_2.Children.Add(FormattaContenuto.Formatta(contenuti_2[9].Testo));
             stackContenuto_2.Children.Add(FormattaContenuto.Formatta(contenuti_2[10].Testo));
-            stackContenuto_2.Children.Add(new Label { Text = "video centrali_12" });
             stackContenuto_2.Children.Add(FormattaContenuto.Formatta(contenuti_2[12].Testo));
             stackContenuto_2.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_05.centrali_08.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 5, 0, 5) });
             stackContenuto_2.Children.Add(FormattaContenuto.Formatta(contenuti_2[14].Testo));
