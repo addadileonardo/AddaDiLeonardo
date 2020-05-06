@@ -17,6 +17,9 @@ namespace AddaDiLeonardo.Views.Tappe
         public Tappa_03()
         {
             InitializeComponent();
+            Thread thread = new Thread(new ThreadStart(loadImage));
+            thread.Start();
+            iconMarker.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.Icon-Place_@3x.png");
             var tappa = App.Database.GetTappeSingleAsync(idTappa: 2).Result;
             var sezioni = App.Database.GetSezioniAsync(idTappa: tappa.Id).Result;
 
@@ -26,9 +29,6 @@ namespace AddaDiLeonardo.Views.Tappe
                 accordion.AccordionOpened += accordionEvent;
 
             #region introduction
-            close.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.close_5.png");
-            ImgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_03.Rocchetta_22.png");
-            iconMarker.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.Icon-Place_@3x.png");
             lblTitle.Text = tappa.Titolo;
             lblSubTitle.Text = tappa.Sottotitolo;
             lblDescription.Text = tappa.Descrizione;
@@ -39,12 +39,12 @@ namespace AddaDiLeonardo.Views.Tappe
             Accordion_0.Title = sezioni[0].Titolo;
             stackContenuto_0.Children.Add(FormattaContenuto.Formatta(contenuti_0[0].Testo));
             stackContenuto_0.Children.Add(FormattaContenuto.Formatta(contenuti_0[1].Testo));
-            stackContenuto_0.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_03.Rocchetta_01.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 5, 0, 5) });
-            stackContenuto_0.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_03.Rocchetta_02.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 5, 0, 5) });
+            stackContenuto_0.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_03.Rocchetta_01.JPG"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 5, 0, 5) });
+            //stackContenuto_0.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_03.Rocchetta_02.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 5, 0, 5) });
             stackContenuto_0.Children.Add(FormattaContenuto.Formatta(contenuti_0[4].Testo));
             stackContenuto_0.Children.Add(FormattaContenuto.Formatta(contenuti_0[5].Testo));
             stackContenuto_0.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_03.Rocchetta_03.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 5, 0, 5) });
-            stackContenuto_0.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_03.Rocchetta_04.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 5, 0, 5) });
+            //stackContenuto_0.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_03.Rocchetta_04.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 5, 0, 5) });
             stackContenuto_0.Children.Add(FormattaContenuto.Formatta(contenuti_0[8].Testo));
             stackContenuto_0.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_03.Rocchetta_05.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 5, 0, 5) });
             #endregion
@@ -72,7 +72,7 @@ namespace AddaDiLeonardo.Views.Tappe
             stackContenuto_2.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_03.Rocchetta_02.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 5, 0, 5) });
             stackContenuto_2.Children.Add(FormattaContenuto.Formatta(contenuti_2[3].Testo));
             stackContenuto_2.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_03.Rocchetta_11.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 5, 0, 5) });
-            stackContenuto_2.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_03.Rocchetta_12.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 5, 0, 5) });
+            //stackContenuto_2.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_03.Rocchetta_12.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 5, 0, 5) });
             stackContenuto_2.Children.Add(FormattaContenuto.Formatta(contenuti_2[6].Testo));
             stackContenuto_2.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_03.Rocchetta_13.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 5, 0, 5) });
             #endregion
@@ -81,7 +81,7 @@ namespace AddaDiLeonardo.Views.Tappe
             var contenuti_3 = App.Database.GetContenutiAsync(idSezione: sezioni[3].Id).Result;
             Accordion_3.Title = sezioni[3].Titolo;
             stackContenuto_3.Children.Add(FormattaContenuto.Formatta(contenuti_3[0].Testo));
-            stackContenuto_3.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_03.Rocchetta_14.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 5, 0, 5) });
+            //stackContenuto_3.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_03.Rocchetta_14.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 5, 0, 5) });
             stackContenuto_3.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_03.Rocchetta_15.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 5, 0, 5) });
             stackContenuto_3.Children.Add(FormattaContenuto.Formatta(contenuti_3[3].Testo));
             stackContenuto_3.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_03.Rocchetta_16.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 5, 0, 0) });
@@ -106,18 +106,35 @@ namespace AddaDiLeonardo.Views.Tappe
             stackContenuto_4.Children.Add(FormattaContenuto.Formatta(contenuti_4[3].Testo));
             stackContenuto_4.Children.Add(FormattaContenuto.Formatta(contenuti_4[4].Testo));
             stackContenuto_4.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_03.Rocchetta_20.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 5, 0, 5) });
-            stackContenuto_4.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_03.Rocchetta_21.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 5, 0, 5) });
+            //stackContenuto_4.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_03.Rocchetta_21.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 5, 0, 5) });
             stackContenuto_4.Children.Add(FormattaContenuto.Formatta(contenuti_4[7].Testo));
             stackContenuto_4.Children.Add(FormattaContenuto.Formatta(contenuti_4[8].Testo));
             stackContenuto_4.Children.Add(FormattaContenuto.Formatta(contenuti_4[9].Testo));
             stackContenuto_4.Children.Add(FormattaContenuto.Formatta(contenuti_4[10].Testo));
-            //video intervista
+            ImageButton imgbtn = new ImageButton();
+            imgbtn.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.cover.rocchetta2_cover.jpg");
+            imgbtn.Aspect = Aspect.AspectFill;
+            imgbtn.Margin = new Thickness(0, 5, 0, 5);
+            imgbtn.Clicked += Imgbtn_Clicked;
+            stackContenuto_4.Children.Add(imgbtn);
             #endregion
         }
 
-        private void ImgTappa_Clicked(object sender, EventArgs e)
+        private void loadImage()
         {
+            ImgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.cover.rocchetta_cover.jpg");
+            close.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.close_5.png");
+        }
 
+
+        private async void Imgbtn_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1CKaLQyFhWr5ABpk0MkpezqDyCA-mdkFA"));
+        }
+
+        private async void ImgTappa_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1CKaLQyFhWr5ABpk0MkpezqDyCA-mdkFA"));
         }
 
         private void close_Clicked(object sender, EventArgs e)

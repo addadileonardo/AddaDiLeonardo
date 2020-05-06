@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:AddaDiLeonardo.CustomControls" xmlns:local1="clr-namespace:AddaDiLeonardo.MarkupExtensions"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              mc:Ignorable="d"
              x:Class="AddaDiLeonardo.Views.Tappe.Tappa_05">
     <ContentPage.Content>
@@ -14,11 +15,30 @@
 
             <ScrollView x:Name="Scroll" Grid.Row="0">
                 <StackLayout Spacing="0">
-
-                    <!--#region INTRODUCTION-->
-                    <ImageButton x:Name="ImgTappa" Source="{local1:EmbeddedImage AddaDiLeonardo.Images.Tappe.Tappa_05.centrali_10.jpg}" Aspect="AspectFill" Clicked="ImgTappa_Clicked"></ImageButton>
-
-                    <StackLayout BackgroundColor="White">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="220"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <!--#region INTRODUCTION-->
+                    <!--ImageButton x:Name="ImgTappa" Source="{local1:EmbeddedImage AddaDiLeonardo.Images.Tappe.Tappa_05.centrali_10.jpg}" Aspect="AspectFill" Clicked="ImgTappa_Clicked"></ImageButton-->
+                    <ffimageloading:CachedImage 
+                                LoadingPlaceholder= "LoaderImage"
+                                ErrorPlaceholder= "ErrorImage"
+                                CacheDuration= "50"
+                                RetryCount= "3"
+                                RetryDelay= "600"
+                                DownsampleToViewSize = "true"
+                                x:Name="ImgTappa" Aspect="AspectFill" Grid.Row="0"
+                    >
+                        <ffimageloading:CachedImage.GestureRecognizers>
+                            <TapGestureRecognizer
+                                        Tapped="ImgTappa_Clicked"
+                                        NumberOfTapsRequired="1" />
+                        </ffimageloading:CachedImage.GestureRecognizers>
+                    </ffimageloading:CachedImage>
+                        <StackLayout Grid.Row="1" Spacing="0">
+                            <StackLayout BackgroundColor="White">
 
                         <StackLayout Margin="20,25,20,20">
                             <local:CustomLabel_IntroTitle x:Name="lblTitle"></local:CustomLabel_IntroTitle>
@@ -85,7 +105,8 @@
                     </local:Accordion>
 
                     <!--#endregion-->
-
+                        </StackLayout>
+                    </Grid>
                 </StackLayout>
             </ScrollView>
 

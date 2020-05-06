@@ -1,4 +1,5 @@
-﻿using LibVLCSharp.Shared;
+﻿using LibVLCSharp.Forms.Shared;
+using LibVLCSharp.Shared;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,26 +15,28 @@ namespace AddaDiLeonardo.Views
     public partial class PlayerPage : ContentPage
     {
         private string _link = default;
+        
         public PlayerPage(string link)
         {
             
             InitializeComponent();
-            NavigationPage.SetHasNavigationBar(this, false);
-            Core.Initialize();
+            
             _link = link;
             close.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.close_5.png");
         }
 
-        private void ContentPage_Appearing(object sender, EventArgs e)
+        protected override async void OnAppearing()
         {
+            base.OnAppearing();
             if (Connectivity.NetworkAccess != NetworkAccess.Internet)
             {
-                DisplayAlert("ATTENZIONE!", "Accendi la connessione ad internet per vedere il video!", "OK");
-                Navigation.PopModalAsync();
+                
+                await DisplayAlert("ATTENZIONE!", "Devi essere connesso ad internet per vedere il video!", "Ok");
+                await Navigation.PopModalAsync();
             }
             else
             {
-                
+                Core.Initialize();
                 using (var _libVLC = new LibVLC())
                 {
                     var media = new Media(_libVLC, _link, FromType.FromLocation);
@@ -43,12 +46,22 @@ namespace AddaDiLeonardo.Views
                         Fullscreen = true
                     };
                     myvideo.MediaPlayer.Playing += MediaPlayer_Playing;
+                    myvideo.MediaPlayer.EncounteredError += MediaPlayer_EncounteredError;
                     myvideo.MediaPlayer.Play();
                 };
+
             }
         }
-        
-        
+
+        private void MediaPlayer_EncounteredError(object sender, EventArgs e)
+        {
+            Device.BeginInvokeOnMainThread(async () => {
+                spinner.IsRunning = false;
+                await DisplayAlert("ERRORE!", "Si è verificato un errore durante la riproduzione del video. Riprovare più tardi.", "OK");
+                await Navigation.PopModalAsync();
+            });
+            
+        }
 
         private void MediaPlayer_Playing(object sender, EventArgs e)
         {
@@ -59,11 +72,15 @@ namespace AddaDiLeonardo.Views
 
         protected override void OnDisappearing()
         {
-            myvideo.MediaPlayer.Stop();
+            if (myvideo.MediaPlayer != null || myvideo.MediaPlayer.IsPlaying == true)
+            {
+                myvideo.MediaPlayer.Stop();
+            }
         }
 
         private void close_Clicked(object sender, EventArgs e)
         {
+            
             Navigation.PopModalAsync();
         }
     }

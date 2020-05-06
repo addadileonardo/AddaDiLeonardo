@@ -18,11 +18,12 @@ namespace AddaDiLeonardo
         public MainPage()
         {
             InitializeComponent();
+            
         }
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1-ybKXJo6ZUxK-OAVCftXiX0gq7IOpbQB"));
+            await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1-ybKXo6ZUxK-OAVCftXiX0gq7IOpbQB"));
         }
 
         private async void Button_Clicked_1(object sender, EventArgs e)

@@ -17,6 +17,9 @@ namespace AddaDiLeonardo.Views.Tappe
         public Tappa_04()
         {
             InitializeComponent();
+            close.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.close_5.png");
+            ImgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.cover.ponte_cover.jpg");
+            iconMarker.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.Icon-Place_@3x.png");
             var tappa = App.Database.GetTappeSingleAsync(idTappa: 4).Result;
             var sezioni = App.Database.GetSezioniAsync(idTappa: tappa.Id).Result;
 
@@ -26,9 +29,7 @@ namespace AddaDiLeonardo.Views.Tappe
                 accordion.AccordionOpened += accordionEvent;
 
             #region introduction
-            close.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.close_5.png");
-            ImgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_04.ponte_cover_v2.png");
-            iconMarker.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.Icon-Place_@3x.png");
+            
             lblTitle.Text = tappa.Titolo;
             lblSubTitle.Text = tappa.Sottotitolo;
             lblDescription.Text = tappa.Descrizione;
@@ -37,7 +38,7 @@ namespace AddaDiLeonardo.Views.Tappe
             #region accordion_0
             var contenuti_0 = App.Database.GetContenutiAsync(idSezione: sezioni[0].Id).Result;
             Accordion_0.Title = sezioni[0].Titolo;
-            imgVideo2.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_04.ponte2_cover.png");
+            imgVideo2.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.cover.ponte2_cover.jpg");
             #endregion
 
             #region accordion_1
@@ -75,7 +76,7 @@ namespace AddaDiLeonardo.Views.Tappe
 
             #region accordion_4
             Accordion_4.Title = sezioni[4].Titolo;
-            imgVideo3.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_04.ponte3_cover.png");
+            imgVideo3.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.cover.ponte3_cover.jpg");
             #endregion
 
         }

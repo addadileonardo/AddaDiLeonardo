@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-
 using Foundation;
 using LibVLCSharp.Forms.Shared;
 using UIKit;
@@ -26,6 +25,7 @@ namespace AddaDiLeonardo.iOS
         {
             LibVLCSharpFormsRenderer.Init();
             global::Xamarin.Forms.Forms.Init();
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init();//Cached images
             LoadApplication(new App());
 
             //Database

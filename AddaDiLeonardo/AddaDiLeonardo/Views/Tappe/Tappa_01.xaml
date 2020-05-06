@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:local="clr-namespace:AddaDiLeonardo.CustomControls"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              mc:Ignorable="d"
              x:Class="AddaDiLeonardo.Views.Tappe.Tappa_01">
     <ContentPage.Content>
@@ -11,52 +12,73 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
-            
+
             <ScrollView x:Name="Scroll" Grid.Row="0">
                 <StackLayout Spacing="0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="220"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
 
-                    <!--#region INTRODUCTION-->
-                    <ImageButton x:Name="ImgTappa" Aspect="AspectFill" Clicked="ImgTappa_Clicked"></ImageButton>
+                        <!--#region INTRODUCTION-->
+                        <!--ImageButton x:Name="ImgTappa" Aspect="AspectFill" Clicked="ImgTappa_Clicked"></ImageButton-->
+                        <ffimageloading:CachedImage 
+                                LoadingPlaceholder= "LoaderImage"
+                                ErrorPlaceholder= "ErrorImage"
+                                CacheDuration= "50"
+                                RetryCount= "3"
+                                RetryDelay= "600"
+                                DownsampleToViewSize = "true"
+                                x:Name="ImgTappa" Aspect="AspectFill" Grid.Row="0"
+                    >
+                            <ffimageloading:CachedImage.GestureRecognizers>
+                                <TapGestureRecognizer
+                                        Tapped="ImgTappa_Clicked"
+                                        NumberOfTapsRequired="1" />
+                            </ffimageloading:CachedImage.GestureRecognizers>
+                        </ffimageloading:CachedImage>
+                        <StackLayout Grid.Row="1" Spacing="0">
+                            <StackLayout BackgroundColor="White">
 
-                    <StackLayout BackgroundColor="White">
-
-                        <StackLayout Margin="20,25,20,20">
-                            <local:CustomLabel_IntroTitle x:Name="lblTitle"></local:CustomLabel_IntroTitle>
-                            <local:CustomLabel_IntroSubTitle x:Name="lblSubTitle" Margin="0,0,0,25"></local:CustomLabel_IntroSubTitle>
-                            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Margin="0,0,0,25">
-                                <Image x:Name="iconMarker" Aspect="AspectFit"></Image>
-                                <Label  Text="Lombardia">
-                                    <Label.FontFamily>
-                                        <OnPlatform x:TypeArguments="x:String">
-                                            <On Platform="iOS" Value="Roboto-Light" />
-                                            <On Platform="Android" Value="Roboto-Light.ttf#Roboto" />
-                                        </OnPlatform>
-                                    </Label.FontFamily>
-                                </Label>
+                                <StackLayout Margin="20,25,20,20">
+                                    <local:CustomLabel_IntroTitle x:Name="lblTitle"></local:CustomLabel_IntroTitle>
+                                    <local:CustomLabel_IntroSubTitle x:Name="lblSubTitle" Margin="0,0,0,25"></local:CustomLabel_IntroSubTitle>
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Margin="0,0,0,25">
+                                        <Image x:Name="iconMarker" Aspect="AspectFit"></Image>
+                                        <Label  Text="Lombardia">
+                                            <Label.FontFamily>
+                                                <OnPlatform x:TypeArguments="x:String">
+                                                    <On Platform="iOS" Value="Roboto-Light" />
+                                                    <On Platform="Android" Value="Roboto-Light.ttf#Roboto" />
+                                                </OnPlatform>
+                                            </Label.FontFamily>
+                                        </Label>
+                                    </StackLayout>
+                                    <local:CustomLabel x:Name="lblDescription"></local:CustomLabel>
+                                </StackLayout>
                             </StackLayout>
-                            <local:CustomLabel x:Name="lblDescription"></local:CustomLabel>
+                            <!--#endregion-->
+
+
+                            <!--#region ACCORDION-->
+                            <local:Accordion x:Name="Accordion_0" AccordionName="Accordion_0" BGColor="#F6F6F6" TxtColor="Black">
+                                <local:Accordion.AccordionContent>
+                                    <StackLayout Orientation="Vertical" >
+                                        <StackLayout Margin="10,0,10,10" x:Name="stackContenuto_0" >
+
+                                        </StackLayout>
+                                    </StackLayout>
+                                </local:Accordion.AccordionContent>
+                            </local:Accordion>
+                            <!--#endregion-->
                         </StackLayout>
-                    </StackLayout>
-                    <!--#endregion-->
-
-
-                    <!--#region ACCORDION-->
-                    <local:Accordion x:Name="Accordion_0" AccordionName="Accordion_0" BGColor="#F6F6F6" TxtColor="Black">
-                    <local:Accordion.AccordionContent>
-                            <StackLayout Orientation="Vertical" >
-                                <StackLayout Margin="10,0,10,10" x:Name="stackContenuto_0" >
-
-                            </StackLayout>
-                        </StackLayout>
-                    </local:Accordion.AccordionContent>
-                </local:Accordion>
-                    <!--#endregion-->
-               
+                    </Grid>
                 </StackLayout>
             </ScrollView>
-            
+
             <ImageButton Clicked="close_Clicked" BackgroundColor="Transparent" Margin="0,10,10,0" HeightRequest="40" x:Name="close" Grid.Row="0" VerticalOptions="Start" HorizontalOptions="End"></ImageButton>
-        
+
         </Grid>
     </ContentPage.Content>
 </ContentPage>
