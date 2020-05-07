@@ -34,6 +34,7 @@ namespace AddaDiLeonardo.Views
 
             var tapGestureRecognizer = new TapGestureRecognizer();
 
+            if ()
             var image1 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-1.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map1" };
             image1.GestureRecognizers.Add(tapGestureRecognizer);
             stackMappa.Children.Add(image1);
@@ -54,9 +55,7 @@ namespace AddaDiLeonardo.Views
             image5.GestureRecognizers.Add(tapGestureRecognizer);
             stackMappa.Children.Add(image5);
 
-            
            
-            //map1.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-1.jpg");
             //stackMappa.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-1.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0) });
             //stackMappa.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-2.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0) });
             //stackMappa.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-3.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0) });
@@ -70,13 +69,12 @@ namespace AddaDiLeonardo.Views
 
             Accordion_0.Indicator = new Image() { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.arrow-white.png"), WidthRequest = 20 };
 
-            // Evento tap
+            // Evento tap mappa
             tapGestureRecognizer.Tapped += (sender, e) =>
             {
-                // cast to an image
-                //string step = ((Image)sender).ClassId;
+                // cast image and push async to step
                 OnImageMapTapped(sender, e);
-                // now you have a reference to the image
+
             };
         }
 
