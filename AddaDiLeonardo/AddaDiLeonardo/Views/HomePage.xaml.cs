@@ -25,15 +25,59 @@ namespace AddaDiLeonardo.Views
         {
             InitializeComponent();
             mappaIcon.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.arrow-white.png");
-            if(Application.Current.Properties.ContainsKey("lang"))
+            if (Application.Current.Properties.ContainsKey("lang"))
                 ActiveLanguage = Application.Current.Properties["lang"].ToString(); //viene impostata la lingua memorizzata se presente, altrimenti ita di default.
             btnOpen.Text = ActiveLanguage; //imposto la lingua attiva
             LanguageStack.TranslateTo(0, -200, 00); //traslo lo stack di selezione di -200 sull'asse y-> in realtà purtroppo non escono fuori dallo schermo ma si sovrappongono nell'angolino a destra. quindi se lo sfono non è trasparente si vedono..
+
+            #region stackMappa
+
+            var tapGestureRecognizer = new TapGestureRecognizer();
+
+            var image1 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-1.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map1" };
+            image1.GestureRecognizers.Add(tapGestureRecognizer);
+            stackMappa.Children.Add(image1);
+
+            var image2 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-2.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map2" };
+            image2.GestureRecognizers.Add(tapGestureRecognizer);
+            stackMappa.Children.Add(image2);
+
+            var image3 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-3.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map3" };
+            image3.GestureRecognizers.Add(tapGestureRecognizer);
+            stackMappa.Children.Add(image3);
+
+            var image4 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-4.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map4" };
+            image4.GestureRecognizers.Add(tapGestureRecognizer);
+            stackMappa.Children.Add(image4);
+
+            var image5 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-5.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map5" };
+            image5.GestureRecognizers.Add(tapGestureRecognizer);
+            stackMappa.Children.Add(image5);
+
+            
+           
+            //map1.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-1.jpg");
+            //stackMappa.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-1.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0) });
+            //stackMappa.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-2.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0) });
+            //stackMappa.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-3.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0) });
+            //stackMappa.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-4.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0) });
+            //stackMappa.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-5.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0) });
+            #endregion
+
             accordions = new List<Accordion>() { Accordion_0 };
             foreach (Accordion accordion in accordions)
                 accordion.AccordionOpened += accordionEvent;
 
             Accordion_0.Indicator = new Image() { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.arrow-white.png"), WidthRequest = 20 };
+
+            // Evento tap
+            tapGestureRecognizer.Tapped += (sender, e) =>
+            {
+                // cast to an image
+                //string step = ((Image)sender).ClassId;
+                OnImageMapTapped(sender, e);
+                // now you have a reference to the image
+            };
         }
 
         static List<Accordion> accordions;
@@ -57,6 +101,65 @@ namespace AddaDiLeonardo.Views
         {
             this.Scroll.ScrollToAsync(this.FindByName<Element>("Accordion_0"), ScrollToPosition.Start, true); //da modificare con mappa
         }
+
+
+        #region "MAP"
+        private object syncLockMappa = new object();
+        bool isInCallMappa = false;
+
+        private async void OnImageMapTapped(object sender, EventArgs args)
+        {
+
+            lock (syncLockMappa)
+            {
+                if (isInCallMappa)
+                    return;
+                isInCallMappa = true;
+            }
+
+            try
+            {
+
+                switch (((Image)sender).ClassId)
+                {
+
+                    case "map1":
+                        var TappaTraghetto = new Tappa_02();
+                        await Navigation.PushModalAsync(TappaTraghetto);
+                        break;
+                    case "map2":
+                        var TappaFiume = new Tappa_01();
+                        await Navigation.PushModalAsync(TappaFiume);
+                        break;
+                    case "map3":
+                        var TappaPonte = new Tappa_04();
+                        await Navigation.PushModalAsync(TappaPonte);
+                        break;
+                    case "map4":
+                        var TappaRocchetta = new Tappa_03();
+                        await Navigation.PushModalAsync(TappaRocchetta);
+                        break;
+                    case "map5":
+                        var TappaCentrali = new Tappa_05();
+                        await Navigation.PushModalAsync(TappaCentrali);
+                        break;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                lock (syncLockTappa)
+                {
+                    isInCallTappa = false;
+                }
+            }
+
+        }
+        #endregion
 
         #region "STEP"
         private object syncLockTappa = new object();
