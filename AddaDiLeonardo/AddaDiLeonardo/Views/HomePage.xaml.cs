@@ -33,29 +33,58 @@ namespace AddaDiLeonardo.Views
             #region stackMappa
 
             var tapGestureRecognizer = new TapGestureRecognizer();
+            Image image1 = new Image();
+            Image image2 = new Image();
+            Image image3 = new Image();
+            Image image4 = new Image(); 
+            Image image5 = new Image();
 
-            if ()
-            var image1 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-1.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map1" };
+            switch (ActiveLanguage)
+            {
+                case "IT":
+                    {
+                        image1 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-1.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map1" };
+                        image2 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-2.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map2" };
+                        image3 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-3.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map3" };
+                        image4 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-4.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map4" };
+                        image5 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-5.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map5" };
+                        break;
+                    }
+                case "ENG":
+                    {
+                        image1 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.EN-Map-1.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map1" };
+                        image2 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.EN-Map-2.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map2" };
+                        image3 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.EN-Map-3.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map3" };
+                        image4 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.EN-Map-4.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map4" };
+                        image5 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.EN-Map-5.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map5" };
+                        break;
+                    }
+                case "FR":
+                    {
+                        image1 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.FR-Map-1.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map1" };
+                        image2 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.FR-Map-2.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map2" };
+                        image3 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.FR-Map-3.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map3" };
+                        image4 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.FR-Map-4.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map4" };
+                        image5 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.FR-Map-5.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map5" };
+                        break;
+                    }    
+            }
+
             image1.GestureRecognizers.Add(tapGestureRecognizer);
             stackMappa.Children.Add(image1);
 
-            var image2 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-2.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map2" };
             image2.GestureRecognizers.Add(tapGestureRecognizer);
             stackMappa.Children.Add(image2);
 
-            var image3 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-3.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map3" };
             image3.GestureRecognizers.Add(tapGestureRecognizer);
             stackMappa.Children.Add(image3);
-
-            var image4 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-4.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map4" };
+            
             image4.GestureRecognizers.Add(tapGestureRecognizer);
             stackMappa.Children.Add(image4);
 
-            var image5 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-5.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map5" };
             image5.GestureRecognizers.Add(tapGestureRecognizer);
             stackMappa.Children.Add(image5);
 
-           
             //stackMappa.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-1.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0) });
             //stackMappa.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-2.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0) });
             //stackMappa.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-3.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0) });
@@ -72,7 +101,7 @@ namespace AddaDiLeonardo.Views
             // Evento tap mappa
             tapGestureRecognizer.Tapped += (sender, e) =>
             {
-                // cast image and push async to step
+                // Cast image and push async to step
                 OnImageMapTapped(sender, e);
 
             };
