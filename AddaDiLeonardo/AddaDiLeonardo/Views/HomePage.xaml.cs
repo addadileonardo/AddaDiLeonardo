@@ -154,7 +154,7 @@ namespace AddaDiLeonardo.Views
             {
                 lock (syncLockTappa)
                 {
-                    isInCallTappa = false;
+                    isInCallMappa = false;
                 }
             }
 
