@@ -21,6 +21,19 @@ namespace AddaDiLeonardo.Views
         //proprietà per tener traccia della lingua attiva
         public static string ActiveLanguage = "IT";
 
+        //immagini tappe e mappa
+        Image imageT1 = new Image();
+        Image imageT2 = new Image();
+        Image imageT3 = new Image();
+        Image imageT4 = new Image();
+        Image imageT5 = new Image();
+
+        Image imageM1 = new Image();
+        Image imageM2 = new Image();
+        Image imageM3 = new Image();
+        Image imageM4 = new Image();
+        Image imageM5 = new Image();
+
         public HomePage()
         {
             InitializeComponent();
@@ -33,17 +46,6 @@ namespace AddaDiLeonardo.Views
             #region stackMappa
 
             var tapGestureRecognizer = new TapGestureRecognizer();
-            Image imageM1 = new Image();
-            Image imageM2 = new Image();
-            Image imageM3 = new Image();
-            Image imageM4 = new Image(); 
-            Image imageM5 = new Image();
-
-            Image imageT1 = new Image();
-            Image imageT2 = new Image();
-            Image imageT3 = new Image();
-            Image imageT4 = new Image();
-            Image imageT5 = new Image();
 
             switch (ActiveLanguage)
             {
@@ -63,11 +65,11 @@ namespace AddaDiLeonardo.Views
                     }
                 case "ENG":
                     {
-                        imageT1 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.IT-1-Fiume.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map1" };
-                        imageT2 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.IT-2-Ponte.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map2" };
-                        imageT3 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.IT-3-Rocchetta.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map3" };
-                        imageT4 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.IT-4-Traghetto.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map4" };
-                        imageT5 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.IT-5-Centrali.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map5" };
+                        imageT1 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.EN-1-Fiume.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map1" };
+                        imageT2 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.EN-2-Ponte.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map2" };
+                        imageT3 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.EN-3-Rocchetta.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map3" };
+                        imageT4 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.EN-4-Traghetto.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map4" };
+                        imageT5 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.EN-5-Centrali.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map5" };
                         imageM1 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.EN-Map-1.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map1" };
                         imageM2 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.EN-Map-2.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map2" };
                         imageM3 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.EN-Map-3.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map3" };
@@ -77,11 +79,11 @@ namespace AddaDiLeonardo.Views
                     }
                 case "FR":
                     {
-                        imageT1 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.IT-1-Fiume.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map1" };
-                        imageT2 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.IT-2-Ponte.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map2" };
-                        imageT3 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.IT-3-Rocchetta.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map3" };
-                        imageT4 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.IT-4-Traghetto.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map4" };
-                        imageT5 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.IT-5-Centrali.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map5" };
+                        imageT1 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.FR-1-Fiume.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map1" };
+                        imageT2 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.FR-2-Ponte.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map2" };
+                        imageT3 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.FR-3-Rocchetta.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map3" };
+                        imageT4 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.FR-4-Traghetto.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map4" };
+                        imageT5 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.FR-5-Centrali.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map5" };
                         imageM1 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.FR-Map-1.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map1" };
                         imageM2 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.FR-Map-2.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map2" };
                         imageM3 = new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.FR-Map-3.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map3" };
@@ -369,6 +371,7 @@ namespace AddaDiLeonardo.Views
         {
             ActiveLanguage = "IT";
             Application.Current.Properties["lang"] = "IT";
+            imageT1.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.IT-1-Fiume.jpg");
             Close();
         }
 
@@ -376,6 +379,7 @@ namespace AddaDiLeonardo.Views
         {
             ActiveLanguage = "ENG";
             Application.Current.Properties["lang"] = "ENG";
+            imageT1.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.EN-1-Fiume.jpg");
             Close();
         }
 
@@ -383,6 +387,7 @@ namespace AddaDiLeonardo.Views
         {
             ActiveLanguage = "FR";
             Application.Current.Properties["lang"] = "FR";
+            imageT1.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.FR-1-Fiume.jpg");
             Close();
         }
 
@@ -415,7 +420,6 @@ namespace AddaDiLeonardo.Views
             if (ActiveLanguage == "IT")
             {
                 btnOpen.Text = ActiveLanguage;
-
                 //Cambio database attuale -> italiano
                 //funzione di riavvio app
             }
