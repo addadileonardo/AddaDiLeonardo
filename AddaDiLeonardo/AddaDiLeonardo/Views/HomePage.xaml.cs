@@ -182,6 +182,7 @@ namespace AddaDiLeonardo.Views
             imageM5.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.FR-Map-5.jpg");
 
         }
+
         #region "MAP"
         private object syncLockMappa = new object();
         bool isInCallMappa = false;
@@ -327,38 +328,6 @@ namespace AddaDiLeonardo.Views
                 lock (syncLockPlayer)
                 {
                     isInCallPlayer = false;
-                }
-            }
-
-        }
-        #endregion
-
-        #region "MAP"
-        private object syncLockMap = new object();
-        bool isInCallMap = false;
-
-        private async void btnMap_Clicked(object sender, EventArgs e)
-        {
-            lock (syncLockMap)
-            {
-                if (isInCallMap)
-                    return;
-                isInCallPlayer = true;
-            }
-
-            try
-            {
-                await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1-ybKXJo6ZUxK-OAVCftXiX0gq7IOpbQB"));
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                lock (syncLockMap)
-                {
-                    isInCallMap = false;
                 }
             }
 
