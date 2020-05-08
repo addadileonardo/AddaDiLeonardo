@@ -14,8 +14,28 @@
     <None Remove="Images\Home\background.png" />
     <None Remove="Images\Home\centrale.jpg" />
     <None Remove="Images\Home\fiume.jpg" />
+    <None Remove="Images\Home\Mappa\EN-Map-1.jpg" />
+    <None Remove="Images\Home\Mappa\EN-Map-2.jpg" />
+    <None Remove="Images\Home\Mappa\EN-Map-3.jpg" />
+    <None Remove="Images\Home\Mappa\EN-Map-4.jpg" />
+    <None Remove="Images\Home\Mappa\EN-Map-5.jpg" />
+    <None Remove="Images\Home\Mappa\FR-Map-1.jpg" />
+    <None Remove="Images\Home\Mappa\FR-Map-2.jpg" />
+    <None Remove="Images\Home\Mappa\FR-Map-3.jpg" />
+    <None Remove="Images\Home\Mappa\FR-Map-4.jpg" />
+    <None Remove="Images\Home\Mappa\FR-Map-5.jpg" />
+    <None Remove="Images\Home\Mappa\IT-Map-1.jpg" />
+    <None Remove="Images\Home\Mappa\IT-Map-2.jpg" />
+    <None Remove="Images\Home\Mappa\IT-Map-3.jpg" />
+    <None Remove="Images\Home\Mappa\IT-Map-4.jpg" />
+    <None Remove="Images\Home\Mappa\IT-Map-5.jpg" />
     <None Remove="Images\Home\ponte.jpg" />
     <None Remove="Images\Home\rocchetta.jpg" />
+    <None Remove="Images\Home\Tappe\IT-1-Fiume.jpg" />
+    <None Remove="Images\Home\Tappe\IT-2-Ponte.jpg" />
+    <None Remove="Images\Home\Tappe\IT-3-Rocchetta.jpg" />
+    <None Remove="Images\Home\Tappe\IT-4-Traghetto.jpg" />
+    <None Remove="Images\Home\Tappe\IT-5-Centrali.jpg" />
     <None Remove="Images\Home\traghetto.jpg" />
     <None Remove="Images\Home\videoplayer_2.png" />
     <None Remove="Images\Icons\arrow-white.png" />
@@ -80,6 +100,11 @@
     <EmbeddedResource Include="Images\Home\background.png" />
     <EmbeddedResource Include="Images\Home\centrale.jpg" />
     <EmbeddedResource Include="Images\Home\fiume.jpg" />
+    <EmbeddedResource Include="Images\Home\Tappe\IT-1-Fiume.jpg" />
+    <EmbeddedResource Include="Images\Home\Tappe\IT-2-Ponte.jpg" />
+    <EmbeddedResource Include="Images\Home\Tappe\IT-3-Rocchetta.jpg" />
+    <EmbeddedResource Include="Images\Home\Tappe\IT-4-Traghetto.jpg" />
+    <EmbeddedResource Include="Images\Home\Tappe\IT-5-Centrali.jpg" />
     <EmbeddedResource Include="Images\Home\videoplayer_2.png" />
     <EmbeddedResource Include="Images\Home\ponte.jpg" />
     <EmbeddedResource Include="Images\Home\rocchetta.jpg" />
@@ -198,5 +223,23 @@
   <ItemGroup>
     <Folder Include="Images\Tappe\Tappa_01\" />
     <Folder Include="Images\Tappe\Tappa_02\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Home\Mappa\EN-Map-1.jpg" />
+    <EmbeddedResource Include="Images\Home\Mappa\EN-Map-2.jpg" />
+    <EmbeddedResource Include="Images\Home\Mappa\EN-Map-3.jpg" />
+    <EmbeddedResource Include="Images\Home\Mappa\EN-Map-4.jpg" />
+    <EmbeddedResource Include="Images\Home\Mappa\EN-Map-5.jpg" />
+    <EmbeddedResource Include="Images\Home\Mappa\FR-Map-1.jpg" />
+    <EmbeddedResource Include="Images\Home\Mappa\FR-Map-2.jpg" />
+    <EmbeddedResource Include="Images\Home\Mappa\FR-Map-3.jpg" />
+    <EmbeddedResource Include="Images\Home\Mappa\FR-Map-4.jpg" />
+    <EmbeddedResource Include="Images\Home\Mappa\FR-Map-5.jpg" />
+    <EmbeddedResource Include="Images\Home\Mappa\IT-Map-1.jpg" />
+    <EmbeddedResource Include="Images\Home\Mappa\IT-Map-2.jpg" />
+    <EmbeddedResource Include="Images\Home\Mappa\IT-Map-3.jpg" />
+    <EmbeddedResource Include="Images\Home\Mappa\IT-Map-4.jpg" />
+    <EmbeddedResource Include="Images\Home\Mappa\IT-Map-5.jpg" />
   </ItemGroup>
 </Project>

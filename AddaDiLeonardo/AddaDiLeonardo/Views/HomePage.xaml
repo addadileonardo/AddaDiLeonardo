@@ -68,7 +68,13 @@
                                 </Image.GestureRecognizers>
                             </Image>
                             <Local:CustomLabel Margin="10, 0, 10, 0" TextColor="White" x:Name="descrizione" Text="La mia anima è pervasa da una mirabile serenità, simile a queste belle mattinate di maggio che io godo con tutto il cuore. Sono solo e mi rallegro di vivere in questo luogo che sembra esser creato per anime simili alla mia. Sono così felice, mio caro, così immerso nel sentimento della mia tranquilla esistenza che la mia arte ne soffre. Non potrei disegnare nulla ora, neppure un segno potrei" ></Local:CustomLabel>
-                            <Grid Margin="0, 20, 0, 0">
+                            <StackLayout Orientation="Vertical" Spacing="0"  Margin="0,20,0,0" x:Name="stackTappe" >
+                                
+                            </StackLayout>
+                            <StackLayout Orientation="Vertical" Spacing="0"  Margin="0,20,0,0" x:Name="stackMappa" >
+
+                            </StackLayout>
+                            <!--<Grid Margin="0, 20, 0, 0">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="200"></RowDefinition>
                                 </Grid.RowDefinitions>
@@ -132,7 +138,8 @@
                                     </Image.GestureRecognizers>
                                 </Image>
                                 <Local:CustomLabel Grid.Row="0" HorizontalOptions="End" VerticalOptions="End" Padding="5, 0, 5, 0" BackgroundColor="Black" TextColor="White" x:Name="centraleText" Text="LA CENTRALE"></Local:CustomLabel>
-                            </Grid>
+                            </Grid>-->
+                           
                             <Local:Accordion x:Name="Accordion_0" AccordionName="Accordion_0" BGColor="Black" TxtColor="White" Title="CREDITS">
                                 <Local:Accordion.AccordionContent>
                                     <StackLayout Orientation="Vertical" BackgroundColor="Black">
