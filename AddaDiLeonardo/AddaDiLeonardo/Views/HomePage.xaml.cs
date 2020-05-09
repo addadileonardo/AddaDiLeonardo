@@ -116,6 +116,10 @@ namespace AddaDiLeonardo.Views
                 OnImageMapTapped(sender, e);
 
             };
+
+            //Testo iniziale
+            string testo = "Un percorso leonardesco come non lo avreste mai pensato, una narrazione personale che ne da’ un'interpretazione inedita e quasi sovversiva. L'Adda da fiume sacro a laica risorsa, gradualmente trasformata e sfruttata dall'uomo in canali, mulini e centrali idroelettriche. Quale migliore metafora del fiume per capire lo scorrere del tempo? Risalire l'Adda significa passare dalla parola al numero, dalla mitologia alla contabilità. Un percorso virtuale che gli studenti degli istituti «Lussana» di Bergamo e «Marconi» di Dalmine hanno creato in italiano, inglese e francese …. Finalmente questo tratto della valle dell’Adda si apre al mondo! \r\n\r\nSaperi appresi dalle interviste, sapori avvertiti nelle visite in loco, sipari aperti sulla grande storia.Pronti ad __addentrarvi__? ";
+            descrizione.FormattedText = FormattaContenuto.Formatta(testo).FormattedText;
         }
 
         static List<Accordion> accordions;
