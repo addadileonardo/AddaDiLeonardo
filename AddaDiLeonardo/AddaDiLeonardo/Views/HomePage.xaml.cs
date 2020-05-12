@@ -36,8 +36,9 @@ namespace AddaDiLeonardo.Views
 
         public HomePage()
         {
+            
             InitializeComponent();
-            mappaIcon.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.arrow-white.png");
+            mappaIcon.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.map_icon.png");
             if (Application.Current.Properties.ContainsKey("lang"))
                 ActiveLanguage = Application.Current.Properties["lang"].ToString(); //viene impostata la lingua memorizzata se presente, altrimenti ita di default.
             btnOpen.Text = ActiveLanguage; //imposto la lingua attiva

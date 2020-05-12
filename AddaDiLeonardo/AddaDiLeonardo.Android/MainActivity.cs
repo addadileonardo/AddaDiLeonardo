@@ -28,6 +28,7 @@ namespace AddaDiLeonardo.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init(true);//Cached images
             LoadApplication(new App());
+            Window.SetStatusBarColor(Android.Graphics.Color.Argb(255, 0, 0, 0));
 
             //Caricamento dei database
             ExtractDBFromAssets(dbname: "Italiano.db");
