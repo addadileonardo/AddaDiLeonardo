@@ -146,44 +146,44 @@ namespace AddaDiLeonardo.Views
 
         private void imagesIT()
         {
-            imageT1.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.IT-1-Fiume.jpg");
-            imageT2.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.IT-2-Ponte.jpg");
-            imageT3.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.IT-3-Rocchetta.jpg");
-            imageT4.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.IT-4-Traghetto.jpg");
-            imageT5.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.IT-5-Centrali.jpg");
-            imageM1.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-1.jpg");
-            imageM2.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-2.jpg");
-            imageM3.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-3.jpg");
-            imageM4.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-4.jpg");
-            imageM5.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-5.jpg");
+            imageT1.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.IT-1-Fiume.png");
+            imageT2.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.IT-2-Ponte.png");
+            imageT3.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.IT-3-Rocchetta.png");
+            imageT4.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.IT-4-Traghetto.png");
+            imageT5.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.IT-5-Centrali.png");
+            imageM1.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-1.png");
+            imageM2.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-2.png");
+            imageM3.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-3.png");
+            imageM4.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-4.png");
+            imageM5.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-5.png");
 
         }
         private void imagesEN()
         {
-            imageT1.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.EN-1-Fiume.jpg");
-            imageT2.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.EN-2-Ponte.jpg");
-            imageT3.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.EN-3-Rocchetta.jpg");
-            imageT4.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.EN-4-Traghetto.jpg");
-            imageT5.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.EN-5-Centrali.jpg");
-            imageM1.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.EN-Map-1.jpg");
-            imageM2.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.EN-Map-2.jpg");
-            imageM3.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.EN-Map-3.jpg");
-            imageM4.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.EN-Map-4.jpg");
-            imageM5.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.EN-Map-5.jpg");
+            imageT1.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.EN-1-Fiume.png");
+            imageT2.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.EN-2-Ponte.png");
+            imageT3.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.EN-3-Rocchetta.png");
+            imageT4.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.EN-4-Traghetto.png");
+            imageT5.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.EN-5-Centrali.png");
+            imageM1.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.EN-Map-1.png");
+            imageM2.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.EN-Map-2.png");
+            imageM3.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.EN-Map-3.png");
+            imageM4.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.EN-Map-4.png");
+            imageM5.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.EN-Map-5.png");
 
         }
         private void imagesFR()
         {
-            imageT1.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.FR-1-Fiume.jpg");
-            imageT2.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.FR-2-Ponte.jpg");
-            imageT3.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.FR-3-Rocchetta.jpg");
-            imageT4.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.FR-4-Traghetto.jpg");
-            imageT5.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.FR-5-Centrali.jpg");
-            imageM1.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.FR-Map-1.jpg");
-            imageM2.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.FR-Map-2.jpg");
-            imageM3.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.FR-Map-3.jpg");
-            imageM4.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.FR-Map-4.jpg");
-            imageM5.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.FR-Map-5.jpg");
+            imageT1.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.FR-1-Fiume.png");
+            imageT2.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.FR-2-Ponte.png");
+            imageT3.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.FR-3-Rocchetta.png");
+            imageT4.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.FR-4-Traghetto.png");
+            imageT5.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Tappe.FR-5-Centrali.png");
+            imageM1.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.FR-Map-1.png");
+            imageM2.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.FR-Map-2.png");
+            imageM3.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.FR-Map-3.png");
+            imageM4.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.FR-Map-4.png");
+            imageM5.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.FR-Map-5.png");
 
         }
 
