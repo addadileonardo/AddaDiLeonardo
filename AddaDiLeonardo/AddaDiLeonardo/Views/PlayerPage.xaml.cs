@@ -65,7 +65,9 @@ namespace AddaDiLeonardo.Views
 
         private void MediaPlayer_Playing(object sender, EventArgs e)
         {
-            spinner.IsRunning = false;
+            Device.BeginInvokeOnMainThread(async () => {
+                spinner.IsRunning = false;
+            });
         }
 
 
