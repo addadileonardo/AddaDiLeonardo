@@ -110,6 +110,21 @@
     <EmbeddedResource Include="Images\Home\background.png" />
     <EmbeddedResource Include="Images\Home\centrale.jpg" />
     <EmbeddedResource Include="Images\Home\fiume.jpg" />
+    <EmbeddedResource Include="Images\Home\Mappa\EN-Map-1.jpg" />
+    <EmbeddedResource Include="Images\Home\Mappa\EN-Map-2.jpg" />
+    <EmbeddedResource Include="Images\Home\Mappa\EN-Map-3.jpg" />
+    <EmbeddedResource Include="Images\Home\Mappa\EN-Map-4.jpg" />
+    <EmbeddedResource Include="Images\Home\Mappa\EN-Map-5.jpg" />
+    <EmbeddedResource Include="Images\Home\Mappa\FR-Map-1.jpg" />
+    <EmbeddedResource Include="Images\Home\Mappa\FR-Map-2.jpg" />
+    <EmbeddedResource Include="Images\Home\Mappa\FR-Map-3.jpg" />
+    <EmbeddedResource Include="Images\Home\Mappa\FR-Map-4.jpg" />
+    <EmbeddedResource Include="Images\Home\Mappa\FR-Map-5.jpg" />
+    <EmbeddedResource Include="Images\Home\Mappa\IT-Map-1.jpg" />
+    <EmbeddedResource Include="Images\Home\Mappa\IT-Map-2.jpg" />
+    <EmbeddedResource Include="Images\Home\Mappa\IT-Map-3.jpg" />
+    <EmbeddedResource Include="Images\Home\Mappa\IT-Map-4.jpg" />
+    <EmbeddedResource Include="Images\Home\Mappa\IT-Map-5.jpg" />
     <EmbeddedResource Include="Images\Home\Tappe\EN-1-Fiume.jpg" />
     <EmbeddedResource Include="Images\Home\Tappe\EN-2-Ponte.jpg" />
     <EmbeddedResource Include="Images\Home\Tappe\EN-3-Rocchetta.jpg" />
@@ -243,23 +258,5 @@
   <ItemGroup>
     <Folder Include="Images\Tappe\Tappa_01\" />
     <Folder Include="Images\Tappe\Tappa_02\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="Images\Home\Mappa\EN-Map-1.jpg" />
-    <EmbeddedResource Include="Images\Home\Mappa\EN-Map-2.jpg" />
-    <EmbeddedResource Include="Images\Home\Mappa\EN-Map-3.jpg" />
-    <EmbeddedResource Include="Images\Home\Mappa\EN-Map-4.jpg" />
-    <EmbeddedResource Include="Images\Home\Mappa\EN-Map-5.jpg" />
-    <EmbeddedResource Include="Images\Home\Mappa\FR-Map-1.jpg" />
-    <EmbeddedResource Include="Images\Home\Mappa\FR-Map-2.jpg" />
-    <EmbeddedResource Include="Images\Home\Mappa\FR-Map-3.jpg" />
-    <EmbeddedResource Include="Images\Home\Mappa\FR-Map-4.jpg" />
-    <EmbeddedResource Include="Images\Home\Mappa\FR-Map-5.jpg" />
-    <EmbeddedResource Include="Images\Home\Mappa\IT-Map-1.jpg" />
-    <EmbeddedResource Include="Images\Home\Mappa\IT-Map-2.jpg" />
-    <EmbeddedResource Include="Images\Home\Mappa\IT-Map-3.jpg" />
-    <EmbeddedResource Include="Images\Home\Mappa\IT-Map-4.jpg" />
-    <EmbeddedResource Include="Images\Home\Mappa\IT-Map-5.jpg" />
   </ItemGroup>
 </Project>

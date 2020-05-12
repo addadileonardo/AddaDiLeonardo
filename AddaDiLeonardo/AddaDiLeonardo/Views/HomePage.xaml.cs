@@ -22,17 +22,17 @@ namespace AddaDiLeonardo.Views
         public static string ActiveLanguage = "IT";
 
         //immagini tappe e mappa
-        Image imageT1 = new Image { Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map3" };
-        Image imageT2 = new Image { Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map3" };
-        Image imageT3 = new Image { Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map3" };
-        Image imageT4 = new Image { Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map3" };
-        Image imageT5 = new Image { Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map3" };
+        Image imageT1 = new Image { Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "step1" };
+        Image imageT2 = new Image { Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "step2" };
+        Image imageT3 = new Image { Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "step3" };
+        Image imageT4 = new Image { Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "step4" };
+        Image imageT5 = new Image { Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "step5" };
 
-        Image imageM1 = new Image { Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map3" };
-        Image imageM2 = new Image { Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map3" };
+        Image imageM1 = new Image { Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map1" };
+        Image imageM2 = new Image { Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map2" };
         Image imageM3 = new Image { Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map3" };
-        Image imageM4 = new Image { Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map3" };
-        Image imageM5 = new Image { Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map3" };
+        Image imageM4 = new Image { Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map4" };
+        Image imageM5 = new Image { Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map5" };
 
         public HomePage()
         {
@@ -113,7 +113,7 @@ namespace AddaDiLeonardo.Views
             tapGestureRecognizer.Tapped += (sender, e) =>
             {
                 // Cast image and push async to step
-                OnImageMapTapped(sender, e);
+                OnImageNameTapped(sender, e);
 
             };
 
@@ -187,68 +187,10 @@ namespace AddaDiLeonardo.Views
 
         }
 
-        #region "MAP"
-        private object syncLockMappa = new object();
-        bool isInCallMappa = false;
-
-        private async void OnImageMapTapped(object sender, EventArgs args)
-        {
-
-            lock (syncLockMappa)
-            {
-                if (isInCallMappa)
-                    return;
-                isInCallMappa = true;
-            }
-
-            try
-            {
-
-                switch (((Image)sender).ClassId)
-                {
-
-                    case "map1":
-                        var TappaTraghetto = new Tappa_02();
-                        await Navigation.PushModalAsync(TappaTraghetto);
-                        break;
-                    case "map2":
-                        var TappaFiume = new Tappa_01();
-                        await Navigation.PushModalAsync(TappaFiume);
-                        break;
-                    case "map3":
-                        var TappaPonte = new Tappa_04();
-                        await Navigation.PushModalAsync(TappaPonte);
-                        break;
-                    case "map4":
-                        var TappaRocchetta = new Tappa_03();
-                        await Navigation.PushModalAsync(TappaRocchetta);
-                        break;
-                    case "map5":
-                        var TappaCentrali = new Tappa_05();
-                        await Navigation.PushModalAsync(TappaCentrali);
-                        break;
-                }
-
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                lock (syncLockTappa)
-                {
-                    isInCallMappa = false;
-                }
-            }
-
-        }
-        #endregion
-
         #region "STEP"
         private object syncLockTappa = new object();
         bool isInCallTappa = false;
-
+        
         private async void OnImageNameTapped(object sender, EventArgs args)
         {
 
@@ -261,35 +203,41 @@ namespace AddaDiLeonardo.Views
 
             try
             {
-
+                
                 switch (((Image)sender).ClassId)
                 {
-
+                    
                     case "step1":
-                        var TappaFiume = new Tappa_01();
-                        await Navigation.PushModalAsync(TappaFiume);
+                        await Navigation.PushModalAsync(new Views.Tappe.Tappa_01());
                         break;
-
                     case "step2":
-                        var TappaPonte = new Tappa_04();
-                        await Navigation.PushModalAsync(TappaPonte);
+                        await Navigation.PushModalAsync(new Views.Tappe.Tappa_04());
                         break;
-
                     case "step3":
-                        var TappaRocchetta = new Tappa_03();
-                        await Navigation.PushModalAsync(TappaRocchetta);
+                        await Navigation.PushModalAsync(new Views.Tappe.Tappa_03());
                         break;
-
                     case "step4":
-                        var TappaTraghetto = new Tappa_02();
-                        await Navigation.PushModalAsync(TappaTraghetto);
+                        await Navigation.PushModalAsync(new Views.Tappe.Tappa_02());
                         break;
                     case "step5":
-                        var TappaCentrali = new Tappa_05();
-                        await Navigation.PushModalAsync(TappaCentrali);
+                        await Navigation.PushModalAsync(new Views.Tappe.Tappa_05());
+                        break;
+                    case "map1":
+                        await Navigation.PushModalAsync(new Views.Tappe.Tappa_02());
+                        break;
+                    case "map2":
+                        await Navigation.PushModalAsync(new Views.Tappe.Tappa_01());
+                        break;
+                    case "map3":
+                        await Navigation.PushModalAsync(new Views.Tappe.Tappa_04());
+                        break;
+                    case "map4":
+                        await Navigation.PushModalAsync(new Views.Tappe.Tappa_03());
+                        break;
+                    case "map5":
+                        await Navigation.PushModalAsync(new Views.Tappe.Tappa_05());
                         break;
                 }
-
             }
             catch (Exception ex)
             {
