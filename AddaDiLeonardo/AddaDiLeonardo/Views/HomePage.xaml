@@ -69,9 +69,9 @@
                             </Image>
                             <!--Testo Homepage-->
                             <Local:CustomLabel Margin="10, 0, 10, 0" TextColor="White" x:Name="descrizione" Text="" ></Local:CustomLabel>
-                            
+
                             <StackLayout Orientation="Vertical" Spacing="0"  Margin="0,20,0,0" x:Name="stackTappe" >
-                                
+
                             </StackLayout>
                             <StackLayout Orientation="Vertical" Spacing="0"  Margin="0,20,0,0" x:Name="stackMappa" >
 
@@ -141,7 +141,7 @@
                                 </Image>
                                 <Local:CustomLabel Grid.Row="0" HorizontalOptions="End" VerticalOptions="End" Padding="5, 0, 5, 0" BackgroundColor="Black" TextColor="White" x:Name="centraleText" Text="LA CENTRALE"></Local:CustomLabel>
                             </Grid>-->
-                           
+
                             <Local:Accordion x:Name="Accordion_0" AccordionName="Accordion_0" BGColor="Black" TxtColor="White" Title="CREDITS">
                                 <Local:Accordion.AccordionContent>
                                     <StackLayout Orientation="Vertical" BackgroundColor="Black">
@@ -208,11 +208,10 @@
                 </Grid>
 
             </ScrollView>
-            <StackLayout Grid.Row="0" HorizontalOptions="End" VerticalOptions="Start" Orientation="Horizontal" Spacing="0">
-                <ImageButton x:Name="mappaIcon" Clicked="mappaIcon_Clicked" HeightRequest="40" VerticalOptions="Start" Margin="0,5,0,0" BackgroundColor="Transparent"></ImageButton>
-                <StackLayout  WidthRequest="70">
-
-                    <Button Text="Click me" Clicked="btnOpen_Clicked" HorizontalOptions="End" x:Name="btnOpen" BackgroundColor="Transparent" TextColor="White" CharacterSpacing="4">
+            <StackLayout Grid.Row="0" HorizontalOptions="End" VerticalOptions="Start" Orientation="Horizontal" Spacing="2">
+                <ImageButton x:Name="mappaIcon" Clicked="mappaIcon_Clicked" HeightRequest="50" VerticalOptions="Start" Margin="0,5,0,0" BackgroundColor="Transparent"></ImageButton>
+                <StackLayout WidthRequest="50">
+                    <Button Text="Click me" Clicked="btnOpen_Clicked" Margin="0,5,0,0" CornerRadius="90" WidthRequest="50" HorizontalOptions="End" x:Name="btnOpen" BackgroundColor="#33000000"  TextColor="White" CharacterSpacing="4">
                         <Button.FontFamily>
                             <OnPlatform x:TypeArguments="x:String">
                                 <On Platform="iOS" Value="Roboto-Medium" />
@@ -220,10 +219,8 @@
                             </OnPlatform>
                         </Button.FontFamily>
                     </Button>
-
-
                     <StackLayout x:Name="LanguageStack" HorizontalOptions="End">
-                        <Button x:Name="btnIT" CharacterSpacing="4" Clicked="btnIT_Clicked" Text="IT" HorizontalOptions="End" BackgroundColor="Transparent" TextColor="White" >
+                        <Button x:Name="btnIT" CharacterSpacing="4" Clicked="btnIT_Clicked" Text="IT" HorizontalOptions="End" CornerRadius="90" BackgroundColor="Transparent" TextColor="White" >
                             <Button.FontFamily>
                                 <OnPlatform x:TypeArguments="x:String">
                                     <On Platform="iOS" Value="Roboto-Medium" />
@@ -231,7 +228,7 @@
                                 </OnPlatform>
                             </Button.FontFamily>
                         </Button>
-                        <Button x:Name="btnENG" CharacterSpacing="4" Clicked="btnENG_Clicked" Text="ENG"  HorizontalOptions="End" BackgroundColor="Transparent" TextColor="White">
+                        <Button x:Name="btnENG" CharacterSpacing="4" Clicked="btnENG_Clicked" Text="EN"  HorizontalOptions="End" CornerRadius="90" BackgroundColor="Transparent" TextColor="White">
                             <Button.FontFamily>
                                 <OnPlatform x:TypeArguments="x:String">
                                     <On Platform="iOS" Value="Roboto-Medium" />
@@ -239,7 +236,7 @@
                                 </OnPlatform>
                             </Button.FontFamily>
                         </Button>
-                        <Button x:Name="btnFR" CharacterSpacing="4" Clicked="btnFR_Clicked" Text="FR"  HorizontalOptions="End" BackgroundColor="Transparent" TextColor="White">
+                        <Button x:Name="btnFR" CharacterSpacing="4" Clicked="btnFR_Clicked" Text="FR"  HorizontalOptions="End" CornerRadius="90" BackgroundColor="Transparent" TextColor="White">
                             <Button.FontFamily>
                                 <OnPlatform x:TypeArguments="x:String">
                                     <On Platform="iOS" Value="Roboto-Medium" />
@@ -250,7 +247,6 @@
                     </StackLayout>
 
                 </StackLayout>
-
 
             </StackLayout>
         </Grid>

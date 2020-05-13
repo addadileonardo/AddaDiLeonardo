@@ -55,6 +55,7 @@
     <None Remove="Images\Icons\close_5_v2.png" />
     <None Remove="Images\Icons\Icon-Place_%403x.png" />
     <None Remove="Images\Icons\map_icon.png" />
+    <None Remove="Images\Icons\map_icon_2.png" />
     <None Remove="Images\Map\centraleW.png" />
     <None Remove="Images\Map\MappaRaul.png" />
     <None Remove="Images\Map\ponteW.png" />
@@ -148,6 +149,7 @@
     <EmbeddedResource Include="Images\Icons\arrow-white.png" />
     <EmbeddedResource Include="Images\Icons\close_5_v2.png" />
     <EmbeddedResource Include="Images\Icons\map_icon.png" />
+    <EmbeddedResource Include="Images\Icons\map_icon_2.png" />
     <EmbeddedResource Include="Images\Map\centraleW.png" />
     <EmbeddedResource Include="Images\Map\MappaRaul.png" />
     <EmbeddedResource Include="Images\Map\ponteW.png" />
