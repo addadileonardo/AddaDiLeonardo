@@ -38,7 +38,7 @@ namespace AddaDiLeonardo.Views
         {
             
             InitializeComponent();
-            mappaIcon.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.map_icon.png");
+            mappaIcon.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.map_icon_2.png");
             if (Application.Current.Properties.ContainsKey("lang"))
                 ActiveLanguage = Application.Current.Properties["lang"].ToString(); //viene impostata la lingua memorizzata se presente, altrimenti ita di default.
             btnOpen.Text = ActiveLanguage; //imposto la lingua attiva
@@ -119,7 +119,7 @@ namespace AddaDiLeonardo.Views
             };
 
             //Testo iniziale
-            string testo = "Un percorso leonardesco come non lo avreste mai pensato, una narrazione personale che ne da’ un'interpretazione inedita e quasi sovversiva. L'Adda da fiume sacro a laica risorsa, gradualmente trasformata e sfruttata dall'uomo in canali, mulini e centrali idroelettriche. Quale migliore metafora del fiume per capire lo scorrere del tempo? Risalire l'Adda significa passare dalla parola al numero, dalla mitologia alla contabilità. Un percorso virtuale che gli studenti degli istituti «Lussana» di Bergamo e «Marconi» di Dalmine hanno creato in italiano, inglese e francese …. Finalmente questo tratto della valle dell’Adda si apre al mondo! \r\n\r\nSaperi appresi dalle interviste, sapori avvertiti nelle visite in loco, sipari aperti sulla grande storia.Pronti ad __addentrarvi__? ";
+            string testo = "Un percorso leonardesco come non lo avreste mai pensato, una narrazione personale che ne da’ un'interpretazione inedita e quasi sovversiva. L'Adda da fiume sacro a laica risorsa, gradualmente trasformata e sfruttata dall'uomo in canali, mulini e centrali idroelettriche. Quale migliore metafora del fiume per capire lo scorrere del tempo? Risalire l'Adda significa passare dalla parola al numero, dalla mitologia alla contabilità. Un percorso virtuale che gli studenti degli istituti «Lussana» di Bergamo e «Marconi» di Dalmine hanno creato in italiano, inglese e francese… Finalmente questo tratto della valle dell’Adda si apre al mondo! \r\n\r\nSaperi appresi dalle interviste, sapori avvertiti nelle visite in loco, sipari aperti sulla grande storia. Pronti ad __addentrarvi__? ";
             descrizione.FormattedText = FormattaContenuto.Formatta(testo).FormattedText;
         }
 
@@ -331,6 +331,9 @@ namespace AddaDiLeonardo.Views
         /// </summary>
         public void Open()
         {
+            btnENG.BackgroundColor = Color.FromHex("#33000000");
+            btnIT.BackgroundColor = Color.FromHex("#33000000");
+            btnFR.BackgroundColor = Color.FromHex("#33000000");
             btnIT.TextColor = Color.White; btnENG.TextColor = Color.White; btnFR.TextColor = Color.White;
             if (ActiveLanguage == "IT")
                 btnIT.TextColor = Color.Gray;
@@ -348,6 +351,9 @@ namespace AddaDiLeonardo.Views
         /// </summary>
         public void Close()
         {
+            btnENG.BackgroundColor = Color.Transparent;
+            btnIT.BackgroundColor = Color.Transparent;
+            btnFR.BackgroundColor = Color.Transparent;
             LanguageStack.TranslateTo(0, -200, 150);
             isOpen = false;
             if (btnOpen.Text == ActiveLanguage)
@@ -360,7 +366,7 @@ namespace AddaDiLeonardo.Views
             }
             if (ActiveLanguage == "ENG")
             {
-                btnOpen.Text = ActiveLanguage;
+                btnOpen.Text = "EN";
                 //Cambio database attuale -> inglese
                 //funzione di riavvio app
             }
@@ -370,6 +376,7 @@ namespace AddaDiLeonardo.Views
                 //Cambio database attuale -> francese
                 //funzione di riavvio app
             }
+
         }
 
 
