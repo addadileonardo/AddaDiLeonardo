@@ -106,7 +106,7 @@ namespace AddaDiLeonardo.Views.Tappe
             stackContenuto_4.Children.Add(FormattaContenuto.Formatta(contenuti_4[3].Testo));
             stackContenuto_4.Children.Add(FormattaContenuto.Formatta(contenuti_4[4].Testo));
             stackContenuto_4.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_03.Rocchetta_20.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 5, 0, 5) });
-            //stackContenuto_4.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_03.Rocchetta_21.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 5, 0, 5) });
+            stackContenuto_4.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_03.Rocchetta_21.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 5, 0, 5) });
             stackContenuto_4.Children.Add(FormattaContenuto.Formatta(contenuti_4[7].Testo));
             stackContenuto_4.Children.Add(FormattaContenuto.Formatta(contenuti_4[8].Testo));
             stackContenuto_4.Children.Add(FormattaContenuto.Formatta(contenuti_4[9].Testo));
