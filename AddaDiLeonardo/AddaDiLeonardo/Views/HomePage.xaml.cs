@@ -41,7 +41,15 @@ namespace AddaDiLeonardo.Views
             mappaIcon.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.map_icon_2.png");
             if (Application.Current.Properties.ContainsKey("lang"))
                 ActiveLanguage = Application.Current.Properties["lang"].ToString(); //viene impostata la lingua memorizzata se presente, altrimenti ita di default.
-            btnOpen.Text = ActiveLanguage; //imposto la lingua attiva
+            if(ActiveLanguage == "ENG")
+            {
+                btnOpen.Text = "EN"; //imposto la lingua attiva
+            }
+            else
+            {
+                btnOpen.Text = ActiveLanguage; //imposto la lingua attiva
+            }
+            
             LanguageStack.TranslateTo(0, -200, 00); //traslo lo stack di selezione di -200 sull'asse y-> in realtà purtroppo non escono fuori dallo schermo ma si sovrappongono nell'angolino a destra. quindi se lo sfono non è trasparente si vedono..
 
             #region stackMappa

@@ -17,7 +17,7 @@
                 <StackLayout Spacing="0">
                     <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="220"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
                             <RowDefinition Height="*"></RowDefinition>
                         </Grid.RowDefinitions>
                         <!--#region INTRODUCTION-->
