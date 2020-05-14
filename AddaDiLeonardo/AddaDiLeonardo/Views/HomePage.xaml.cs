@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
 
 namespace AddaDiLeonardo.Views
 {
@@ -28,11 +29,11 @@ namespace AddaDiLeonardo.Views
         Image imageT4 = new Image { Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "step4" };
         Image imageT5 = new Image { Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "step5" };
 
-        Image imageM1 = new Image { Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map1" };
-        Image imageM2 = new Image { Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map2" };
-        Image imageM3 = new Image { Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map3" };
-        Image imageM4 = new Image { Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map4" };
-        Image imageM5 = new Image { Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "map5" };
+        Image imageM1 = new Image { Aspect = Aspect.AspectFill, Margin = new Thickness(0, 0, 0, 0), ClassId = "map1" };
+        Image imageM2 = new Image { Aspect = Aspect.AspectFill, Margin = new Thickness(0, 0, 0, 0), ClassId = "map2" };
+        Image imageM3 = new Image { Aspect = Aspect.AspectFill, Margin = new Thickness(0, 0, 0, 0), ClassId = "map3" };
+        Image imageM4 = new Image { Aspect = Aspect.AspectFill, Margin = new Thickness(0, 0, 0, 0), ClassId = "map4" };
+        Image imageM5 = new Image { Aspect = Aspect.AspectFill, Margin = new Thickness(0, 0, 0, 0), ClassId = "map5" };
 
         public HomePage()
         {
@@ -51,6 +52,32 @@ namespace AddaDiLeonardo.Views
             }
             
             LanguageStack.TranslateTo(0, -200, 00); //traslo lo stack di selezione di -200 sull'asse y-> in realtà purtroppo non escono fuori dallo schermo ma si sovrappongono nell'angolino a destra. quindi se lo sfono non è trasparente si vedono..
+
+            var display = DeviceDisplay.MainDisplayInfo;
+            var widthScreenpixel = display.Width;
+            var HeightScreenpixel = display.Height;
+            var densityScreenPixel = display.Density;
+            var widthScreenUnit = widthScreenpixel / densityScreenPixel;
+
+            var heightRowUnitTappa = (884 * widthScreenUnit) / 1809;
+
+            gridTappe.RowDefinitions.Add(new RowDefinition { Height = heightRowUnitTappa });
+            gridTappe.RowDefinitions.Add(new RowDefinition { Height = heightRowUnitTappa });
+            gridTappe.RowDefinitions.Add(new RowDefinition { Height = heightRowUnitTappa });
+            gridTappe.RowDefinitions.Add(new RowDefinition { Height = heightRowUnitTappa });
+            gridTappe.RowDefinitions.Add(new RowDefinition { Height = heightRowUnitTappa });
+
+            var heightRowUnitMappa1 = (384 * widthScreenUnit) / 1126;
+            var heightRowUnitMappa2 = (363 * widthScreenUnit) / 1126;
+            var heightRowUnitMappa3 = (378 * widthScreenUnit) / 1126;
+            var heightRowUnitMappa4 = (383 * widthScreenUnit) / 1126;
+            var heightRowUnitMappa5 = (365 * widthScreenUnit) / 1126;
+
+            gridMappe.RowDefinitions.Add(new RowDefinition { Height = heightRowUnitMappa1 });
+            gridMappe.RowDefinitions.Add(new RowDefinition { Height = heightRowUnitMappa2 });
+            gridMappe.RowDefinitions.Add(new RowDefinition { Height = heightRowUnitMappa3 });
+            gridMappe.RowDefinitions.Add(new RowDefinition { Height = heightRowUnitMappa4 });
+            gridMappe.RowDefinitions.Add(new RowDefinition { Height = heightRowUnitMappa5 });
 
             #region stackMappa
             var tapGestureRecognizer = new TapGestureRecognizer();
@@ -75,34 +102,34 @@ namespace AddaDiLeonardo.Views
             }
 
             imageT1.GestureRecognizers.Add(tapGestureRecognizer);
-            stackTappe.Children.Add(imageT1);
+            stackTappa1.Children.Add(imageT1);
 
             imageT2.GestureRecognizers.Add(tapGestureRecognizer);
-            stackTappe.Children.Add(imageT2);
+            stackTappa2.Children.Add(imageT2);
 
             imageT3.GestureRecognizers.Add(tapGestureRecognizer);
-            stackTappe.Children.Add(imageT3);
+            stackTappa3.Children.Add(imageT3);
 
             imageT4.GestureRecognizers.Add(tapGestureRecognizer);
-            stackTappe.Children.Add(imageT4);
+            stackTappa4.Children.Add(imageT4);
 
             imageT5.GestureRecognizers.Add(tapGestureRecognizer);
-            stackTappe.Children.Add(imageT5);
+            stackTappa5.Children.Add(imageT5);
 
             imageM1.GestureRecognizers.Add(tapGestureRecognizer);
-            stackMappa.Children.Add(imageM1);
+            stackMappa1.Children.Add(imageM1);
 
             imageM2.GestureRecognizers.Add(tapGestureRecognizer);
-            stackMappa.Children.Add(imageM2);
+            stackMappa2.Children.Add(imageM2);
 
             imageM3.GestureRecognizers.Add(tapGestureRecognizer);
-            stackMappa.Children.Add(imageM3);
+            stackMappa3.Children.Add(imageM3);
             
             imageM4.GestureRecognizers.Add(tapGestureRecognizer);
-            stackMappa.Children.Add(imageM4);
+            stackMappa4.Children.Add(imageM4);
 
             imageM5.GestureRecognizers.Add(tapGestureRecognizer);
-            stackMappa.Children.Add(imageM5);
+            stackMappa5.Children.Add(imageM5);
 
 
             //stackMappa.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-1.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0) });
