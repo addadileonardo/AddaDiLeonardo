@@ -15,11 +15,8 @@
 
             <ScrollView x:Name="Scroll" Grid.Row="0">
                 <StackLayout Spacing="0">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"></RowDefinition>
-                            <RowDefinition Height="*"></RowDefinition>
-                        </Grid.RowDefinitions>
+                    <Grid x:Name="Grid1">
+                        
                         <!--#region INTRODUCTION-->
                         <!--ImageButton x:Name="ImgTappa" Aspect="AspectFill" Clicked="ImgTappa_Clicked">
                     </-->
@@ -39,7 +36,8 @@
                                         NumberOfTapsRequired="1" />
                             </ffimageloading:CachedImage.GestureRecognizers>
                         </ffimageloading:CachedImage>
-                        <StackLayout Spacing="0" Grid.Row="1">
+                    </Grid>
+                    <StackLayout Spacing="0" Grid.Row="1">
                             <StackLayout BackgroundColor="White">
 
                                 <StackLayout Margin="20,25,20,20">
@@ -121,7 +119,7 @@
 
                         </StackLayout>
 
-                    </Grid>
+                    
 
                 </StackLayout>
             </ScrollView>

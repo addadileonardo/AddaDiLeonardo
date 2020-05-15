@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -17,6 +17,13 @@ namespace AddaDiLeonardo.Views.Tappe
         public Tappa_04()
         {
             InitializeComponent();
+            var display = DeviceDisplay.MainDisplayInfo;
+            var widthScreenpixel = display.Width;
+            var HeightScreenpixel = display.Height;
+            var densityScreenPixel = display.Density;
+            var widthScreenUnit = widthScreenpixel / densityScreenPixel;
+            var imageUnitHeight = (594 * widthScreenUnit) / 1080;
+            Grid1.RowDefinitions.Add(new RowDefinition { Height = imageUnitHeight });
             close.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.close_5.png");
             ImgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.cover.ponte_cover.jpg");
             iconMarker.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.Icon-Place_@3x.png");
@@ -115,7 +122,7 @@ namespace AddaDiLeonardo.Views.Tappe
 
         private async void imgVideo3_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1CKaLQyFhWr5ABpk0MkpezqDyCA-mdkFA"));
+            await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1Ism2sCZvFWh3SczmSNPltotAYzxv7pl0"));
         }
     }
 }
