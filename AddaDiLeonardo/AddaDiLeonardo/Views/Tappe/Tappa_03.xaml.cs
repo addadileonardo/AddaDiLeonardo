@@ -135,12 +135,12 @@ namespace AddaDiLeonardo.Views.Tappe
 
         private async void Imgbtn_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1CKaLQyFhWr5ABpk0MkpezqDyCA-mdkFA"));
+            await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1_yymOz5-nm0b6s1uriYDMmwvU1nyOTWB"));
         }
 
         private async void ImgTappa_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1CKaLQyFhWr5ABpk0MkpezqDyCA-mdkFA"));
+            await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=14YVPkh_O4jnQMb18xrK-u4OnsbUf2lVL"));
         }
 
         private void close_Clicked(object sender, EventArgs e)
