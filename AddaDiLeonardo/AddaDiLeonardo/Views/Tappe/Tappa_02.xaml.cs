@@ -24,8 +24,10 @@ namespace AddaDiLeonardo.Views.Tappe
             var widthScreenUnit = widthScreenpixel / densityScreenPixel;
             var imageUnitHeight = (594 * widthScreenUnit) / 1080;
             Grid1.RowDefinitions.Add(new RowDefinition { Height = imageUnitHeight });
+            Grid2.RowDefinitions.Add(new RowDefinition { Height = imageUnitHeight });
             close.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.close_5.png");
             ImgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.cover.traghetto_cover.jpg");
+            imgIntervista.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.cover.traghetto2_cover.jpg");
             iconMarker.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.Icon-Place_@3x.png");
             var tappa = App.Database.GetTappeSingleAsync(idTappa: 3).Result;
             var sezioni = App.Database.GetSezioniAsync(idTappa: tappa.Id).Result;
@@ -111,6 +113,11 @@ namespace AddaDiLeonardo.Views.Tappe
         private void ScrollTop(string elementname)
         {
             this.Scroll.ScrollToAsync(this.FindByName<Element>(elementname), ScrollToPosition.Start, true);
+        }
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1zT-rp9fsbRuhixJIJrnzf8UE23EuXSdF"));
         }
     }
 }

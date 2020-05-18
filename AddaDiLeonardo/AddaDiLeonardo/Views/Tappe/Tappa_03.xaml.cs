@@ -127,10 +127,6 @@ namespace AddaDiLeonardo.Views.Tappe
             #endregion
         }
 
-        private void loadImage()
-        {
-            
-        }
 
 
         private async void Imgbtn_Clicked(object sender, EventArgs e)
