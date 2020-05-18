@@ -49,7 +49,7 @@
                                 </Image.GestureRecognizers>
                             </Image>
                             <!--Testo Homepage-->
-                            <Local:CustomLabel Margin="10, 0, 10, 0" TextColor="White" x:Name="descrizione" Text="" ></Local:CustomLabel>
+                            <Local:CustomLabel Margin="10, 0, 10, 0" TextColor="White" x:Name="descrizione"></Local:CustomLabel>
 
                             <Grid x:Name="gridTappe" RowSpacing="0">
                                 <StackLayout Spacing="0" x:Name="stackTappa1" Grid.Row="0">
