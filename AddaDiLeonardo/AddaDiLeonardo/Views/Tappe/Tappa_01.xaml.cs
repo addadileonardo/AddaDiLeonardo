@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -17,6 +17,13 @@ namespace AddaDiLeonardo.Views.Tappe
         public Tappa_01()
         {
             InitializeComponent();
+            var display = DeviceDisplay.MainDisplayInfo;
+            var widthScreenpixel = display.Width;
+            var HeightScreenpixel = display.Height;
+            var densityScreenPixel = display.Density;
+            var widthScreenUnit = widthScreenpixel / densityScreenPixel;
+            var imageUnitHeight = (594 * widthScreenUnit) / 1080;
+            Grid1.RowDefinitions.Add(new RowDefinition { Height = imageUnitHeight });
             close.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.close_5.png");
             ImgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.cover.fiume_cover.jpg");
             iconMarker.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.Icon-Place_@3x.png");
