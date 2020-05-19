@@ -43,7 +43,7 @@
                             <local:CustomLabel_IntroSubTitle x:Name="lblSubTitle" Margin="0,0,0,25"></local:CustomLabel_IntroSubTitle>
                             <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Margin="0,0,0,25">
                                 <Image x:Name="iconMarker" Aspect="AspectFit"></Image>
-                                <Label  Text="Paderno d'Adda">
+                                <Label  Text="Imbersago e Paderno d'Adda">
                                     <Label.FontFamily>
                                         <OnPlatform x:TypeArguments="x:String">
                                             <On Platform="iOS" Value="Roboto-Light" />
@@ -53,11 +53,31 @@
                                 </Label>
                             </StackLayout>
                             <local:CustomLabel x:Name="lblDescription"></local:CustomLabel>
-                        </StackLayout>
+                                <Grid x:Name="Grid2">
+
+                                    <!--#region INTRODUCTION-->
+                                    <!--ImageButton x:Name="ImgTappa" Aspect="AspectFill" Clicked="ImgTappa_Clicked"></ImageButton-->
+                                    <ffimageloading:CachedImage 
+                                LoadingPlaceholder= "LoaderImage"
+                                ErrorPlaceholder= "ErrorImage"
+                                CacheDuration= "50"
+                                RetryCount= "3"
+                                RetryDelay= "600"
+                                DownsampleToViewSize = "true"
+                                x:Name="imgIntervista" Aspect="AspectFill" Grid.Row="0"
+                    >
+                                        <ffimageloading:CachedImage.GestureRecognizers>
+                                            <TapGestureRecognizer
+                                        Tapped="TapGestureRecognizer_Tapped"
+                                        NumberOfTapsRequired="1" />
+                                        </ffimageloading:CachedImage.GestureRecognizers>
+                                    </ffimageloading:CachedImage>
+                                </Grid>
+                            </StackLayout>
                     </StackLayout>
                     <!--#endregion-->
-
-                    <!--#region ACCORDION-->
+                        
+                        <!--#region ACCORDION-->
                     <local:Accordion TxtColor="Black" x:Name="Accordion_0" AccordionName="Accordion_0" BGColor="#F6F6F6">
                         <local:Accordion.AccordionContent>
                             <StackLayout Orientation="Vertical" >
