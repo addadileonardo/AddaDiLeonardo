@@ -22,6 +22,8 @@ namespace AddaDiLeonardo.Views
         //proprietà per tener traccia della lingua attiva
         public static string ActiveLanguage = "IT";
 
+        //database
+
         //immagini tappe e mappa
         Image imageT1 = new Image { Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "step1" };
         Image imageT2 = new Image { Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "step2" };
@@ -178,7 +180,13 @@ namespace AddaDiLeonardo.Views
 
         private void mappaIcon_Clicked(object sender, EventArgs e)
         {
-            this.Scroll.ScrollToAsync(this.FindByName<Element>("Accordion_0"), ScrollToPosition.Start, true); //da modificare con mappa
+            this.Scroll.ScrollToAsync(this.FindByName<Element>("gridMappe"), ScrollToPosition.Start, true); //da modificare con collegamento mappa
+        }
+
+        private void databaseChange()  //sample da modificare quando ci sarà il db aggiornato
+        {
+            var tappa = App.Database.GetTappeSingleAsync(idTappa: 2).Result;
+            var sezioni = App.Database.GetSezioniAsync(idTappa: tappa.Id).Result;
         }
 
         private void imagesIT()
@@ -221,7 +229,6 @@ namespace AddaDiLeonardo.Views
             imageM3.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.FR-Map-3.png");
             imageM4.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.FR-Map-4.png");
             imageM5.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.FR-Map-5.png");
-
         }
 
         #region "STEP"
@@ -342,6 +349,8 @@ namespace AddaDiLeonardo.Views
         {
             ActiveLanguage = "IT";
             Application.Current.Properties["lang"] = "IT";
+            databaseChange();
+            //descrizione.Text = tappa.Descrizione;
             imagesIT();
             Close();
         }
@@ -350,6 +359,9 @@ namespace AddaDiLeonardo.Views
         {
             ActiveLanguage = "ENG";
             Application.Current.Properties["lang"] = "ENG";
+            var tappa = App.Database.GetTappeSingleAsync(idTappa: 2).Result;
+            var sezioni = App.Database.GetSezioniAsync(idTappa: tappa.Id).Result;
+            descrizione.Text = tappa.Descrizione;
             imagesEN();
             Close();
         }
@@ -358,6 +370,9 @@ namespace AddaDiLeonardo.Views
         {
             ActiveLanguage = "FR";
             Application.Current.Properties["lang"] = "FR";
+            var tappa = App.Database.GetTappeSingleAsync(idTappa: 2).Result;
+            var sezioni = App.Database.GetSezioniAsync(idTappa: tappa.Id).Result;
+            descrizione.Text = tappa.Descrizione;
             imagesFR();
             Close();
         }
