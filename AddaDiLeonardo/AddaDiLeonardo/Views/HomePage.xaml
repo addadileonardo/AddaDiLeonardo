@@ -24,7 +24,7 @@
 
                     <StackLayout Grid.Row="0">
                         <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.bg.jpg}" Aspect="AspectFill" x:Name="background"></Image>
-                        
+
                     </StackLayout>
                     <Grid>
                         <Grid.RowDefinitions>
@@ -84,60 +84,73 @@
 
                             <Local:Accordion x:Name="Accordion_0" AccordionName="Accordion_0" BGColor="Black" TxtColor="White" Title="CREDITS">
                                 <Local:Accordion.AccordionContent>
-                                    <StackLayout Orientation="Vertical" BackgroundColor="Black">
-                                        <StackLayout Margin="10,0,10,10" x:Name="stackContenuto_0" >
-                                            <StackLayout Margin="20,0,20,0">
-                                                <StackLayout Margin="20,0,20,0">
+                                    <StackLayout Spacing="0" Orientation="Vertical">
+                                        <StackLayout Orientation="Vertical" BackgroundColor="Black">
+                                            <StackLayout Margin="10,0,10,0">
+                                                <Local:CustomLabel x:Name="lblReasonWhy" LineBreakMode="TailTruncation" TextColor="White" VerticalOptions="StartAndExpand" MaxLines="6" Margin="0,35,0,0" Text="Italy has a relevant historical and artistic heritage as well as a significant scientific culture, so Micron Foundation and Fondazione Politecnico decided to combine these elements. 
 
-                                                    <Local:CustomLabelTitle Text="LEAD FULL STACK DEVELOPER" TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
-                                                    <Local:CustomLabel Text="Riccardo Raffini, Raul Sorrentino, Andrea Troccolo" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
+Micron Foundation sponsored an innovative project in order to allow student to learn how to use technology and develop creative thinking, drawing on the power of STEAM subjects (STEM plus the Arts). Our students have had the opportunity to learn about science, technology, engineering, art and math (STEAM) and contribute to projects that promote cultural heritage. Supported by our university partners, they learn, discover and develop paths to enrich life in our communities and guided by Micron, they experienced innovation, creativity and the assumption of risk, as well as learning to plan and manage projects as a means to achieve their objectives. This skillset can help everyone in their daily lives and in society, showing where there are opportunities and how to translate them into work, into a company.
 
-                                                    <Local:CustomLabelTitle Text="LEAD DEVELOPER" TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
-                                                    <Local:CustomLabel Text="Andrea Albani, Manuel Bortolotti, Simone Previtali" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
+Innovation is linked to this new model of transversal collaboration between schools, universities and companies, where students have applied the collaborative operational methods typical of the world of work, while connecting with Micron's international, dynamic and motivating environment. Education in entrepreneurship is education that instils mettle and a proactive mindset. It must begin in schools, as the sine qua non for young people adapting to the work market in a global world. All these features, together with being able to interact with university professors and lecturers, means that young people can field technical and scientific knowledge learnt in the classroom.
+This mobile app will open the door to some places dear to Leonardo da Vinci with a suitable communication model to create a multimedia and multi-language product for a wide audience. A stretch of the River Adda inspired Leonardo da Vinci, who used it for the scenery of some famous paintings and for his studies on the navigability of the Adda. Art and science are featured in this 6-km open-air museum, which is unfortunately inaccessible to elderly or disabled people. Students will create an app to retrace the full path and allow any interested people an opportunity to experience this magnificent path."></Local:CustomLabel>
+                                                <Button Text="+ Read More" BackgroundColor="Transparent" TextColor="White" x:Name="btnReadMore" Clicked="btnReadMore_Clicked"></Button>
+                                            </StackLayout>
+                                            <StackLayout Margin="50,0,50,45">
 
-                                                    <Local:CustomLabelTitle Text="VIDEO EDITING" TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
-                                                    <Local:CustomLabel Margin="0,10,0,0" Text="Simone Beretta, Andrea Bettinelli, Luis Blasco, Davide Bottini, Emanuele Comberiati, Dimitri Daneluzzi, Stefano Domenghini, Paolo Esposito, Omar Locatelli, Mattia Teli" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
+                                                
 
-                                                    <Local:CustomLabelTitle Text="COPY AND CONTENT" TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
-                                                    <Local:CustomLabelTitle  Text='Team "Traghetto e Naviglio di Paderno"' TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
-                                                    <Local:CustomLabel Text="Lorenzo Pulcini, Simone Beretta, Elena Bassoli, Luis Blasco, Francesca Curcio, Paolo Esposito, Omar Locatelli, Veronica Cecchini Manara, Mattia Teli" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
+                                                <Local:CustomLabelTitle Text="LEAD FULL STACK DEVELOPER" TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
+                                                <Local:CustomLabel Text="Riccardo Raffini, Raul Sorrentino, Andrea Troccolo" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
 
-                                                    <Local:CustomLabelTitle  Text='Team "Ponte di San Michele"' TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
-                                                    <Local:CustomLabel Text="Agata Gagliano, Andrea Albani, Diego Appiani, Lorenzo Belotti, Andrea Bettinelli, Giobattista Leonardo Dominoni, Marta Rubini, Laura Valota" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
+                                                <Local:CustomLabelTitle Text="LEAD DEVELOPER" TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
+                                                <Local:CustomLabel Text="Andrea Albani, Manuel Bortolotti, Simone Previtali" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
 
-                                                    <Local:CustomLabelTitle   Text='Team "Vergine delle Rocce e Santuario della Rocchetta"' TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
-                                                    <Local:CustomLabel Text="Gaia Morgana Gualandris, Dimitri Daneluzzi, Manuel Bortolotti, Sofia Montanari, Laura Palmieri, Benedetta Sarrocco, Raul Sorrentino, Andrea Troccolo, Giampietro Valentina, Cristina Zambelli" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
+                                                <Local:CustomLabelTitle Text="VIDEO EDITING" TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
+                                                <Local:CustomLabel Margin="0,10,0,0" Text="Simone Beretta, Andrea Bettinelli, Luis Blasco, Davide Bottini, Emanuele Comberiati, Dimitri Daneluzzi, Stefano Domenghini, Paolo Esposito, Omar Locatelli, Mattia Teli" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
 
-                                                    <Local:CustomLabelTitle   Text='Team "Fiume Adda"' TextColor="White" HorizontalTextAlignment="Center" Margin="0,10,0,0"></Local:CustomLabelTitle>
-                                                    <Local:CustomLabel Text="Rachele Belli, Riccardo Raffini, Rachele Agliardi, Giulia Cioti, Stefano Domenghini, Lucrezia Finelli, Chiara Passera, Chiara Peri, Valerio Presciani, Simone Previtali" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
+                                                <Local:CustomLabelTitle Text="COPY AND CONTENT" TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
+                                                <Local:CustomLabelTitle  Text='Team "Traghetto e Naviglio di Paderno"' TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
+                                                <Local:CustomLabel Text="Lorenzo Pulcini, Simone Beretta, Elena Bassoli, Luis Blasco, Francesca Curcio, Paolo Esposito, Omar Locatelli, Veronica Cecchini Manara, Mattia Teli" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
 
-                                                    <Local:CustomLabelTitle Text='Team "Centrali Idroelettriche Bertini ed Esterle"' TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
-                                                    <Local:CustomLabel Text="Chiara Alimonti, Luca Ferrari, Francesca Bonacina, Davide Bottini, Emanuele Comberiati, Andrea Ferioli, Lorenzo Foiadelli, Anita Gelfi, Federica Salerno, Michael Solivani, Maurizio Zambelli" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
+                                                <Local:CustomLabelTitle  Text='Team "Ponte di San Michele"' TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
+                                                <Local:CustomLabel Text="Agata Gagliano, Andrea Albani, Diego Appiani, Lorenzo Belotti, Andrea Bettinelli, Giobattista Leonardo Dominoni, Marta Rubini, Laura Valota" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
 
-                                                    <Local:CustomLabelTitle Text='TECHNICAL AND SCIENTIFIC COMMITTEE' TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
-                                                    <Local:CustomLabelTitle Text='Micron' TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
-                                                    <Local:CustomLabel Text="Manuela Seminara, Barbara Carcano" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
-                                                    <Local:CustomLabel Text="" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
+                                                <Local:CustomLabelTitle   Text='Team "Vergine delle Rocce e Santuario della Rocchetta"' TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
+                                                <Local:CustomLabel Text="Gaia Morgana Gualandris, Dimitri Daneluzzi, Manuel Bortolotti, Sofia Montanari, Laura Palmieri, Benedetta Sarrocco, Raul Sorrentino, Andrea Troccolo, Giampietro Valentina, Cristina Zambelli" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
 
-                                                    <Local:CustomLabelTitle Text='Ecomuseo "Adda di Leonardo"' TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
-                                                    <Local:CustomLabel Text="Cristian Bonomi" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
+                                                <Local:CustomLabelTitle   Text='Team "Fiume Adda"' TextColor="White" HorizontalTextAlignment="Center" Margin="0,10,0,0"></Local:CustomLabelTitle>
+                                                <Local:CustomLabel Text="Rachele Belli, Riccardo Raffini, Rachele Agliardi, Giulia Cioti, Stefano Domenghini, Lucrezia Finelli, Chiara Passera, Chiara Peri, Valerio Presciani, Simone Previtali" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
 
-                                                    <Local:CustomLabelTitle Text='Dipartimento di Design, Politecnico di Milano' TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
-                                                    <Local:CustomLabel Text="Ilaria Mariani, Nicola Brignoli, Marisa Galbiati" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
+                                                <Local:CustomLabelTitle Text='Team "Centrali Idroelettriche Bertini ed Esterle"' TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
+                                                <Local:CustomLabel Text="Chiara Alimonti, Luca Ferrari, Francesca Bonacina, Davide Bottini, Emanuele Comberiati, Andrea Ferioli, Lorenzo Foiadelli, Anita Gelfi, Federica Salerno, Michael Solivani, Maurizio Zambelli" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
+                                            </StackLayout>
 
-                                                    <Local:CustomLabelTitle Text='Fondazione Politecnico' TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
-                                                    <Local:CustomLabel Text="Francesca Brambilla, Manuela Pizzagalli" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Vertical" BackgroundColor="White">
+                                            <StackLayout Margin="50,35,50,10">
+                                                <Local:CustomLabelTitle Text='TECHNICAL AND SCIENTIFIC COMMITTEE' TextColor="Black" HorizontalTextAlignment="Center" Margin="0,0,0,0"></Local:CustomLabelTitle>
+                                                <Local:CustomLabelTitle Text='Micron' TextColor="Black" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
+                                                <Local:CustomLabel Text="Manuela Seminara, Barbara Carcano" TextColor="Black" HorizontalTextAlignment="Center"></Local:CustomLabel>
+                                                <Local:CustomLabel Text="" TextColor="Black" HorizontalTextAlignment="Center"></Local:CustomLabel>
 
-                                                    <Local:CustomLabelTitle Text='Tutor e referenti PCTO, Liceo Lussana ' TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
-                                                    <Local:CustomLabel Text="Prof.ssa Manuela Bandini, Prof.ssa Paola Torroni" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
+                                                <Local:CustomLabelTitle Text='Ecomuseo "Adda di Leonardo"' TextColor="Black" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
+                                                <Local:CustomLabel Text="Cristian Bonomi" TextColor="Black" HorizontalTextAlignment="Center"></Local:CustomLabel>
 
-                                                    <Local:CustomLabelTitle Text='Tutor e referenti PCTO, IIS Guglielmo Marconi' TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
-                                                    <Local:CustomLabel Text="Prof. Maurizio Agazzi" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
+                                                <Local:CustomLabelTitle Text='Dipartimento di Design, Politecnico di Milano' TextColor="Black" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
+                                                <Local:CustomLabel Text="Ilaria Mariani, Nicola Brignoli, Marisa Galbiati" TextColor="Black" HorizontalTextAlignment="Center"></Local:CustomLabel>
 
+                                                <Local:CustomLabelTitle Text='Fondazione Politecnico' TextColor="Black" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
+                                                <Local:CustomLabel Text="Francesca Brambilla, Manuela Pizzagalli" TextColor="Black" HorizontalTextAlignment="Center"></Local:CustomLabel>
 
-                                                </StackLayout>
+                                                <Local:CustomLabelTitle Text='Tutor e referenti PCTO, Liceo Lussana ' TextColor="Black" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
+                                                <Local:CustomLabel Text="Prof.ssa Manuela Bandini, Prof.ssa Paola Torroni" TextColor="Black" HorizontalTextAlignment="Center"></Local:CustomLabel>
+
+                                                <Local:CustomLabelTitle Text='Tutor e referenti PCTO, IIS Guglielmo Marconi' TextColor="Black" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
+                                                <Local:CustomLabel Text="Prof. Maurizio Agazzi" TextColor="Black" HorizontalTextAlignment="Center"></Local:CustomLabel>
+
 
                                             </StackLayout>
+
                                         </StackLayout>
                                     </StackLayout>
                                 </Local:Accordion.AccordionContent>

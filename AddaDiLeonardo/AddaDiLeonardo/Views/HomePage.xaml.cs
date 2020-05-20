@@ -415,6 +415,19 @@ namespace AddaDiLeonardo.Views
 
         }
 
-        
+        private void btnReadMore_Clicked(object sender, EventArgs e)
+        {
+            if(lblReasonWhy.MaxLines == 6)
+            {
+                lblReasonWhy.MaxLines = 99;
+                btnReadMore.Text = "- Hide";
+            }
+            else
+            {
+                lblReasonWhy.MaxLines = 6;
+                btnReadMore.Text = "+ Read More";
+                this.Scroll.ScrollToAsync(this.FindByName<Element>("Accordion_0"), ScrollToPosition.Start, true);
+            }
+        }
     }
 }
