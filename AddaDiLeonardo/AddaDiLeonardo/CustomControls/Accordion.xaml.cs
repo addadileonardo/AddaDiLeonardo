@@ -110,7 +110,7 @@ namespace AddaDiLeonardo.CustomControls
             _content.IsVisible = true;
             await Task.WhenAll(
                 _content.TranslateTo(0, 0, AnimationDuration),
-                Img.TranslateTo(-20, 0, AnimationDuration),
+                Img.TranslateTo(-10, 0, AnimationDuration),
                 IndicatorOpen(),
                 _indicator.RotateTo(0, AnimationDuration),
                 _content.FadeTo(30, 50, Easing.SinIn)

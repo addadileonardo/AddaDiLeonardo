@@ -11,6 +11,12 @@
 
             <!--Header-->
             <StackLayout Padding="20,20,20,20" BackgroundColor="{Binding Source={x:Reference _accordion}, Path=BGColor}" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <!--Indicator-->
+                <ContentView  x:Name="_indicator"
+                             HorizontalOptions="Start" VerticalOptions="Center" Margin="0,0,0,0"
+                             Content="{Binding Source={x:Reference _accordion}, Path=Indicator}">
+
+                </ContentView>
                 <!--Title-->
                 <Label  x:Name="_title"
                        HorizontalOptions="Start" VerticalOptions="Center" Margin="5,0,0,0"
@@ -24,12 +30,7 @@
                         </OnPlatform>
                     </Label.FontFamily>
                 </Label>
-                <!--Indicator-->
-                <ContentView  x:Name="_indicator"
-                             HorizontalOptions="EndAndExpand" VerticalOptions="Center" Margin="0,0,0,0"
-                             Content="{Binding Source={x:Reference _accordion}, Path=Indicator}">
-
-                </ContentView>
+                
 
                 <!--TapHandler-->
                 <StackLayout.GestureRecognizers>
