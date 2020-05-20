@@ -16,7 +16,7 @@
     <None Remove="Images\Home\bg.jpg" />
     <None Remove="Images\Home\centrale.jpg" />
     <None Remove="Images\Home\fiume.jpg" />
-    <None Remove="Images\Home\logo_schifoso.png" />
+    <None Remove="Images\Home\logo.png" />
     <None Remove="Images\Home\Mappa\EN-Map-1.png" />
     <None Remove="Images\Home\Mappa\EN-Map-2.png" />
     <None Remove="Images\Home\Mappa\EN-Map-3.png" />
@@ -116,7 +116,7 @@
     <EmbeddedResource Include="Images\Home\bg.jpg" />
     <EmbeddedResource Include="Images\Home\centrale.jpg" />
     <EmbeddedResource Include="Images\Home\fiume.jpg" />
-    <EmbeddedResource Include="Images\Home\logo_schifoso.png" />
+    <EmbeddedResource Include="Images\Home\logo.png" />
     <EmbeddedResource Include="Images\Home\Mappa\EN-Map-1.png" />
     <EmbeddedResource Include="Images\Home\Mappa\EN-Map-2.png" />
     <EmbeddedResource Include="Images\Home\Mappa\EN-Map-3.png" />
