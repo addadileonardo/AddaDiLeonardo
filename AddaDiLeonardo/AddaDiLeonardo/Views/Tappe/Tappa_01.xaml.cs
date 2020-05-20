@@ -57,7 +57,7 @@ namespace AddaDiLeonardo.Views.Tappe
 
         private async void ImgTappa_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1ejOO-44xvn-yFUOQJrMTW45wLl-rkwu7"));
+            await Navigation.PushModalAsync(new PlayerPage("https://fondazionepolitecnico.box.com/shared/static/bnzq9sovk2zyyxhjsmhavh6vbdzk7kgu.mp4"));
         }
 
         static List<Accordion> accordions;

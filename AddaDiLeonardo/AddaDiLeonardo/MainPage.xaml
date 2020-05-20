@@ -15,6 +15,7 @@
         <Button Text="rocchetta" Clicked="Button_Clicked_3"></Button>
         <Button Text="traghetto" Clicked="Button_Clicked_4"></Button>
         <Button Text="centrali" Clicked="Button_Clicked_5"></Button>
+        
     </StackLayout>
 
 </ContentPage>

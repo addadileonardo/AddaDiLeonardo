@@ -313,7 +313,7 @@ namespace AddaDiLeonardo.Views
 
             try
             {
-                await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1d-R7WjRWfbybERT5JTLKHaRHI7UUZ39P"));
+                await Navigation.PushModalAsync(new PlayerPage("https://fondazionepolitecnico.box.com/shared/static/8sb7zumfmudhi12hjga9q5uuphyf7r05.mp4"));
             }
             catch (Exception ex)
             {
@@ -430,6 +430,19 @@ namespace AddaDiLeonardo.Views
 
         }
 
-        
+        private void btnReadMore_Clicked(object sender, EventArgs e)
+        {
+            if(lblReasonWhy.MaxLines == 6)
+            {
+                lblReasonWhy.MaxLines = 99;
+                btnReadMore.Text = "- Hide";
+            }
+            else
+            {
+                lblReasonWhy.MaxLines = 6;
+                btnReadMore.Text = "+ Read More";
+                this.Scroll.ScrollToAsync(this.FindByName<Element>("Accordion_0"), ScrollToPosition.Start, true);
+            }
+        }
     }
 }
