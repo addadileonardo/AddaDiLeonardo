@@ -306,7 +306,7 @@ namespace AddaDiLeonardo.Views
 
             try
             {
-                await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1d-R7WjRWfbybERT5JTLKHaRHI7UUZ39P"));
+                await Navigation.PushModalAsync(new PlayerPage("https://fondazionepolitecnico.box.com/shared/static/8sb7zumfmudhi12hjga9q5uuphyf7r05.mp4"));
             }
             catch (Exception ex)
             {
