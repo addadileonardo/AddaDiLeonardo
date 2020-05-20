@@ -16,11 +16,12 @@ namespace AddaDiLeonardo.Views
     {
         private string _link = default;
         
+
         public PlayerPage(string link)
         {
-            
+
             InitializeComponent();
-            
+
             _link = link;
             close.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.close_5.png");
         }
@@ -30,7 +31,7 @@ namespace AddaDiLeonardo.Views
             base.OnAppearing();
             if (Connectivity.NetworkAccess != NetworkAccess.Internet)
             {
-                
+
                 await DisplayAlert("ATTENZIONE!", "Devi essere connesso ad internet per vedere il video!", "Ok");
                 await Navigation.PopModalAsync();
             }
@@ -49,23 +50,25 @@ namespace AddaDiLeonardo.Views
                     myvideo.MediaPlayer.EncounteredError += MediaPlayer_EncounteredError;
                     myvideo.MediaPlayer.Play();
                 };
-
             }
         }
 
+
+
         private void MediaPlayer_EncounteredError(object sender, EventArgs e)
         {
-            Device.BeginInvokeOnMainThread(async () => {
+            Device.BeginInvokeOnMainThread(async () =>
+            {
                 spinner.IsRunning = false;
                 await DisplayAlert("ERRORE!", "Si è verificato un errore durante la riproduzione del video. Riprovare più tardi.", "OK");
                 await Navigation.PopModalAsync();
             });
-            
         }
 
         private void MediaPlayer_Playing(object sender, EventArgs e)
         {
-            Device.BeginInvokeOnMainThread(async () => {
+            Device.BeginInvokeOnMainThread(async () =>
+            {
                 spinner.IsRunning = false;
             });
         }
@@ -82,7 +85,7 @@ namespace AddaDiLeonardo.Views
 
         private void close_Clicked(object sender, EventArgs e)
         {
-            
+
             Navigation.PopModalAsync();
         }
     }
