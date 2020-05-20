@@ -90,7 +90,7 @@ namespace AddaDiLeonardo.Views.Tappe
 
         private async void ImgTappa_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1CKaLQyFhWr5ABpk0MkpezqDyCA-mdkFA"));
+            await Navigation.PushModalAsync(new PlayerPage("https://fondazionepolitecnico.box.com/shared/static/flp80azwe558a0nn41jpp5i6mrs0ho4q.mp4"));
         }
 
         private void close_Clicked(object sender, EventArgs e)
@@ -117,12 +117,12 @@ namespace AddaDiLeonardo.Views.Tappe
 
         private async void imgVideo2_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1gtdOvg4SXK-4Xtd0CLv7JQWDXLLrXL0p"));
+            await Navigation.PushModalAsync(new PlayerPage("https://fondazionepolitecnico.box.com/shared/static/awzu2gtjx1jp0hdxz54zeq74dauthe3x.mkv"));
         }
 
         private async void imgVideo3_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1Ism2sCZvFWh3SczmSNPltotAYzxv7pl0"));
+            await Navigation.PushModalAsync(new PlayerPage("https://fondazionepolitecnico.box.com/shared/static/3jy2anjp1yees1n47azgxqg8qb70ahr8.mkv"));
         }
     }
 }

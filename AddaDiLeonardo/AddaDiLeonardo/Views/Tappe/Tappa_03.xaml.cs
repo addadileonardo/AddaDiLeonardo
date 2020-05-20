@@ -131,12 +131,12 @@ namespace AddaDiLeonardo.Views.Tappe
 
         private async void Imgbtn_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1_yymOz5-nm0b6s1uriYDMmwvU1nyOTWB"));
+            await Navigation.PushModalAsync(new PlayerPage("https://fondazionepolitecnico.box.com/shared/static/6eeewodilwazwez46pq4lnbbn844eiu4.mp4"));
         }
 
         private async void ImgTappa_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=14YVPkh_O4jnQMb18xrK-u4OnsbUf2lVL"));
+            await Navigation.PushModalAsync(new PlayerPage("https://fondazionepolitecnico.box.com/shared/static/hm2lgy8j63tfh5di7djkzpj4ic5yz5dh.mp4"));
         }
 
         private void close_Clicked(object sender, EventArgs e)

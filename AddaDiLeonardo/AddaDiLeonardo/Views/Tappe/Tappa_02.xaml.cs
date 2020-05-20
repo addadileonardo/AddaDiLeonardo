@@ -90,7 +90,7 @@ namespace AddaDiLeonardo.Views.Tappe
 
         private async void ImgTappa_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1erw66iglXnyz4jtZPI_cCbifx62N7J2T"));
+            await Navigation.PushModalAsync(new PlayerPage("https://fondazionepolitecnico.box.com/shared/static/4qplisnpkunpj6u0yc0nd410s66jn8ko.mp4"));
         }
 
         private void close_Clicked(object sender, EventArgs e)
@@ -117,7 +117,7 @@ namespace AddaDiLeonardo.Views.Tappe
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1zT-rp9fsbRuhixJIJrnzf8UE23EuXSdF"));
+            await Navigation.PushModalAsync(new PlayerPage("https://fondazionepolitecnico.box.com/shared/static/7h0atvaq04rnrqiov7gafu1l4mu9eb9x.mkv"));
         }
     }
 }
