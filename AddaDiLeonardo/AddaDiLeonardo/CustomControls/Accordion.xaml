@@ -13,7 +13,7 @@
             <StackLayout Padding="20,20,20,20" BackgroundColor="{Binding Source={x:Reference _accordion}, Path=BGColor}" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                 <!--Indicator-->
                 <ContentView  x:Name="_indicator"
-                             HorizontalOptions="Start" VerticalOptions="Center" Margin="0,0,0,0"
+                             HorizontalOptions="Start" VerticalOptions="Center" Margin="10,0,0,0"
                              Content="{Binding Source={x:Reference _accordion}, Path=Indicator}">
 
                 </ContentView>
