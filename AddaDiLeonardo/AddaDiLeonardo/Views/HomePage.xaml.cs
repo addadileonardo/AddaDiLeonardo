@@ -22,6 +22,14 @@ namespace AddaDiLeonardo.Views
         //proprietà per tener traccia della lingua attiva
         public static string ActiveLanguage = "IT";
 
+        //contenuti database
+        struct dataStruct
+        {
+            public Database.Data.Tappe tappa;
+            public List<Database.Data.Sezioni> sezioni;
+            public List<Database.Data.Contenuti> contenuti;
+        }
+
         //immagini tappe e mappa
         Image imageT1 = new Image { Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "step1" };
         Image imageT2 = new Image { Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "step2" };
@@ -145,17 +153,17 @@ namespace AddaDiLeonardo.Views
 
             Accordion_0.Indicator = new Image() { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.arrow-white.png"), WidthRequest = 20 };
 
-            // Evento tap mappa
+            //evento tap mappa
             tapGestureRecognizer.Tapped += (sender, e) =>
             {
-                // Cast image and push async to step
+                //cast image and push async to step
                 OnImageNameTapped(sender, e);
 
             };
 
-            //Testo iniziale
-            string testo = "Un percorso leonardesco come non lo avreste mai pensato, una narrazione personale che ne da’ un'interpretazione inedita e quasi sovversiva. L'Adda da fiume sacro a laica risorsa, gradualmente trasformata e sfruttata dall'uomo in canali, mulini e centrali idroelettriche. Quale migliore metafora del fiume per capire lo scorrere del tempo? Risalire l'Adda significa passare dalla parola al numero, dalla mitologia alla contabilità. Un percorso virtuale che gli studenti degli istituti «Lussana» di Bergamo e «Marconi» di Dalmine hanno creato in italiano, inglese e francese… Finalmente questo tratto della valle dell’Adda si apre al mondo! \r\n\r\nSaperi appresi dalle interviste, sapori avvertiti nelle visite in loco, sipari aperti sulla grande storia. Pronti ad __addentrarvi__? ";            
-            descrizione.FormattedText = FormattaContenuto.Formatta(testo).FormattedText;
+            //testo iniziale
+            dataStruct data = databaseChange();
+            descrizione.FormattedText = FormattaContenuto.Formatta(data.contenuti[0].Testo).FormattedText;
 
         }
 
@@ -178,7 +186,16 @@ namespace AddaDiLeonardo.Views
 
         private void mappaIcon_Clicked(object sender, EventArgs e)
         {
-            this.Scroll.ScrollToAsync(this.FindByName<Element>("Accordion_0"), ScrollToPosition.Start, true); //da modificare con mappa
+            this.Scroll.ScrollToAsync(this.FindByName<Element>("gridMappe"), ScrollToPosition.Start, true); //da modificare con collegamento mappa
+        }
+
+        private dataStruct databaseChange()  
+        {
+            dataStruct data = new dataStruct();
+            data.tappa = App.Database.GetTappeSingleAsync(idTappa: 0).Result;
+            data.sezioni = App.Database.GetSezioniAsync(idTappa: data.tappa.Id).Result;
+            data.contenuti = App.Database.GetContenutiAsync(idSezione: data.sezioni[0].Id).Result;
+            return data;
         }
 
         private void imagesIT()
@@ -221,7 +238,6 @@ namespace AddaDiLeonardo.Views
             imageM3.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.FR-Map-3.png");
             imageM4.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.FR-Map-4.png");
             imageM5.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.FR-Map-5.png");
-
         }
 
         #region "STEP"
@@ -342,6 +358,8 @@ namespace AddaDiLeonardo.Views
         {
             ActiveLanguage = "IT";
             Application.Current.Properties["lang"] = "IT";
+            dataStruct data = databaseChange();
+            descrizione.FormattedText = FormattaContenuto.Formatta(data.contenuti[0].Testo).FormattedText;
             imagesIT();
             Close();
         }
@@ -350,6 +368,8 @@ namespace AddaDiLeonardo.Views
         {
             ActiveLanguage = "ENG";
             Application.Current.Properties["lang"] = "ENG";
+            dataStruct data = databaseChange();
+            descrizione.FormattedText = FormattaContenuto.Formatta(data.contenuti[0].Testo).FormattedText;
             imagesEN();
             Close();
         }
@@ -358,6 +378,8 @@ namespace AddaDiLeonardo.Views
         {
             ActiveLanguage = "FR";
             Application.Current.Properties["lang"] = "FR";
+            dataStruct data = databaseChange();
+            descrizione.FormattedText = FormattaContenuto.Formatta(data.contenuti[0].Testo).FormattedText;
             imagesFR();
             Close();
         }
