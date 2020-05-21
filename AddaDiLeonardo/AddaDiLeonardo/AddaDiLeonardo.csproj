@@ -70,8 +70,8 @@
     <None Remove="Images\Tappe\cover\ponte2_cover.jpg" />
     <None Remove="Images\Tappe\cover\ponte3_cover.jpg" />
     <None Remove="Images\Tappe\cover\ponte_cover.jpg" />
-    <None Remove="Images\Tappe\cover\rocchetta2_cover.jpg" />
     <None Remove="Images\Tappe\cover\rocchetta_cover.jpg" />
+    <None Remove="Images\Tappe\cover\rocchetta_cover_v2.png" />
     <None Remove="Images\Tappe\cover\traghetto2_cover.jpg" />
     <None Remove="Images\Tappe\cover\traghetto_cover.jpg" />
     <None Remove="Images\Tappe\Tappa_03\Rocchetta_01.JPG" />
@@ -166,8 +166,8 @@
     <EmbeddedResource Include="Images\Tappe\cover\ponte2_cover.jpg" />
     <EmbeddedResource Include="Images\Tappe\cover\ponte3_cover.jpg" />
     <EmbeddedResource Include="Images\Tappe\cover\ponte_cover.jpg" />
-    <EmbeddedResource Include="Images\Tappe\cover\rocchetta2_cover.jpg" />
     <EmbeddedResource Include="Images\Tappe\cover\rocchetta_cover.jpg" />
+    <EmbeddedResource Include="Images\Tappe\cover\rocchetta_cover_v2.png" />
     <EmbeddedResource Include="Images\Tappe\cover\traghetto2_cover.jpg" />
     <EmbeddedResource Include="Images\Tappe\cover\traghetto_cover.jpg" />
     <EmbeddedResource Include="Images\Tappe\Tappa_03\Rocchetta_01.JPG" />
