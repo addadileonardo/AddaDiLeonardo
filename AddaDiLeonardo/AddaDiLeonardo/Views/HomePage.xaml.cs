@@ -161,10 +161,14 @@ namespace AddaDiLeonardo.Views
 
             };
 
+            
+        }
+
+        protected override void OnAppearing()
+        {
             //testo iniziale
             dataStruct data = databaseChange();
             descrizione.FormattedText = FormattaContenuto.Formatta(data.contenuti[0].Testo).FormattedText;
-
         }
 
         static List<Accordion> accordions;

@@ -119,7 +119,7 @@ namespace AddaDiLeonardo.Views.Tappe
             stackContenuto_4.Children.Add(FormattaContenuto.Formatta(contenuti_4[9].Testo));
             stackContenuto_4.Children.Add(FormattaContenuto.Formatta(contenuti_4[10].Testo));
             ImageButton imgbtn = new ImageButton();
-            imgbtn.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.cover.rocchetta2_cover.jpg");
+            imgbtn.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.cover.rocchetta_cover_v2.png");
             imgbtn.Aspect = Aspect.AspectFill;
             imgbtn.Margin = new Thickness(0, 5, 0, 5);
             imgbtn.Clicked += Imgbtn_Clicked;
