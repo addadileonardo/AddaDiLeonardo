@@ -110,5 +110,19 @@ namespace AddaDiLeonardo.Database
         }
 
         #endregion
+
+        #region Errori
+
+        public Task<List<Errori>> GetErroriAsync()
+        {
+            return DatabaseConnection.Table<Errori>().ToListAsync();
+        }
+
+        public Task<Errori> GetErroriAsync(int idErrore)
+        {
+            return DatabaseConnection.FindWithQueryAsync<Errori>("SELECT [Id], [Titolo], [Messaggio] FROM [Errori] WHERE [Id] = ?", idErrore);
+        }
+
+        #endregion
     }
 }
