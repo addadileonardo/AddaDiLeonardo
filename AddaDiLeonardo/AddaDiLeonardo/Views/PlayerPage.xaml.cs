@@ -15,12 +15,15 @@ namespace AddaDiLeonardo.Views
     public partial class PlayerPage : ContentPage
     {
         private string _link = default;
-        
+        private Database.Data.Errori _connError = default;
+        private Database.Data.Errori _videoError = default;
 
         public PlayerPage(string link)
         {
 
             InitializeComponent();
+            _videoError = App.Database.GetErroriAsync(0).Result;
+            _connError = App.Database.GetErroriAsync(1).Result;
 
             _link = link;
             close.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.close_5.png");
@@ -31,9 +34,11 @@ namespace AddaDiLeonardo.Views
             base.OnAppearing();
             if (Connectivity.NetworkAccess != NetworkAccess.Internet)
             {
-
-                await DisplayAlert("ATTENZIONE!", "Devi essere connesso ad internet per vedere il video!", "Ok");
-                await Navigation.PopModalAsync();
+                Device.BeginInvokeOnMainThread(async () =>
+                {
+                    await DisplayAlert(_connError.Titolo, _connError.Messaggio, "OK");
+                    await Navigation.PopModalAsync();
+                });
             }
             else
             {
@@ -60,7 +65,8 @@ namespace AddaDiLeonardo.Views
             Device.BeginInvokeOnMainThread(async () =>
             {
                 spinner.IsRunning = false;
-                await DisplayAlert("ERRORE!", "Si è verificato un errore durante la riproduzione del video. Riprovare più tardi.", "OK");
+                
+                await DisplayAlert(_videoError.Titolo, _videoError.Messaggio, "OK");
                 await Navigation.PopModalAsync();
             });
         }
@@ -77,8 +83,9 @@ namespace AddaDiLeonardo.Views
 
         protected override void OnDisappearing()
         {
-            if (myvideo.MediaPlayer != null || myvideo.MediaPlayer.IsPlaying == true)
+            if (myvideo.MediaPlayer != null)
             {
+                
                 myvideo.MediaPlayer.Stop();
             }
         }

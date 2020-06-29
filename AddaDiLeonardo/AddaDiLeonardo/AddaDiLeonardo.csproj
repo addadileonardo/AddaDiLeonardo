@@ -15,6 +15,7 @@
     <None Remove="Images\Home\background.png" />
     <None Remove="Images\Home\bg.jpg" />
     <None Remove="Images\Home\centrale.jpg" />
+    <None Remove="Images\Home\Credits-Loghi.png" />
     <None Remove="Images\Home\fiume.jpg" />
     <None Remove="Images\Home\logo.png" />
     <None Remove="Images\Home\Mappa\EN-Map-1.png" />
@@ -115,6 +116,7 @@
     <EmbeddedResource Include="Images\Home\background.png" />
     <EmbeddedResource Include="Images\Home\bg.jpg" />
     <EmbeddedResource Include="Images\Home\centrale.jpg" />
+    <EmbeddedResource Include="Images\Home\Credits-Loghi.png" />
     <EmbeddedResource Include="Images\Home\fiume.jpg" />
     <EmbeddedResource Include="Images\Home\logo.png" />
     <EmbeddedResource Include="Images\Home\Mappa\EN-Map-1.png" />

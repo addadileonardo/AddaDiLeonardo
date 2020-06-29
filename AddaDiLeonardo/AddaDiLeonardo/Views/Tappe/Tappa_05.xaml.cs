@@ -47,15 +47,15 @@ namespace AddaDiLeonardo.Views.Tappe
             Accordion_0.Title = sezioni[0].Titolo;
             stackContenuto_0.Children.Add(FormattaContenuto.Formatta(contenuti_0[0].Testo));
             stackContenuto_0.Children.Add(FormattaContenuto.Formatta(contenuti_0[1].Testo));
-            stackContenuto_0.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_05.centrali_03.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 5, 0, 5) });
+            stackContenuto_0.Children.Add(new CustomImage { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_05.centrali_03.jpg"), Aspect = Aspect.AspectFill });
             stackContenuto_0.Children.Add(FormattaContenuto.Formatta(contenuti_0[3].Testo));
-            stackContenuto_0.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_05.centrali_04.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 5, 0, 5) });
+            stackContenuto_0.Children.Add(new CustomImage { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_05.centrali_04.jpg"), Aspect = Aspect.AspectFill });
             stackContenuto_0.Children.Add(FormattaContenuto.Formatta(contenuti_0[5].Testo));
             stackContenuto_0.Children.Add(FormattaContenuto.Formatta(contenuti_0[6].Testo));
             stackContenuto_0.Children.Add(FormattaContenuto.Formatta(contenuti_0[7].Testo));
-            stackContenuto_0.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_05.centrali_01.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 5, 0, 5) });
+            stackContenuto_0.Children.Add(new CustomImage { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_05.centrali_01.jpg"), Aspect = Aspect.AspectFill });
             stackContenuto_0.Children.Add(FormattaContenuto.Formatta(contenuti_0[9].Testo));
-            stackContenuto_0.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_05.centrali_02.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 5, 0, 5) });
+            stackContenuto_0.Children.Add(new CustomImage { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_05.centrali_02.jpg"), Aspect = Aspect.AspectFill });
             stackContenuto_0.Children.Add(FormattaContenuto.Formatta(contenuti_0[11].Testo));
             #endregion
 
@@ -73,17 +73,17 @@ namespace AddaDiLeonardo.Views.Tappe
             Accordion_2.Title = sezioni[2].Titolo;
             stackContenuto_2.Children.Add(FormattaContenuto.Formatta(contenuti_2[0].Testo));
             stackContenuto_2.Children.Add(FormattaContenuto.Formatta(contenuti_2[1].Testo));
-            stackContenuto_2.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_05.centrali_07.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 5, 0, 5) });
+            stackContenuto_2.Children.Add(new CustomImage { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_05.centrali_07.jpg"), Aspect = Aspect.AspectFill });
             stackContenuto_2.Children.Add(FormattaContenuto.Formatta(contenuti_2[3].Testo));
-            stackContenuto_2.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_05.centrali_05.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 5, 0, 5) });
+            stackContenuto_2.Children.Add(new CustomImage { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_05.centrali_05.jpg"), Aspect = Aspect.AspectFill });
             stackContenuto_2.Children.Add(FormattaContenuto.Formatta(contenuti_2[5].Testo));
-            stackContenuto_2.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_05.centrali_06.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 5, 0, 5) });
+            stackContenuto_2.Children.Add(new CustomImage { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_05.centrali_06.jpg"), Aspect = Aspect.AspectFill});
             stackContenuto_2.Children.Add(FormattaContenuto.Formatta(contenuti_2[7].Testo));
             stackContenuto_2.Children.Add(FormattaContenuto.Formatta(contenuti_2[8].Testo));
             stackContenuto_2.Children.Add(FormattaContenuto.Formatta(contenuti_2[9].Testo));
             stackContenuto_2.Children.Add(FormattaContenuto.Formatta(contenuti_2[10].Testo));
             stackContenuto_2.Children.Add(FormattaContenuto.Formatta(contenuti_2[12].Testo));
-            stackContenuto_2.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_05.centrali_08.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 5, 0, 5) });
+            stackContenuto_2.Children.Add(new CustomImage { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_05.centrali_08.jpg"), Aspect = Aspect.AspectFill });
             stackContenuto_2.Children.Add(FormattaContenuto.Formatta(contenuti_2[14].Testo));
             #endregion
 
@@ -92,7 +92,7 @@ namespace AddaDiLeonardo.Views.Tappe
             Accordion_3.Title = sezioni[0].Titolo;
             stackContenuto_3.Children.Add(FormattaContenuto.Formatta(contenuti_3[0].Testo));
             stackContenuto_3.Children.Add(FormattaContenuto.Formatta(contenuti_3[1].Testo));
-            stackContenuto_3.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_05.centrali_09.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 5, 0, 5) });
+            stackContenuto_3.Children.Add(new CustomImage { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappe.Tappa_05.centrali_09.jpg"), Aspect = Aspect.AspectFill});
             stackContenuto_3.Children.Add(FormattaContenuto.Formatta(contenuti_3[3].Testo));
             #endregion
 
