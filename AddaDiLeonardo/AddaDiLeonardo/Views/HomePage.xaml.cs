@@ -168,9 +168,16 @@ namespace AddaDiLeonardo.Views
         protected override void OnAppearing()
         {
             //testo iniziale
-            dataStruct data = databaseChange();
+            dataStruct data = databaseChange(0, 0);
             descrizione.FormattedText = FormattaContenuto.Formatta(data.contenuti[0].Testo).FormattedText;
             //lblReasonWhy.FormattedText = FormattaContenuto.Formatta()     <-- DA METTERE IL TESTO DEI CREDITS E FARE IL CAMBIO LINGUA, L'IMPORTANTE è CHE NON CAMBI LE COSE PER L'OPEN/CLOSE
+
+
+            //testo mappa
+            dataStruct dataMappa = databaseChange(0, 22);
+            lbTitoloMappa.Text = dataMappa.sezioni[2].Titolo;
+            lbSottotitoloMappa.FormattedText = FormattaContenuto.Formatta(dataMappa.contenuti[0].Testo).FormattedText;
+
         }
 
         static List<Accordion> accordions;
@@ -195,12 +202,12 @@ namespace AddaDiLeonardo.Views
             this.Scroll.ScrollToAsync(this.FindByName<Element>("gridMappe"), ScrollToPosition.Start, true); //da modificare con collegamento mappa
         }
 
-        private dataStruct databaseChange()  
+        private dataStruct databaseChange(int tappa, int sezione)  
         {
             dataStruct data = new dataStruct();
-            data.tappa = App.Database.GetTappeSingleAsync(idTappa: 0).Result;
+            data.tappa = App.Database.GetTappeSingleAsync(idTappa: tappa).Result;
             data.sezioni = App.Database.GetSezioniAsync(idTappa: data.tappa.Id).Result;
-            data.contenuti = App.Database.GetContenutiAsync(idSezione: data.sezioni[0].Id).Result;
+            data.contenuti = App.Database.GetContenutiAsync(idSezione: sezione).Result;
             return data;
         }
 
@@ -364,7 +371,7 @@ namespace AddaDiLeonardo.Views
         {
             ActiveLanguage = "IT";
             Application.Current.Properties["lang"] = "IT";
-            dataStruct data = databaseChange();
+            dataStruct data = databaseChange(0, 0);
             descrizione.FormattedText = FormattaContenuto.Formatta(data.contenuti[0].Testo).FormattedText;
             imagesIT();
             Close();
@@ -374,7 +381,7 @@ namespace AddaDiLeonardo.Views
         {
             ActiveLanguage = "ENG";
             Application.Current.Properties["lang"] = "ENG";
-            dataStruct data = databaseChange();
+            dataStruct data = databaseChange(0, 0);
             descrizione.FormattedText = FormattaContenuto.Formatta(data.contenuti[0].Testo).FormattedText;
             imagesEN();
             Close();
@@ -384,7 +391,7 @@ namespace AddaDiLeonardo.Views
         {
             ActiveLanguage = "FR";
             Application.Current.Properties["lang"] = "FR";
-            dataStruct data = databaseChange();
+            dataStruct data = databaseChange(0, 0);
             descrizione.FormattedText = FormattaContenuto.Formatta(data.contenuti[0].Testo).FormattedText;
             imagesFR();
             Close();

@@ -35,11 +35,6 @@
                         <StackLayout Spacing="0" Grid.Row="0">
 
                             <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.logo.png}" Margin="10, 150, 10, 10" Aspect="AspectFit" HorizontalOptions="FillAndExpand" x:Name="logo">
-                                <Image.GestureRecognizers>
-                                    <TapGestureRecognizer
-                                        Tapped="btnVideoPlayer_Clicked"
-                                        NumberOfTapsRequired="1" />
-                                </Image.GestureRecognizers>
                             </Image>
                             <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.videoplayer_2.png}" Margin="0, 10, 0, 10" Aspect="AspectFit" WidthRequest="110" HeightRequest="50" x:Name="videoplayer">
                                 <Image.GestureRecognizers>
@@ -63,7 +58,13 @@
                                 <StackLayout Spacing="0" x:Name="stackTappa5" Grid.Row="4">
                                 </StackLayout>
                             </Grid>
-                            <Grid x:Name="gridMappe" Margin="0, 20, 0, 0" RowSpacing="0">
+                            <Grid x:Name="gridTitoloMappa" Margin="0, 0, 0, 0" RowSpacing="0" BackgroundColor="White">
+                                <StackLayout Margin="20,25,20,20" Spacing="0" x:Name="stackTitoloMappa" Grid.Row="0">
+                                    <Local:CustomLabel_IntroTitle x:Name="lbTitoloMappa"></Local:CustomLabel_IntroTitle>
+                                    <Local:CustomLabel x:Name="lbSottotitoloMappa"></Local:CustomLabel>
+                                </StackLayout>
+                            </Grid>
+                            <Grid x:Name="gridMappe" Margin="0, 0, 0, 0" RowSpacing="0">
                                 <StackLayout Spacing="0" x:Name="stackMappa1" Grid.Row="0">
                                 </StackLayout>
                                 <StackLayout Spacing="0" x:Name="stackMappa2" Grid.Row="1">
