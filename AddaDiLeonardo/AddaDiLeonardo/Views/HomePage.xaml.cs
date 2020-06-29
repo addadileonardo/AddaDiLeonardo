@@ -147,6 +147,7 @@ namespace AddaDiLeonardo.Views
             //stackMappa.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-5.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0) });
             #endregion
 
+
             accordions = new List<Accordion>() { Accordion_0 };
             foreach (Accordion accordion in accordions)
                 accordion.AccordionOpened += accordionEvent;
@@ -169,6 +170,7 @@ namespace AddaDiLeonardo.Views
             //testo iniziale
             dataStruct data = databaseChange();
             descrizione.FormattedText = FormattaContenuto.Formatta(data.contenuti[0].Testo).FormattedText;
+            //lblReasonWhy.FormattedText = FormattaContenuto.Formatta()     <-- DA METTERE IL TESTO DEI CREDITS E FARE IL CAMBIO LINGUA, L'IMPORTANTE è CHE NON CAMBI LE COSE PER L'OPEN/CLOSE
         }
 
         static List<Accordion> accordions;

@@ -116,7 +116,7 @@ This mobile app will open the door to some places dear to Leonardo da Vinci with
                                                 <Local:CustomLabel Text="Agata Gagliano, Andrea Albani, Diego Appiani, Lorenzo Belotti, Andrea Bettinelli, Giobattista Leonardo Dominoni, Marta Rubini, Laura Valota" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
 
                                                 <Local:CustomLabelTitle   Text='Team "Vergine delle Rocce e Santuario della Rocchetta"' TextColor="White" HorizontalTextAlignment="Center" Margin="0,35,0,0"></Local:CustomLabelTitle>
-                                                <Local:CustomLabel Text="Gaia Morgana Gualandris, Dimitri Daneluzzi, Manuel Bortolotti, Sofia Montanari, Laura Palmieri, Benedetta Sarrocco, Raul Sorrentino, Andrea Troccolo, Giampietro Valentina, Cristina Zambelli" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
+                                                <Local:CustomLabel Text="Gaia Morgana Gualandris, Dimitri Daneluzzi, Manuel Bortolotti, Sofia Montanari, Laura Palmieri, Benedetta Sarrocco, Raul Sorrentino, Andrea Troccolo, Valentina Giampietro, Cristina Zambelli" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
 
                                                 <Local:CustomLabelTitle   Text='Team "Fiume Adda"' TextColor="White" HorizontalTextAlignment="Center" Margin="0,10,0,0"></Local:CustomLabelTitle>
                                                 <Local:CustomLabel Text="Rachele Belli, Riccardo Raffini, Rachele Agliardi, Giulia Cioti, Stefano Domenghini, Lucrezia Finelli, Chiara Passera, Chiara Peri, Valerio Presciani, Simone Previtali" TextColor="White" HorizontalTextAlignment="Center"></Local:CustomLabel>
@@ -150,7 +150,7 @@ This mobile app will open the door to some places dear to Leonardo da Vinci with
 
 
                                             </StackLayout>
-
+                                            <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.Credits-Loghi.png}" Aspect="AspectFit" HorizontalOptions="FillAndExpand"></Image>
                                         </StackLayout>
                                     </StackLayout>
                                 </Local:Accordion.AccordionContent>
