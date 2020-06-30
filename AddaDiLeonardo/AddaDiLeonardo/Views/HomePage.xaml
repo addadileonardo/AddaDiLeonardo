@@ -59,7 +59,7 @@
                                 </StackLayout>
                             </Grid>
                             <Grid x:Name="gridTitoloMappa" Margin="0, 0, 0, 0" RowSpacing="0" BackgroundColor="White">
-                                <StackLayout Margin="20,25,20,20" Spacing="0" x:Name="stackTitoloMappa" Grid.Row="0">
+                                <StackLayout Margin="20,40,20,40" Spacing="0" x:Name="stackTitoloMappa" Grid.Row="0">
                                     <Local:CustomLabel_IntroTitle x:Name="lbTitoloMappa"></Local:CustomLabel_IntroTitle>
                                     <Local:CustomLabel x:Name="lbSottotitoloMappa"></Local:CustomLabel>
                                 </StackLayout>
@@ -88,12 +88,7 @@
                                     <StackLayout Spacing="0" Orientation="Vertical">
                                         <StackLayout Orientation="Vertical" BackgroundColor="Black">
                                             <StackLayout Margin="10,0,10,0">
-                                                <Local:CustomLabel x:Name="lblReasonWhy" LineBreakMode="TailTruncation" TextColor="White" VerticalOptions="StartAndExpand" MaxLines="6" Margin="0,35,0,0" Text="Italy has a relevant historical and artistic heritage as well as a significant scientific culture, so Micron Foundation and Fondazione Politecnico decided to combine these elements. 
-
-Micron Foundation sponsored an innovative project in order to allow student to learn how to use technology and develop creative thinking, drawing on the power of STEAM subjects (STEM plus the Arts). Our students have had the opportunity to learn about science, technology, engineering, art and math (STEAM) and contribute to projects that promote cultural heritage. Supported by our university partners, they learn, discover and develop paths to enrich life in our communities and guided by Micron, they experienced innovation, creativity and the assumption of risk, as well as learning to plan and manage projects as a means to achieve their objectives. This skillset can help everyone in their daily lives and in society, showing where there are opportunities and how to translate them into work, into a company.
-
-Innovation is linked to this new model of transversal collaboration between schools, universities and companies, where students have applied the collaborative operational methods typical of the world of work, while connecting with Micron's international, dynamic and motivating environment. Education in entrepreneurship is education that instils mettle and a proactive mindset. It must begin in schools, as the sine qua non for young people adapting to the work market in a global world. All these features, together with being able to interact with university professors and lecturers, means that young people can field technical and scientific knowledge learnt in the classroom.
-This mobile app will open the door to some places dear to Leonardo da Vinci with a suitable communication model to create a multimedia and multi-language product for a wide audience. A stretch of the River Adda inspired Leonardo da Vinci, who used it for the scenery of some famous paintings and for his studies on the navigability of the Adda. Art and science are featured in this 6-km open-air museum, which is unfortunately inaccessible to elderly or disabled people. Students will create an app to retrace the full path and allow any interested people an opportunity to experience this magnificent path."></Local:CustomLabel>
+                                                <Local:CustomLabel x:Name="lblReasonWhy" LineBreakMode="TailTruncation" TextColor="White" VerticalOptions="StartAndExpand" MaxLines="6" Margin="0,35,0,0" FormattedText="test"></Local:CustomLabel>
                                                 <Button Text="+ Read More" BackgroundColor="Transparent" TextColor="White" x:Name="btnReadMore" Clicked="btnReadMore_Clicked"></Button>
                                             </StackLayout>
                                             <StackLayout Margin="50,0,50,45">
