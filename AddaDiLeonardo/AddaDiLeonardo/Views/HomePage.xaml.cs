@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
+using AddaDiLeonardo.Database.Data;
 
 namespace AddaDiLeonardo.Views
 {
@@ -21,14 +22,6 @@ namespace AddaDiLeonardo.Views
 
         //proprietà per tener traccia della lingua attiva
         public static string ActiveLanguage = "IT";
-
-        //contenuti database
-        struct dataStruct
-        {
-            public Database.Data.Tappe tappa;
-            public List<Database.Data.Sezioni> sezioni;
-            public List<Database.Data.Contenuti> contenuti;
-        }
 
         //immagini tappe e mappa
         Image imageT1 = new Image { Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0), ClassId = "step1" };
@@ -139,12 +132,6 @@ namespace AddaDiLeonardo.Views
             imageM5.GestureRecognizers.Add(tapGestureRecognizer);
             stackMappa5.Children.Add(imageM5);
 
-
-            //stackMappa.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-1.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0) });
-            //stackMappa.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-2.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0) });
-            //stackMappa.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-3.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0) });
-            //stackMappa.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-4.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0) });
-            //stackMappa.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Home.Mappa.IT-Map-5.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 0, 0, 0) });
             #endregion
 
 
@@ -167,10 +154,7 @@ namespace AddaDiLeonardo.Views
 
         protected override void OnAppearing()
         {
-            //testo iniziale
-            dataStruct data = databaseChange();
-            descrizione.FormattedText = FormattaContenuto.Formatta(data.contenuti[0].Testo).FormattedText;
-            //lblReasonWhy.FormattedText = FormattaContenuto.Formatta()     <-- DA METTERE IL TESTO DEI CREDITS E FARE IL CAMBIO LINGUA, L'IMPORTANTE è CHE NON CAMBI LE COSE PER L'OPEN/CLOSE
+            ChangeLang();
         }
 
         static List<Accordion> accordions;
@@ -192,16 +176,24 @@ namespace AddaDiLeonardo.Views
 
         private void mappaIcon_Clicked(object sender, EventArgs e)
         {
-            this.Scroll.ScrollToAsync(this.FindByName<Element>("gridMappe"), ScrollToPosition.Start, true); //da modificare con collegamento mappa
+            this.Scroll.ScrollToAsync(this.FindByName<Element>("gridMappe"), ScrollToPosition.Start, true); 
         }
 
-        private dataStruct databaseChange()  
+        private void ChangeLang()
         {
-            dataStruct data = new dataStruct();
-            data.tappa = App.Database.GetTappeSingleAsync(idTappa: 0).Result;
-            data.sezioni = App.Database.GetSezioniAsync(idTappa: data.tappa.Id).Result;
-            data.contenuti = App.Database.GetContenutiAsync(idSezione: data.sezioni[0].Id).Result;
-            return data;
+            //testo iniziale
+            Contenuti descrizioneIntro = App.Database.GetContenutiSingleAsync(idSezione: 0, idIndice: 0).Result;
+            descrizione.FormattedText = FormattaContenuto.Formatta(descrizioneIntro.Testo).FormattedText;
+
+            //testo mappa
+            Sezioni titoloMappa = App.Database.GetSezioniSingleAsync(idSezioni: 22).Result;
+            Contenuti corpoMappa = App.Database.GetContenutiSingleAsync(idSezione: 22, idIndice: 0).Result;
+            lbTitoloMappa.Text = titoloMappa.Titolo;
+            lbSottotitoloMappa.Text = FormattaContenuto.Formatta(corpoMappa.Testo).Text;
+
+            //testo credits
+            Contenuti corpoCredits = App.Database.GetContenutiSingleAsync(idSezione: 23, idIndice: 0).Result;
+            lblReasonWhy.Text = FormattaContenuto.Formatta(corpoCredits.Testo).Text;
         }
 
         private void imagesIT()
@@ -364,8 +356,8 @@ namespace AddaDiLeonardo.Views
         {
             ActiveLanguage = "IT";
             Application.Current.Properties["lang"] = "IT";
-            dataStruct data = databaseChange();
-            descrizione.FormattedText = FormattaContenuto.Formatta(data.contenuti[0].Testo).FormattedText;
+
+            ChangeLang();
             imagesIT();
             Close();
         }
@@ -374,8 +366,8 @@ namespace AddaDiLeonardo.Views
         {
             ActiveLanguage = "ENG";
             Application.Current.Properties["lang"] = "ENG";
-            dataStruct data = databaseChange();
-            descrizione.FormattedText = FormattaContenuto.Formatta(data.contenuti[0].Testo).FormattedText;
+
+            ChangeLang();
             imagesEN();
             Close();
         }
@@ -384,8 +376,8 @@ namespace AddaDiLeonardo.Views
         {
             ActiveLanguage = "FR";
             Application.Current.Properties["lang"] = "FR";
-            dataStruct data = databaseChange();
-            descrizione.FormattedText = FormattaContenuto.Formatta(data.contenuti[0].Testo).FormattedText;
+
+            ChangeLang();
             imagesFR();
             Close();
         }
