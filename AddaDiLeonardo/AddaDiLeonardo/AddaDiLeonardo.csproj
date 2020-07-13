@@ -14,6 +14,10 @@
   <ItemGroup>
     <None Remove="Images\Home\bg.jpg" />
     <None Remove="Images\Home\centrale.jpg" />
+    <None Remove="Images\Home\Cover-1.png" />
+    <None Remove="Images\Home\Cover-2.png" />
+    <None Remove="Images\Home\Cover-sat-1.png" />
+    <None Remove="Images\Home\Cover-sat-2.png" />
     <None Remove="Images\Home\Credits-Loghi.png" />
     <None Remove="Images\Home\fiume.jpg" />
     <None Remove="Images\Home\logo.png" />
@@ -114,6 +118,10 @@
   <ItemGroup>
     <EmbeddedResource Include="Images\Home\bg.jpg" />
     <EmbeddedResource Include="Images\Home\centrale.jpg" />
+    <EmbeddedResource Include="Images\Home\Cover-1.png" />
+    <EmbeddedResource Include="Images\Home\Cover-2.png" />
+    <EmbeddedResource Include="Images\Home\Cover-sat-1.png" />
+    <EmbeddedResource Include="Images\Home\Cover-sat-2.png" />
     <EmbeddedResource Include="Images\Home\Credits-Loghi.png" />
     <EmbeddedResource Include="Images\Home\fiume.jpg" />
     <EmbeddedResource Include="Images\Home\logo.png" />
