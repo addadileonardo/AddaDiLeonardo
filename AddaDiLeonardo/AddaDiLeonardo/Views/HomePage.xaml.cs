@@ -176,7 +176,7 @@ namespace AddaDiLeonardo.Views
 
         private void mappaIcon_Clicked(object sender, EventArgs e)
         {
-            this.Scroll.ScrollToAsync(this.FindByName<Element>("gridMappe"), ScrollToPosition.Start, true); 
+            this.Scroll.ScrollToAsync(this.FindByName<Element>("gridTitoloMappa"), ScrollToPosition.Start, true); 
         }
 
         private void ChangeLang()
