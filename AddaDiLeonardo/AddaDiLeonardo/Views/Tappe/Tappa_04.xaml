@@ -61,7 +61,7 @@
                         <local:Accordion.AccordionContent>
                             <StackLayout Orientation="Vertical" >
                                 <Image x:Name="imgSection_0" Aspect="AspectFill"></Image>
-                                <StackLayout Margin="10,0,10,10" x:Name="stackContenuto_0" >
+                                    <StackLayout Margin="20,0,20,10" x:Name="stackContenuto_0" >
                                     <ImageButton x:Name="imgVideo2" Aspect="AspectFill" Clicked="imgVideo2_Clicked"></ImageButton>
                                 </StackLayout>
                             </StackLayout>
@@ -72,7 +72,7 @@
                         <local:Accordion.AccordionContent>
                             <StackLayout Orientation="Vertical" >
                                 <Image x:Name="imgSection_1" Aspect="AspectFill"></Image>
-                                <StackLayout Margin="10,0,10,10" x:Name="stackContenuto_1" >
+                                    <StackLayout Margin="20,0,20,10" x:Name="stackContenuto_1" >
 
                                 </StackLayout>
                             </StackLayout>
@@ -83,7 +83,7 @@
                         <local:Accordion.AccordionContent>
                             <StackLayout Orientation="Vertical" >
                                 <Image x:Name="imgSection_2" Aspect="AspectFill"></Image>
-                                <StackLayout Margin="10,0,10,10" x:Name="stackContenuto_2" >
+                                    <StackLayout Margin="20,0,20,10" x:Name="stackContenuto_2" >
 
                                 </StackLayout>
                             </StackLayout>
@@ -94,7 +94,7 @@
                         <local:Accordion.AccordionContent>
                             <StackLayout Orientation="Vertical" >
                                 <Image x:Name="imgSection_3" Aspect="AspectFill"></Image>
-                                <StackLayout Margin="10,0,10,10" x:Name="stackContenuto_3" >
+                                    <StackLayout Margin="20,0,20,10" x:Name="stackContenuto_3" >
 
                                 </StackLayout>
                             </StackLayout>
@@ -105,7 +105,7 @@
                         <local:Accordion.AccordionContent>
                             <StackLayout Orientation="Vertical" >
                                 <Image x:Name="imgSection_4" Aspect="AspectFill"></Image>
-                                <StackLayout Margin="10,0,10,10" x:Name="stackContenuto_4" >
+                                    <StackLayout Margin="20,0,20,10" x:Name="stackContenuto_4" >
                                     <ImageButton x:Name="imgVideo3" Aspect="AspectFill" Clicked="imgVideo3_Clicked"></ImageButton>
                                 </StackLayout>
                             </StackLayout>

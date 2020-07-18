@@ -67,6 +67,7 @@ namespace AddaDiLeonardo.Views
             gridTappe.RowDefinitions.Add(new RowDefinition { Height = heightRowUnitTappa });
             gridTappe.RowDefinitions.Add(new RowDefinition { Height = heightRowUnitTappa });
             gridTappe.RowDefinitions.Add(new RowDefinition { Height = heightRowUnitTappa });
+            gridTappe.RowDefinitions.Add(new RowDefinition { Height = heightRowUnitTappa });
 
             var heightRowUnitMappa1 = (384 * widthScreenUnit) / 1126;
             var heightRowUnitMappa2 = (363 * widthScreenUnit) / 1126;
@@ -387,9 +388,9 @@ namespace AddaDiLeonardo.Views
         /// </summary>
         public void Open()
         {
-            btnENG.BackgroundColor = Color.FromHex("#33000000");
-            btnIT.BackgroundColor = Color.FromHex("#33000000");
-            btnFR.BackgroundColor = Color.FromHex("#33000000");
+            btnENG.BackgroundColor = Color.FromHex("#66000000");
+            btnIT.BackgroundColor = Color.FromHex("#66000000");
+            btnFR.BackgroundColor = Color.FromHex("#66000000");
             btnIT.TextColor = Color.White; btnENG.TextColor = Color.White; btnFR.TextColor = Color.White;
             if (ActiveLanguage == "IT")
                 btnIT.TextColor = Color.Gray;
