@@ -150,7 +150,7 @@
 
 
                                             </StackLayout>
-                                            <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.Credits-Loghi.png}" Aspect="AspectFit" HorizontalOptions="FillAndExpand"></Image>
+                                            <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.Partners.png}" Aspect="AspectFit" HorizontalOptions="FillAndExpand"></Image>
                                         </StackLayout>
                                     </StackLayout>
                                 </Local:Accordion.AccordionContent>

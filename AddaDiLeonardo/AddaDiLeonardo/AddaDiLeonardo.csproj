@@ -36,6 +36,7 @@
     <None Remove="Images\Home\Mappa\IT-Map-3.png" />
     <None Remove="Images\Home\Mappa\IT-Map-4.png" />
     <None Remove="Images\Home\Mappa\IT-Map-5.png" />
+    <None Remove="Images\Home\Partners.png" />
     <None Remove="Images\Home\play.png" />
     <None Remove="Images\Home\ponte.jpg" />
     <None Remove="Images\Home\rocchetta.jpg" />
@@ -141,6 +142,7 @@
     <EmbeddedResource Include="Images\Home\Mappa\IT-Map-3.png" />
     <EmbeddedResource Include="Images\Home\Mappa\IT-Map-4.png" />
     <EmbeddedResource Include="Images\Home\Mappa\IT-Map-5.png" />
+    <EmbeddedResource Include="Images\Home\Partners.png" />
     <EmbeddedResource Include="Images\Home\play.png" />
     <EmbeddedResource Include="Images\Home\Tappe\EN-1-Fiume.png" />
     <EmbeddedResource Include="Images\Home\Tappe\EN-2-Ponte.png" />
