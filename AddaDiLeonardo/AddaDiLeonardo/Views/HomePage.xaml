@@ -23,7 +23,7 @@
                     </Grid.RowDefinitions>
 
                     <StackLayout Grid.Row="0">
-                        <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.bg.jpg}" Aspect="AspectFill" x:Name="background"></Image>
+                        <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.Cover-sat-1.png}" Aspect="AspectFill" x:Name="background"></Image>
 
                     </StackLayout>
                     <Grid>
@@ -36,26 +36,30 @@
 
                             <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.logo.png}" Margin="10, 150, 10, 10" Aspect="AspectFit" HorizontalOptions="FillAndExpand" x:Name="logo">
                             </Image>
-                            <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.videoplayer_2.png}" Margin="0, 10, 0, 10" Aspect="AspectFit" WidthRequest="110" HeightRequest="50" x:Name="videoplayer">
-                                <Image.GestureRecognizers>
-                                    <TapGestureRecognizer
+                            
+                            <!--Testo Homepage-->
+                            <Local:CustomLabel Margin="20, 85, 20, 45" TextColor="White" x:Name="descrizione"></Local:CustomLabel>
+                            
+                            
+                            <Grid x:Name="gridTappe" Margin="0, 0, 0, 0" RowSpacing="0">
+                                <StackLayout Spacing="0" x:Name="stackTappa0" Grid.Row="0">
+                                    <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.play.png}"  x:Name="videoplayer">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer
                                         Tapped="btnVideoPlayer_Clicked"
                                         NumberOfTapsRequired="1" />
-                                </Image.GestureRecognizers>
-                            </Image>
-                            <!--Testo Homepage-->
-                            <Local:CustomLabel Margin="10, 0, 10, 0" TextColor="White" x:Name="descrizione"></Local:CustomLabel>
-
-                            <Grid x:Name="gridTappe" Margin="0, 10, 0, 0" RowSpacing="0">
-                                <StackLayout Spacing="0" x:Name="stackTappa1" Grid.Row="0">
+                                        </Image.GestureRecognizers>
+                                    </Image>
                                 </StackLayout>
-                                <StackLayout Spacing="0" x:Name="stackTappa2" Grid.Row="1">
+                                <StackLayout Spacing="0" x:Name="stackTappa1" Grid.Row="1">
                                 </StackLayout>
-                                <StackLayout Spacing="0" x:Name="stackTappa3" Grid.Row="2">
+                                <StackLayout Spacing="0" x:Name="stackTappa2" Grid.Row="2">
                                 </StackLayout>
-                                <StackLayout Spacing="0" x:Name="stackTappa4" Grid.Row="3">
+                                <StackLayout Spacing="0" x:Name="stackTappa3" Grid.Row="3">
                                 </StackLayout>
-                                <StackLayout Spacing="0" x:Name="stackTappa5" Grid.Row="4">
+                                <StackLayout Spacing="0" x:Name="stackTappa4" Grid.Row="4">
+                                </StackLayout>
+                                <StackLayout Spacing="0" x:Name="stackTappa5" Grid.Row="5">
                                 </StackLayout>
                             </Grid>
                             <Grid x:Name="gridTitoloMappa" Margin="0, 0, 0, 0" RowSpacing="0" BackgroundColor="White">
@@ -87,7 +91,7 @@
                                 <Local:Accordion.AccordionContent>
                                     <StackLayout Spacing="0" Orientation="Vertical">
                                         <StackLayout Orientation="Vertical" BackgroundColor="Black">
-                                            <StackLayout Margin="10,0,10,0">
+                                            <StackLayout Margin="20,0,20,0">
                                                 <Local:CustomLabel x:Name="lblReasonWhy" LineBreakMode="TailTruncation" TextColor="White" VerticalOptions="StartAndExpand" MaxLines="6" Margin="0,35,0,0" FormattedText="test"></Local:CustomLabel>
                                                 <Button Text="+ Read More" BackgroundColor="Transparent" TextColor="White" x:Name="btnReadMore" Clicked="btnReadMore_Clicked"></Button>
                                             </StackLayout>
@@ -146,7 +150,7 @@
 
 
                                             </StackLayout>
-                                            <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.Credits-Loghi.png}" Aspect="AspectFit" HorizontalOptions="FillAndExpand"></Image>
+                                            <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.Partners.png}" Aspect="AspectFit" HorizontalOptions="FillAndExpand"></Image>
                                         </StackLayout>
                                     </StackLayout>
                                 </Local:Accordion.AccordionContent>
@@ -160,7 +164,7 @@
             <StackLayout Grid.Row="0" HorizontalOptions="End" VerticalOptions="Start" Orientation="Horizontal">
                 <ImageButton x:Name="mappaIcon" Clicked="mappaIcon_Clicked" HeightRequest="50" VerticalOptions="Start" Margin="0,5,0,0" BackgroundColor="Transparent"></ImageButton>
                 <StackLayout WidthRequest="50"  Margin="0,5,5,0">
-                    <Button Text="Click me" Clicked="btnOpen_Clicked" CornerRadius="90" WidthRequest="50" HorizontalOptions="End" x:Name="btnOpen" BackgroundColor="#33000000"  TextColor="White" CharacterSpacing="4">
+                    <Button Text="Click me" Clicked="btnOpen_Clicked" CornerRadius="90" WidthRequest="50" HorizontalOptions="End" x:Name="btnOpen" BackgroundColor="#66000000"  TextColor="White" CharacterSpacing="4">
                         <Button.FontFamily>
                             <OnPlatform x:TypeArguments="x:String">
                                 <On Platform="iOS" Value="Roboto-Medium" />
